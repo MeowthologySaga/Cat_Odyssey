@@ -1,0 +1,95 @@
+{
+  "oracleTower": {
+    "id": "apawna-oracle-tower",
+    "name": "아-포-나의 신탁탑",
+    "floors": [
+      { "id": "oracle-01", "floor": 1, "stageId": "r01-s02", "recommendedPower": 900, "modifiers": ["enemy-hp:120"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-dust", "amount": 5 } },
+      { "id": "oracle-02", "floor": 2, "stageId": "r02-s02", "recommendedPower": 960, "modifiers": ["slow-field:125"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "nausi-cat", "amount": 2 } },
+      { "id": "oracle-03", "floor": 3, "stageId": "r03-s02", "recommendedPower": 1020, "modifiers": ["moving-bumper-speed:120"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-dust", "amount": 6 } },
+      { "id": "oracle-04", "floor": 4, "stageId": "r04-s02", "recommendedPower": 1080, "modifiers": ["wind-force:125"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "orange-sailor", "amount": 3 } },
+      { "id": "oracle-05", "floor": 5, "stageId": "r01-s04", "recommendedPower": 1160, "modifiers": ["preview-bounces:2", "boss-hp:130"], "bossFloor": true, "lockoutFloors": 3, "reward": { "kind": "relic", "id": "relic-storm-compass", "amount": 1 } },
+      { "id": "oracle-06", "floor": 6, "stageId": "r05-s01", "recommendedPower": 1220, "modifiers": ["one-way-walls:fast"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-dust", "amount": 7 } },
+      { "id": "oracle-07", "floor": 7, "stageId": "r06-s02", "recommendedPower": 1280, "modifiers": ["portal-exit-hidden"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "tiresias", "amount": 3 } },
+      { "id": "oracle-08", "floor": 8, "stageId": "r07-s02", "recommendedPower": 1340, "modifiers": ["sound-wave-speed:120"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-dust", "amount": 8 } },
+      { "id": "oracle-09", "floor": 9, "stageId": "r08-s02", "recommendedPower": 1400, "modifiers": ["suction-force:125"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "tuxedo-sailor", "amount": 4 } },
+      { "id": "oracle-10", "floor": 10, "stageId": "r02-s04", "recommendedPower": 1500, "modifiers": ["healing-received:70", "boss-hp:140"], "bossFloor": true, "lockoutFloors": 3, "reward": { "kind": "relic", "id": "relic-moly-root", "amount": 1 } },
+      { "id": "oracle-11", "floor": 11, "stageId": "r09-s02", "recommendedPower": 1560, "modifiers": ["lightning-delay:0"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-dust", "amount": 9 } },
+      { "id": "oracle-12", "floor": 12, "stageId": "r10-s02", "recommendedPower": 1620, "modifiers": ["shield-rear-window:70"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "eumaeus", "amount": 4 } },
+      { "id": "oracle-13", "floor": 13, "stageId": "r03-s03", "recommendedPower": 1680, "modifiers": ["breakable-wall-hp:170"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-dust", "amount": 10 } },
+      { "id": "oracle-14", "floor": 14, "stageId": "r04-s03", "recommendedPower": 1740, "modifiers": ["giant-countdown:-1"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "aeolus", "amount": 5 } },
+      { "id": "oracle-15", "floor": 15, "stageId": "r03-s05", "recommendedPower": 1860, "modifiers": ["weakpoint-only", "preview-bounces:2"], "bossFloor": true, "lockoutFloors": 3, "reward": { "kind": "relic", "id": "relic-cyclops-cup", "amount": 1 } },
+      { "id": "oracle-16", "floor": 16, "stageId": "r05-s03", "recommendedPower": 1920, "modifiers": ["friendship-disabled"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-dust", "amount": 11 } },
+      { "id": "oracle-17", "floor": 17, "stageId": "r06-s03", "recommendedPower": 1980, "modifiers": ["protect-target-hp:70"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "anticleia-ghost", "amount": 5 } },
+      { "id": "oracle-18", "floor": 18, "stageId": "r07-s03", "recommendedPower": 2040, "modifiers": ["crystal-order-hidden-after-first"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-dust", "amount": 12 } },
+      { "id": "oracle-19", "floor": 19, "stageId": "r08-s03", "recommendedPower": 2100, "modifiers": ["part-hp:150"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "a-paw-na", "amount": 5 } },
+      { "id": "oracle-20", "floor": 20, "stageId": "r05-s04", "recommendedPower": 2240, "modifiers": ["active-skills-disabled", "boss-hp:160"], "bossFloor": true, "lockoutFloors": 3, "reward": { "kind": "relic", "id": "relic-oracle-ash", "amount": 1 } },
+      { "id": "oracle-21", "floor": 21, "stageId": "r09-s03", "recommendedPower": 2310, "modifiers": ["preview-bounces:1", "forbidden-radius:120"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-emblem", "amount": 1 } },
+      { "id": "oracle-22", "floor": 22, "stageId": "r10-s03", "recommendedPower": 2380, "modifiers": ["single-preview-segment"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "meow-dysseus", "amount": 6 } },
+      { "id": "oracle-23", "floor": 23, "stageId": "r04-s04", "recommendedPower": 2450, "modifiers": ["wind-force:150", "no-support-class"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-emblem", "amount": 1 } },
+      { "id": "oracle-24", "floor": 24, "stageId": "r06-s04", "recommendedPower": 2520, "modifiers": ["portal-exit-hidden", "enemy-countdown:-1"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "purr-ce", "amount": 6 } },
+      { "id": "oracle-25", "floor": 25, "stageId": "r07-s04", "recommendedPower": 2680, "modifiers": ["sound-wave-speed:145", "boss-hp:175"], "bossFloor": true, "lockoutFloors": 3, "reward": { "kind": "relic", "id": "relic-siren-shell", "amount": 1 } },
+      { "id": "oracle-26", "floor": 26, "stageId": "r08-s04", "recommendedPower": 2750, "modifiers": ["suction-force:160", "no-heavy-class"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-emblem", "amount": 2 } },
+      { "id": "oracle-27", "floor": 27, "stageId": "r09-s04", "recommendedPower": 2820, "modifiers": ["lightning-strikes:+2", "healing-disabled"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "fragment", "id": "heli-paws", "amount": 7 } },
+      { "id": "oracle-28", "floor": 28, "stageId": "r10-s04", "recommendedPower": 2890, "modifiers": ["reinforcement-turn:3", "enemy-hp:180"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "material", "id": "oracle-emblem", "amount": 2 } },
+      { "id": "oracle-29", "floor": 29, "stageId": "r08-s05", "recommendedPower": 2960, "modifiers": ["preview-bounces:1", "suction-force:170", "part-hp:180"], "bossFloor": false, "lockoutFloors": 3, "reward": { "kind": "title", "id": "oracle-sixfold", "amount": 1 } },
+      { "id": "oracle-30", "floor": 30, "stageId": "r10-s05", "recommendedPower": 3200, "modifiers": ["weakpoint-only", "enemy-countdown:-1", "boss-hp:200"], "bossFloor": true, "lockoutFloors": 3, "reward": { "kind": "title", "id": "athenas-chosen", "amount": 1 } }
+    ]
+  },
+  "stormRoute": {
+    "id": "poseidon-weekly-storm",
+    "nodeCount": 12,
+    "weeklySeedFormat": "YYYY-WW:profile:poseidon-storm",
+    "fallenHeroLock": true,
+    "nodes": [
+      { "index": 1, "type": "battle", "pool": ["r01-s02", "r02-s01", "r03-s01"], "rewardScale": 1, "rules": ["full-party-start"] },
+      { "index": 2, "type": "blessing", "pool": ["athena-true-line", "hermes-winged-start", "helios-warm-ray"], "rewardScale": 0, "rules": ["choose-one-of-three"] },
+      { "index": 3, "type": "elite", "pool": ["r03-s03", "r04-s03", "r05-s03"], "rewardScale": 1.4, "rules": ["elite-hp:130"] },
+      { "index": 4, "type": "harbor", "pool": ["repair", "swap-one-hero"], "rewardScale": 0, "rules": ["one-service-free"] },
+      { "index": 5, "type": "battle", "pool": ["r05-s02", "r06-s02", "r07-s01"], "rewardScale": 1.2, "rules": ["route-curse-active"] },
+      { "index": 6, "type": "curse", "pool": ["short-preview", "rising-current", "fragile-walls"], "rewardScale": 0, "rules": ["choose-one-of-two-curses"] },
+      { "index": 7, "type": "elite", "pool": ["r07-s03", "r08-s03", "r09-s03"], "rewardScale": 1.6, "rules": ["enemy-countdown:-1"] },
+      { "index": 8, "type": "blessing", "pool": ["aeolus-all-winds", "circe-palace-of-mirrors", "calypso-undying-island"], "rewardScale": 0, "rules": ["choose-one-of-three", "epic-weight:20"] },
+      { "index": 9, "type": "battle", "pool": ["r08-s02", "r09-s02", "r10-s02"], "rewardScale": 1.4, "rules": ["two-route-modifiers"] },
+      { "index": 10, "type": "harbor", "pool": ["repair", "revive-one-hero", "remove-one-curse"], "rewardScale": 0, "rules": ["choose-one-service"] },
+      { "index": 11, "type": "elite", "pool": ["r04-s04", "r06-s04", "r07-s04"], "rewardScale": 1.9, "rules": ["boss-hp:135", "no-resurrection"] },
+      { "index": 12, "type": "boss", "pool": ["r03-s05", "r08-s05", "r10-s05"], "rewardScale": 2.5, "rules": ["weekly-score-enabled", "fallen-heroes-remain-locked"] }
+    ]
+  },
+  "raid": {
+    "id": "mythic-scylla-hunt",
+    "name": "신화 괴수 토벌: 스킬라-캣",
+    "bossId": "scylla-cat",
+    "partiesRequired": 3,
+    "heroesPerParty": 4,
+    "duplicateHeroesAllowed": false,
+    "anatomy": { "heads": 6, "necks": 6, "forepaws": 2 },
+    "phases": [
+      {
+        "party": 1,
+        "name": "갑각과 앞발 파괴",
+        "objective": { "type": "break-parts", "turnLimit": 12, "targetIds": ["scylla-forepaws"], "requiredCount": 2 },
+        "bossParts": ["scylla-forepaws", "scylla-body"],
+        "carryForward": ["broken-forepaws", "opened-safe-bumper"]
+      },
+      {
+        "party": 2,
+        "name": "여섯 머리 연쇄 경직",
+        "objective": { "type": "break-parts", "turnLimit": 14, "targetIds": ["scylla-heads"], "requiredCount": 6 },
+        "bossParts": ["scylla-heads", "scylla-necks"],
+        "carryForward": ["staggered-head-count", "exposed-cave-body"]
+      },
+      {
+        "party": 3,
+        "name": "동굴 속 본체 마무리",
+        "objective": { "type": "break-parts", "turnLimit": 16, "targetIds": ["scylla-body"], "requiredCount": 1 },
+        "bossParts": ["scylla-body"],
+        "carryForward": ["weekly-damage-score", "companion-fragments"]
+      }
+    ],
+    "weeklyRewards": [
+      { "gold": 700, "heroXp": 250, "materials": { "raid-scale": 4 }, "firstClear": { "kind": "fragment", "id": "purr-ce", "amount": 3 } },
+      { "gold": 1100, "heroXp": 390, "materials": { "raid-scale": 7 }, "firstClear": { "kind": "fragment", "id": "purr-ce", "amount": 5 } },
+      { "gold": 1800, "heroXp": 620, "materials": { "raid-scale": 12 }, "firstClear": { "kind": "relic", "id": "relic-scylla-tooth", "amount": 1 } }
+    ]
+  }
+}

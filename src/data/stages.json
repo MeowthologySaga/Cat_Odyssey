@@ -1,0 +1,455 @@
+[
+  {
+    "id": "r01-s01", "routeId": "route-01-ogygia", "order": 1, "name": "뗏목을 위한 숲", "recommendedPower": 80,
+    "arena": { "id": "ogygia-cedar-grove", "theme": "ogygia-grove", "width": 720, "height": 1040, "backgroundKey": "arena-ogygia-cedar-grove", "backgroundAssetUrl": "assets/art/maps/stages/r01-s01-forest.webp", "musicKey": "bgm-voyage-calm" },
+    "walls": [{ "id": "grove-cliff-left", "shape": "capsule", "x": 82, "y": 245, "x2": 112, "y2": 790, "radius": 34, "material": "stone", "restitution": 0.9, "presentation": { "visualId": "wall-ogygia-cliff", "width": 560, "height": 82 } }, { "id": "grove-root-right", "shape": "capsule", "x": 620, "y": 365, "x2": 548, "y2": 675, "radius": 27, "material": "wood", "restitution": 0.84, "presentation": { "visualId": "wall-ogygia-root", "width": 330, "height": 68 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 920, "radius": 42 }, { "id": "timber-tree-a", "kind": "prop", "x": 205, "y": 305, "radius": 48, "presentation": { "visualId": "prop-ogygia-tree-intact", "width": 150, "height": 220, "anchorX": 0.5, "anchorY": 0.82, "stateVisualIds": { "intact": "prop-ogygia-tree-intact", "damaged": "prop-ogygia-tree-damaged", "fallen": "prop-ogygia-tree-fallen", "stump": "prop-ogygia-tree-stump" } }, "interaction": { "mode": "destructible", "maxHp": 380 } }, { "id": "timber-tree-b", "kind": "prop", "x": 500, "y": 280, "radius": 48, "presentation": { "visualId": "prop-ogygia-tree-intact", "width": 150, "height": 220, "anchorX": 0.5, "anchorY": 0.82, "stateVisualIds": { "intact": "prop-ogygia-tree-intact", "damaged": "prop-ogygia-tree-damaged", "fallen": "prop-ogygia-tree-fallen", "stump": "prop-ogygia-tree-stump" } }, "interaction": { "mode": "destructible", "maxHp": 380 } }, { "id": "timber-tree-c", "kind": "prop", "x": 360, "y": 535, "radius": 48, "presentation": { "visualId": "prop-ogygia-tree-intact", "width": 150, "height": 220, "anchorX": 0.5, "anchorY": 0.82, "stateVisualIds": { "intact": "prop-ogygia-tree-intact", "damaged": "prop-ogygia-tree-damaged", "fallen": "prop-ogygia-tree-fallen", "stump": "prop-ogygia-tree-stump" } }, "interaction": { "mode": "destructible", "maxHp": 380 } }],
+    "enemies": [], "hazards": [],
+    "objective": { "type": "break-parts", "turnLimit": 10, "targetIds": ["timber-tree-a", "timber-tree-b", "timber-tree-c"], "requiredCount": 3 },
+    "rewards": { "gold": 80, "heroXp": 28, "materials": { "ogygian-timber": 3 }, "firstClear": { "kind": "material", "id": "voyage-knot", "amount": 1 } },
+    "modifiers": ["preview-bounces:1", "tutorial:direct-hit"], "boss": null
+  },
+  {
+    "id": "r01-s02", "routeId": "route-01-ogygia", "order": 2, "name": "파도 앞의 뗏목", "recommendedPower": 105,
+    "arena": { "id": "ogygia-raft-yard", "theme": "ogygia-workshore", "width": 720, "height": 1040, "backgroundKey": "arena-ogygia-raft-yard", "backgroundAssetUrl": "assets/art/maps/stages/r01-s02-raft-yard.webp", "musicKey": "bgm-voyage-calm" },
+    "walls": [{ "id": "raft-rail-left", "shape": "capsule", "x": 150, "y": 365, "x2": 265, "y2": 675, "radius": 24, "material": "wood", "restitution": 0.84, "presentation": { "visualId": "wall-ogygia-raft-rail", "width": 340, "height": 68 } }, { "id": "raft-rail-right", "shape": "capsule", "x": 570, "y": 365, "x2": 455, "y2": 675, "radius": 24, "material": "wood", "restitution": 0.84, "presentation": { "visualId": "wall-ogygia-raft-rail", "width": 340, "height": 68 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 920, "radius": 42 }, { "id": "raft-lash-a", "kind": "prop", "x": 220, "y": 335, "radius": 34, "presentation": { "visualId": "prop-raft-log-unlashed", "width": 150, "height": 82, "anchorX": 0.5, "anchorY": 0.5, "stateVisualIds": { "unlashed": "prop-raft-log-unlashed", "positioned": "prop-raft-log-positioned", "lashed": "prop-raft-log-lashed" } }, "interaction": { "mode": "assembly", "hitsRequired": 2, "destination": { "x": 270, "y": 560 } } }, { "id": "raft-lash-b", "kind": "prop", "x": 500, "y": 335, "radius": 34, "presentation": { "visualId": "prop-raft-log-unlashed", "width": 150, "height": 82, "anchorX": 0.5, "anchorY": 0.5, "stateVisualIds": { "unlashed": "prop-raft-log-unlashed", "positioned": "prop-raft-log-positioned", "lashed": "prop-raft-log-lashed" } }, "interaction": { "mode": "assembly", "hitsRequired": 2, "destination": { "x": 450, "y": 560 } } }, { "id": "raft-lash-c", "kind": "prop", "x": 360, "y": 710, "radius": 36, "presentation": { "visualId": "prop-raft-log-unlashed", "width": 150, "height": 82, "anchorX": 0.5, "anchorY": 0.5, "stateVisualIds": { "unlashed": "prop-raft-log-unlashed", "positioned": "prop-raft-log-positioned", "lashed": "prop-raft-log-lashed" } }, "interaction": { "mode": "assembly", "hitsRequired": 2, "destination": { "x": 360, "y": 650 } } }, { "id": "raft-crab", "kind": "enemy", "x": 360, "y": 245, "radius": 30 }],
+    "enemies": [{ "enemyId": "foam-crab", "spawnId": "raft-crab", "level": 1 }],
+    "hazards": [{ "id": "rolling-log", "type": "moving-bumper", "x": 360, "y": 800, "radius": 42, "parameters": { "axis": "x", "distance": 185, "periodTurns": 3 } }],
+    "objective": { "type": "assemble", "turnLimit": 9, "targetIds": ["raft-lash-a", "raft-lash-b", "raft-lash-c"], "requiredCount": 3 },
+    "rewards": { "gold": 105, "heroXp": 36, "materials": { "ogygian-timber": 4 }, "firstClear": { "kind": "material", "id": "bronze-oar-head", "amount": 1 } },
+    "modifiers": ["preview-bounces:1", "moving-bumper-before-enemy-phase"], "boss": null
+  },
+  {
+    "id": "r01-s03", "routeId": "route-01-ogygia", "order": 3, "name": "캣-립소의 작별 시험", "recommendedPower": 135,
+    "arena": { "id": "calypso-farewell-grove", "theme": "ogygia-moon-grove", "width": 720, "height": 1040, "backgroundKey": "arena-calypso-farewell-grove", "backgroundAssetUrl": "assets/art/maps/stages/r01-s03-farewell-grove.webp", "musicKey": "bgm-voyage-rising" },
+    "walls": [{ "id": "farewell-vine-left", "shape": "capsule", "x": 105, "y": 315, "x2": 180, "y2": 735, "radius": 28, "material": "spirit", "restitution": 0.92, "presentation": { "visualId": "wall-ogygia-vine", "width": 440, "height": 76 } }, { "id": "farewell-vine-right", "shape": "capsule", "x": 615, "y": 315, "x2": 540, "y2": 735, "radius": 28, "material": "spirit", "restitution": 0.92, "presentation": { "visualId": "wall-ogygia-vine", "width": 440, "height": 76 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 920, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 250, "radius": 68 }, { "id": "island-bond-a", "kind": "prop", "x": 205, "y": 485, "radius": 38, "presentation": { "visualId": "prop-island-bond-bonded", "width": 92, "height": 122, "anchorX": 0.5, "anchorY": 0.58, "stateVisualIds": { "bonded": "prop-island-bond-bonded", "fraying": "prop-island-bond-fraying", "severed": "prop-island-bond-severed" } }, "interaction": { "mode": "bond", "maxHp": 180 } }, { "id": "island-bond-b", "kind": "prop", "x": 515, "y": 485, "radius": 38, "presentation": { "visualId": "prop-island-bond-bonded", "width": 92, "height": 122, "anchorX": 0.5, "anchorY": 0.58, "stateVisualIds": { "bonded": "prop-island-bond-bonded", "fraying": "prop-island-bond-fraying", "severed": "prop-island-bond-severed" } }, "interaction": { "mode": "bond", "maxHp": 180 } }, { "id": "island-bond-c", "kind": "prop", "x": 360, "y": 675, "radius": 40, "presentation": { "visualId": "prop-island-bond-bonded", "width": 96, "height": 128, "anchorX": 0.5, "anchorY": 0.58, "stateVisualIds": { "bonded": "prop-island-bond-bonded", "fraying": "prop-island-bond-fraying", "severed": "prop-island-bond-severed" } }, "interaction": { "mode": "bond", "maxHp": 180 } }],
+    "enemies": [{ "enemyId": "cat-lypso-trial", "spawnId": "boss", "level": 3 }],
+    "hazards": [{ "id": "farewell-breeze", "type": "current", "x": 360, "y": 585, "radius": 245, "parameters": { "forceX": 58, "forceY": -18, "reverseEachTurn": true } }],
+    "objective": { "type": "break-parts", "turnLimit": 10, "targetIds": ["island-bond-a", "island-bond-b", "island-bond-c"], "requiredCount": 3 },
+    "rewards": { "gold": 145, "heroXp": 50, "materials": { "calypso-thread": 3 }, "firstClear": { "kind": "relic", "id": "relic-calypso-thread", "amount": 1 } },
+    "modifiers": ["boss-cannot-be-killed", "hazard-vector-visible"],
+    "boss": { "bossId": "cat-lypso-trial", "supportBossIds": [], "phaseIds": ["gentle-warning", "parting-gale", "open-sea"], "anatomy": {}, "parts": [] }
+  },
+  {
+    "id": "r01-s04", "routeId": "route-01-ogygia", "order": 4, "name": "포-사이돈의 분노", "recommendedPower": 175,
+    "arena": { "id": "poseidon-storm-passage", "theme": "storm-sea", "width": 720, "height": 1040, "backgroundKey": "arena-poseidon-storm-passage", "backgroundAssetUrl": "assets/art/maps/stages/r01-s04-poseidon-storm.webp", "musicKey": "bgm-boss-storm" },
+    "walls": [{ "id": "black-reef-left", "shape": "capsule", "x": 85, "y": 280, "x2": 150, "y2": 760, "radius": 34, "material": "stone", "restitution": 0.93, "presentation": { "visualId": "wall-black-reef", "width": 500, "height": 88 } }, { "id": "black-reef-right", "shape": "capsule", "x": 635, "y": 280, "x2": 570, "y2": 760, "radius": 34, "material": "stone", "restitution": 0.93, "presentation": { "visualId": "wall-black-reef", "width": 500, "height": 88 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 920, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 245, "radius": 76 }, { "id": "foam-crab", "kind": "enemy", "x": 205, "y": 455, "radius": 30 }, { "id": "storm-jelly", "kind": "enemy", "x": 515, "y": 440, "radius": 33 }],
+    "enemies": [{ "enemyId": "storm-avatar", "spawnId": "boss", "level": 3 }, { "enemyId": "foam-crab", "spawnId": "foam-crab", "level": 2 }, { "enemyId": "storm-jelly", "spawnId": "storm-jelly", "level": 2 }],
+    "hazards": [{ "id": "poseidon-crosscurrent", "type": "current", "x": 360, "y": 575, "radius": 310, "parameters": { "forceX": 105, "forceY": -30, "rotateEachTurn": 45 } }, { "id": "poseidon-wave-front", "type": "wave-front", "x": 360, "y": 860, "radius": 84, "parameters": { "axis": "y", "direction": -1, "distance": 520, "warningTurns": 1, "activeTurns": 4, "length": 720, "forceX": 0, "forceY": -115, "damage": 58 } }, { "id": "sea-lightning", "type": "lightning", "x": 360, "y": 390, "radius": 90, "parameters": { "warningTurns": 1, "damage": 55 } }],
+    "objective": { "type": "survive", "turnLimit": 7, "targetIds": [] },
+    "rewards": { "gold": 220, "heroXp": 78, "materials": { "storm-glass": 6 }, "firstClear": { "kind": "relic", "id": "relic-storm-compass", "amount": 1 } },
+    "modifiers": ["survival-boss", "hazard-vector-visible", "lightning-pattern-changes-phase", "boss-phase-at:65", "boss-phase-at:30"],
+    "boss": { "bossId": "storm-avatar", "supportBossIds": [], "phaseIds": ["gather-clouds", "crosswind", "eye-of-storm"], "anatomy": {}, "parts": [] }
+  },
+
+  {
+    "id": "r02-s01", "routeId": "route-02-lotus", "order": 1, "name": "달콤한 첫 향기", "recommendedPower": 240,
+    "arena": { "id": "lotus-edge", "theme": "lotus", "width": 720, "height": 1040, "backgroundKey": "arena-lotus-edge", "backgroundAssetUrl": "assets/art/maps/stages/r02-s01-first-scent.webp", "musicKey": "bgm-lotus" },
+    "walls": [{ "id": "garden-left", "shape": "capsule", "x": 110, "y": 280, "x2": 190, "y2": 760, "radius": 34, "material": "coral", "restitution": 0.9, "presentation": { "visualId": "wall-lotus-dream-petal", "width": 542, "height": 252 } }, { "id": "garden-right", "shape": "capsule", "x": 610, "y": 280, "x2": 530, "y2": 760, "radius": 34, "material": "coral", "restitution": 0.9, "presentation": { "visualId": "wall-lotus-dream-petal", "width": 542, "height": 252 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 260, "y": 330, "radius": 31 }, { "id": "e2", "kind": "enemy", "x": 470, "y": 290, "radius": 28 }],
+    "enemies": [{ "enemyId": "lotus-bud", "spawnId": "e1", "level": 5 }, { "enemyId": "lotus-spitter", "spawnId": "e2", "level": 5 }],
+    "hazards": [{ "id": "pollen", "type": "slow-field", "x": 360, "y": 590, "radius": 170, "parameters": { "speedMultiplier": 0.72, "sleepStacks": 1 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 9, "targetIds": [] }, "rewards": { "gold": 145, "heroXp": 50, "materials": { "lotus-fiber": 3 }, "firstClear": { "kind": "material", "id": "lotus-antidote", "amount": 1 } },
+    "modifiers": ["slow-field-visible"], "boss": null
+  },
+  {
+    "id": "r02-s02", "routeId": "route-02-lotus", "order": 2, "name": "잠든 선원을 깨워라", "recommendedPower": 275,
+    "arena": { "id": "lotus-camp", "theme": "lotus", "width": 720, "height": 1040, "backgroundKey": "arena-lotus-camp", "backgroundAssetUrl": "assets/art/maps/stages/r02-s02-sleeping-camp.webp", "musicKey": "bgm-lotus" },
+    "walls": [{ "id": "root-a", "shape": "capsule", "x": 150, "y": 470, "x2": 330, "y2": 420, "radius": 24, "material": "wood", "restitution": 0.88, "presentation": { "visualId": "wall-lotus-dream-petal", "width": 208, "height": 208 } }, { "id": "root-b", "shape": "capsule", "x": 570, "y": 640, "x2": 390, "y2": 690, "radius": 24, "material": "wood", "restitution": 0.88, "presentation": { "visualId": "wall-lotus-dream-petal", "width": 208, "height": 208 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "rescue-a", "kind": "prop", "x": 220, "y": 360, "radius": 36, "presentation": { "visualId": "sleeping-sailor", "width": 112, "height": 112 } }, { "id": "rescue-b", "kind": "prop", "x": 500, "y": 300, "radius": 36, "presentation": { "visualId": "sleeping-sailor", "width": 112, "height": 112 } }, { "id": "e1", "kind": "enemy", "x": 360, "y": 520, "radius": 28 }],
+    "enemies": [{ "enemyId": "lotus-healer", "spawnId": "e1", "level": 6 }],
+    "hazards": [{ "id": "pollen-a", "type": "slow-field", "x": 230, "y": 360, "radius": 115, "parameters": { "speedMultiplier": 0.68, "sleepStacks": 1 } }, { "id": "pollen-b", "type": "slow-field", "x": 500, "y": 300, "radius": 115, "parameters": { "speedMultiplier": 0.68, "sleepStacks": 1 } }],
+    "objective": { "type": "protect", "turnLimit": 8, "targetIds": ["rescue-a", "rescue-b"], "requiredCount": 2 }, "rewards": { "gold": 165, "heroXp": 58, "materials": { "lotus-fiber": 4 }, "firstClear": { "kind": "fragment", "id": "orange-sailor", "amount": 5 } },
+    "modifiers": ["ally-contact-cleanses-sleep"], "boss": null
+  },
+  {
+    "id": "r02-s03", "routeId": "route-02-lotus", "order": 3, "name": "꿈속의 갈림길", "recommendedPower": 315,
+    "arena": { "id": "lotus-maze", "theme": "lotus", "width": 720, "height": 1040, "backgroundKey": "arena-lotus-maze", "backgroundAssetUrl": "assets/art/maps/stages/r02-s03-dream-fork.webp", "musicKey": "bgm-lotus-deep" },
+    "walls": [{ "id": "dream-wall-a", "shape": "capsule", "x": 180, "y": 420, "x2": 480, "y2": 420, "radius": 34, "material": "spirit", "restitution": 0.97, "presentation": { "visualId": "wall-lotus-dream-petal", "width": 334, "height": 252 } }, { "id": "dream-wall-b", "shape": "capsule", "x": 240, "y": 670, "x2": 540, "y2": 670, "radius": 34, "material": "spirit", "restitution": 0.97, "presentation": { "visualId": "wall-lotus-dream-petal", "width": 334, "height": 252 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 180, "y": 260, "radius": 29 }, { "id": "e2", "kind": "enemy", "x": 360, "y": 300, "radius": 31 }, { "id": "e3", "kind": "enemy", "x": 540, "y": 260, "radius": 28 }],
+    "enemies": [{ "enemyId": "lotus-spitter", "spawnId": "e1", "level": 7 }, { "enemyId": "lotus-bud", "spawnId": "e2", "level": 7, "elite": true }, { "enemyId": "lotus-healer", "spawnId": "e3", "level": 7 }],
+    "hazards": [{ "id": "dream-current", "type": "current", "x": 360, "y": 545, "radius": 260, "parameters": { "forceX": 0, "forceY": 70, "reverseEachTurn": true } }],
+    "objective": { "type": "defeat-all", "turnLimit": 11, "targetIds": [] }, "rewards": { "gold": 190, "heroXp": 68, "materials": { "lotus-fiber": 5 }, "firstClear": { "kind": "relic", "id": "relic-calypso-thread", "amount": 1 } },
+    "modifiers": ["wrong-wall-mirrors-trajectory"], "boss": null
+  },
+  {
+    "id": "r02-s04", "routeId": "route-02-lotus", "order": 4, "name": "망각의 심장", "recommendedPower": 370,
+    "arena": { "id": "lotus-heart-grove", "theme": "lotus", "width": 720, "height": 1040, "backgroundKey": "arena-lotus-heart", "backgroundAssetUrl": "assets/art/maps/stages/r02-s04-lotus-heart.webp", "musicKey": "bgm-boss-lotus" },
+    "walls": [{ "id": "petal-left", "shape": "capsule", "x": 90, "y": 360, "x2": 210, "y2": 720, "radius": 30, "material": "coral", "restitution": 0.92, "presentation": { "visualId": "wall-lotus-dream-petal", "width": 422, "height": 252 } }, { "id": "petal-right", "shape": "capsule", "x": 630, "y": 360, "x2": 510, "y2": 720, "radius": 30, "material": "coral", "restitution": 0.92, "presentation": { "visualId": "wall-lotus-dream-petal", "width": 422, "height": 252 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 290, "radius": 72 }, { "id": "e1", "kind": "enemy", "x": 210, "y": 520, "radius": 28 }, { "id": "e2", "kind": "enemy", "x": 510, "y": 520, "radius": 28 }],
+    "enemies": [{ "enemyId": "lotus-heart", "spawnId": "boss", "level": 9, "elite": true }, { "enemyId": "lotus-healer", "spawnId": "e1", "level": 8 }, { "enemyId": "lotus-healer", "spawnId": "e2", "level": 8 }],
+    "hazards": [{ "id": "sleep-ring", "type": "slow-field", "x": 360, "y": 290, "radius": 230, "parameters": { "speedMultiplier": 0.58, "expandsPerTurn": 22 } }],
+    "objective": { "type": "break-parts", "turnLimit": 15, "targetIds": ["lotus-core"], "requiredCount": 1 }, "rewards": { "gold": 290, "heroXp": 105, "materials": { "lotus-fiber": 10 }, "firstClear": { "kind": "relic", "id": "relic-moly-root", "amount": 1 } },
+    "modifiers": ["sleep-at-three-stacks", "ally-hit-removes-stack"],
+    "boss": { "bossId": "lotus-heart", "supportBossIds": [], "phaseIds": ["closed-bloom", "dream-pollen", "awakened-core"], "anatomy": {}, "parts": [{ "id": "lotus-core", "kind": "core", "count": 1, "collider": "circle", "weakpoint": true, "breakable": true }] }
+  },
+
+  {
+    "id": "r03-s01", "routeId": "route-03-cyclops", "order": 1, "name": "동굴 입구의 양떼", "recommendedPower": 390,
+    "arena": { "id": "cyclops-mouth", "theme": "cyclops-cave", "width": 720, "height": 1040, "backgroundKey": "arena-cyclops-mouth", "backgroundAssetUrl": "assets/art/maps/stages/r03-s01-cave-mouth.webp", "musicKey": "bgm-cyclops" },
+    "walls": [{ "id": "cave-left", "shape": "capsule", "x": 80, "y": 220, "x2": 160, "y2": 850, "radius": 32, "material": "stone", "restitution": 0.96, "presentation": { "visualId": "wall-cyclops-slab", "width": 706, "height": 300 } }, { "id": "cave-right", "shape": "capsule", "x": 640, "y": 220, "x2": 560, "y2": 850, "radius": 32, "material": "stone", "restitution": 0.96, "presentation": { "visualId": "wall-cyclops-slab", "width": 706, "height": 300 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 250, "y": 360, "radius": 40 }, { "id": "e2", "kind": "enemy", "x": 470, "y": 360, "radius": 30 }],
+    "enemies": [{ "enemyId": "cyclops-stoneguard", "spawnId": "e1", "level": 9 }, { "enemyId": "foam-crab", "spawnId": "e2", "level": 9 }],
+    "hazards": [], "objective": { "type": "defeat-all", "turnLimit": 9, "targetIds": [] },
+    "rewards": { "gold": 200, "heroXp": 72, "materials": { "cave-iron": 4 }, "firstClear": { "kind": "material", "id": "ram-bell", "amount": 1 } },
+    "modifiers": ["shield-front-reduction:80"], "boss": null
+  },
+  {
+    "id": "r03-s02", "routeId": "route-03-cyclops", "order": 2, "name": "거석이 지나갈 때까지", "recommendedPower": 430,
+    "arena": { "id": "cyclops-slope", "theme": "cyclops-cave", "width": 720, "height": 1040, "backgroundKey": "arena-cyclops-slope", "backgroundAssetUrl": "assets/art/maps/stages/r03-s02-boulder-slope.webp", "musicKey": "bgm-cyclops" },
+    "walls": [{ "id": "slope-a", "shape": "capsule", "x": 90, "y": 310, "x2": 530, "y2": 500, "radius": 32, "material": "stone", "restitution": 0.93, "presentation": { "visualId": "wall-cyclops-slab", "width": 533, "height": 300 } }, { "id": "slope-b", "shape": "capsule", "x": 630, "y": 610, "x2": 260, "y2": 740, "radius": 32, "material": "stone", "restitution": 0.93, "presentation": { "visualId": "wall-cyclops-slab", "width": 436, "height": 300 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 190, "y": 260, "radius": 50 }, { "id": "e2", "kind": "enemy", "x": 520, "y": 280, "radius": 37 }],
+    "enemies": [{ "enemyId": "rock-tortoise", "spawnId": "e1", "level": 10 }, { "enemyId": "cave-herder", "spawnId": "e2", "level": 10 }],
+    "hazards": [{ "id": "rolling-boulder", "type": "moving-bumper", "x": 360, "y": 540, "radius": 62, "parameters": { "axis": "diagonal", "distance": 260, "periodTurns": 2 } }],
+    "objective": { "type": "survive", "turnLimit": 6, "targetIds": [] }, "rewards": { "gold": 230, "heroXp": 82, "materials": { "cave-iron": 5 }, "firstClear": { "kind": "relic", "id": "relic-giant-stone", "amount": 1 } },
+    "modifiers": ["boulder-damages-all-teams"], "boss": null
+  },
+  {
+    "id": "r03-s03", "routeId": "route-03-cyclops", "order": 3, "name": "거석으로 여는 퇴로", "recommendedPower": 475,
+    "arena": { "id": "cyclops-breakwall", "theme": "cyclops-cave", "width": 720, "height": 1040, "backgroundKey": "arena-cyclops-breakwall", "backgroundAssetUrl": "assets/art/maps/stages/r03-s03-breakwall.webp", "musicKey": "bgm-cyclops-deep" },
+    "walls": [{ "id": "break-a", "shape": "capsule", "x": 140, "y": 520, "x2": 580, "y2": 520, "radius": 34, "material": "stone", "restitution": 0.88, "breakable": true, "hp": 320, "presentation": { "visualId": "wall-cyclops-slab", "width": 489, "height": 317 } }, { "id": "back-wall", "shape": "capsule", "x": 110, "y": 210, "x2": 610, "y2": 210, "radius": 32, "material": "stone", "restitution": 0.98, "presentation": { "visualId": "wall-cyclops-slab", "width": 556, "height": 300 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 220, "y": 330, "radius": 44 }, { "id": "e2", "kind": "enemy", "x": 500, "y": 330, "radius": 44 }],
+    "enemies": [{ "enemyId": "rock-tortoise", "spawnId": "e1", "level": 11, "elite": true }, { "enemyId": "cyclops-stoneguard", "spawnId": "e2", "level": 11, "elite": true }],
+    "hazards": [], "objective": { "type": "escape", "turnLimit": 9, "targetIds": ["north-exit"], "requiredCount": 1 },
+    "rewards": { "gold": 260, "heroXp": 92, "materials": { "cave-iron": 6 }, "firstClear": { "kind": "relic", "id": "relic-ram-hide", "amount": 1 } },
+    "modifiers": ["breakable-wall-opens-rear-route", "exit-opens-after-one-brute-stagger"], "boss": null
+  },
+  {
+    "id": "r03-s04", "routeId": "route-03-cyclops", "order": 4, "name": "아무도 아닌 자", "recommendedPower": 520,
+    "arena": { "id": "cyclops-feast-hall", "theme": "cyclops-cave", "width": 720, "height": 1040, "backgroundKey": "arena-cyclops-feast", "backgroundAssetUrl": "assets/art/maps/stages/r03-s04-feast-hall.webp", "musicKey": "bgm-cyclops-deep" },
+    "walls": [{ "id": "wine-rack-a", "shape": "capsule", "x": 150, "y": 430, "x2": 300, "y2": 390, "radius": 24, "material": "wood", "restitution": 0.84, "breakable": true, "hp": 180, "presentation": { "visualId": "wall-cyclops-wine-rack", "width": 173, "height": 112 } }, { "id": "wine-rack-b", "shape": "capsule", "x": 570, "y": 620, "x2": 420, "y2": 660, "radius": 24, "material": "wood", "restitution": 0.84, "breakable": true, "hp": 180, "presentation": { "visualId": "wall-cyclops-wine-rack", "width": 173, "height": 112 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 180, "y": 290, "radius": 37 }, { "id": "e2", "kind": "enemy", "x": 360, "y": 260, "radius": 50 }, { "id": "e3", "kind": "enemy", "x": 540, "y": 290, "radius": 37 }],
+    "enemies": [{ "enemyId": "cave-herder", "spawnId": "e1", "level": 12 }, { "enemyId": "rock-tortoise", "spawnId": "e2", "level": 12, "elite": true }, { "enemyId": "cave-herder", "spawnId": "e3", "level": 12 }],
+    "hazards": [{ "id": "wine-pool", "type": "slow-field", "x": 360, "y": 560, "radius": 140, "parameters": { "speedMultiplier": 0.8, "enemyAttackDown": 25 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 12, "targetIds": [] }, "rewards": { "gold": 300, "heroXp": 108, "materials": { "cave-iron": 7 }, "firstClear": { "kind": "relic", "id": "relic-cyclops-cup", "amount": 1 } },
+    "modifiers": ["rear-hit-critical", "wine-affects-both-teams"], "boss": null
+  },
+  {
+    "id": "r03-s05", "routeId": "route-03-cyclops", "order": 5, "name": "폴리-먀오무스의 외눈", "recommendedPower": 600,
+    "arena": { "id": "cyclops-throne", "theme": "cyclops-cave", "width": 720, "height": 1040, "backgroundKey": "arena-poly-throne", "backgroundAssetUrl": "assets/art/maps/stages/r03-s05-poly-throne.webp", "musicKey": "bgm-boss-poly" },
+    "walls": [{ "id": "pillar-left", "shape": "capsule", "x": 135, "y": 310, "x2": 190, "y2": 720, "radius": 38, "material": "stone", "restitution": 0.98, "presentation": { "visualId": "wall-cyclops-slab", "width": 460, "height": 354 } }, { "id": "pillar-right", "shape": "capsule", "x": 585, "y": 310, "x2": 530, "y2": 720, "radius": 38, "material": "stone", "restitution": 0.98, "presentation": { "visualId": "wall-cyclops-slab", "width": 460, "height": 354 } }, { "id": "moving-slab", "shape": "capsule", "x": 270, "y": 590, "x2": 450, "y2": 590, "radius": 26, "material": "stone", "restitution": 0.96, "presentation": { "visualId": "wall-cyclops-slab", "width": 200, "height": 242 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 270, "radius": 104 }, { "id": "e1", "kind": "enemy", "x": 210, "y": 500, "radius": 40 }, { "id": "e2", "kind": "enemy", "x": 510, "y": 500, "radius": 40 }],
+    "enemies": [{ "enemyId": "poly-meow-mus", "spawnId": "boss", "level": 15, "elite": true }, { "enemyId": "cyclops-stoneguard", "spawnId": "e1", "level": 13 }, { "enemyId": "cyclops-stoneguard", "spawnId": "e2", "level": 13 }],
+    "hazards": [{ "id": "stomp-zone", "type": "moving-bumper", "x": 360, "y": 600, "radius": 70, "parameters": { "axis": "x", "distance": 230, "periodTurns": 2 } }],
+    "objective": { "type": "break-parts", "turnLimit": 16, "targetIds": ["poly-eye"], "requiredCount": 1 }, "rewards": { "gold": 480, "heroXp": 170, "materials": { "cyclops-fragment": 10 }, "firstClear": { "kind": "relic", "id": "relic-monster-ledger", "amount": 1 } },
+    "modifiers": ["eye-opens-after-rear-hit", "pillars-shift-phase-two"],
+    "boss": { "bossId": "poly-meow-mus", "supportBossIds": [], "phaseIds": ["guarded-eye", "staggered-eye", "blinded-rampage"], "anatomy": { "eyes": 1 }, "parts": [{ "id": "poly-body", "kind": "body", "count": 1, "collider": "circle", "weakpoint": false, "breakable": false }, { "id": "poly-eye", "kind": "eye", "count": 1, "collider": "circle", "weakpoint": true, "breakable": true }] }
+  },
+
+  {
+    "id": "r04-s01", "routeId": "route-04-aeolus", "order": 1, "name": "바람 궁전의 문", "recommendedPower": 630,
+    "arena": { "id": "aeolus-gate", "theme": "wind-palace", "width": 720, "height": 1040, "backgroundKey": "arena-aeolus-gate", "backgroundAssetUrl": "assets/art/maps/stages/r04-s01-wind-gate.webp", "musicKey": "bgm-aeolus" },
+    "walls": [{ "id": "cloud-left", "shape": "capsule", "x": 100, "y": 250, "x2": 210, "y2": 800, "radius": 32, "material": "spirit", "restitution": 1.01, "presentation": { "visualId": "wall-aeolus-cloud-crest", "width": 623, "height": 300 } }, { "id": "cloud-right", "shape": "capsule", "x": 620, "y": 250, "x2": 510, "y2": 800, "radius": 32, "material": "spirit", "restitution": 1.01, "presentation": { "visualId": "wall-aeolus-cloud-crest", "width": 623, "height": 300 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 250, "y": 340, "radius": 36 }, { "id": "e2", "kind": "enemy", "x": 470, "y": 340, "radius": 33 }],
+    "enemies": [{ "enemyId": "storm-ram", "spawnId": "e1", "level": 15 }, { "enemyId": "storm-jelly", "spawnId": "e2", "level": 15 }],
+    "hazards": [{ "id": "wind-east", "type": "wind-vector", "x": 360, "y": 560, "radius": 300, "parameters": { "forceX": 95, "forceY": 0 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 9, "targetIds": [] }, "rewards": { "gold": 320, "heroXp": 112, "materials": { "wind-silk": 4 }, "firstClear": { "kind": "material", "id": "wind-seal", "amount": 1 } },
+    "modifiers": ["wind-vector-visible"], "boss": null
+  },
+  {
+    "id": "r04-s02", "routeId": "route-04-aeolus", "order": 2, "name": "움직이는 구름문", "recommendedPower": 680,
+    "arena": { "id": "aeolus-hall", "theme": "wind-palace", "width": 720, "height": 1040, "backgroundKey": "arena-aeolus-hall", "backgroundAssetUrl": "assets/art/maps/stages/r04-s02-cloud-gates.webp", "musicKey": "bgm-aeolus" },
+    "walls": [{ "id": "gate-a", "shape": "capsule", "x": 130, "y": 500, "x2": 330, "y2": 500, "radius": 24, "material": "bronze", "restitution": 0.98, "presentation": { "visualId": "wall-aeolus-bronze-gate", "width": 222, "height": 239 } }, { "id": "gate-b", "shape": "capsule", "x": 590, "y": 650, "x2": 390, "y2": 650, "radius": 24, "material": "bronze", "restitution": 0.98, "presentation": { "visualId": "wall-aeolus-bronze-gate", "width": 222, "height": 239 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 190, "y": 290, "radius": 31 }, { "id": "e2", "kind": "enemy", "x": 360, "y": 250, "radius": 38 }, { "id": "e3", "kind": "enemy", "x": 530, "y": 290, "radius": 31 }],
+    "enemies": [{ "enemyId": "coral-archer", "spawnId": "e1", "level": 16 }, { "enemyId": "storm-ram", "spawnId": "e2", "level": 16, "elite": true }, { "enemyId": "coral-archer", "spawnId": "e3", "level": 16 }],
+    "hazards": [{ "id": "gate-wind", "type": "wind-vector", "x": 360, "y": 570, "radius": 250, "parameters": { "forceX": 0, "forceY": -110, "rotateEachTurn": 90 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 11, "targetIds": [] }, "rewards": { "gold": 355, "heroXp": 124, "materials": { "wind-silk": 5 }, "firstClear": { "kind": "relic", "id": "relic-aeolus-bag-knot", "amount": 1 } },
+    "modifiers": ["gates-shift-after-shot"], "boss": null
+  },
+  {
+    "id": "r04-s03", "routeId": "route-04-aeolus", "order": 3, "name": "라이스트리곤 항구", "recommendedPower": 740,
+    "arena": { "id": "laestrygon-harbor", "theme": "giant-harbor", "width": 720, "height": 1040, "backgroundKey": "arena-laestrygon-harbor", "backgroundAssetUrl": "assets/art/maps/stages/r04-s03-giant-harbor.webp", "musicKey": "bgm-giant-harbor" },
+    "walls": [{ "id": "harbor-left", "shape": "capsule", "x": 80, "y": 340, "x2": 190, "y2": 780, "radius": 36, "material": "stone", "restitution": 0.9, "presentation": { "visualId": "wall-giant-harbor-breakwater", "width": 504, "height": 361 } }, { "id": "harbor-right", "shape": "capsule", "x": 640, "y": 340, "x2": 530, "y2": 780, "radius": 36, "material": "stone", "restitution": 0.9, "presentation": { "visualId": "wall-giant-harbor-breakwater", "width": 504, "height": 361 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 220, "y": 310, "radius": 62 }, { "id": "e2", "kind": "enemy", "x": 500, "y": 310, "radius": 62 }],
+    "enemies": [{ "enemyId": "laestrygon-brute", "spawnId": "e1", "level": 18, "elite": true }, { "enemyId": "laestrygon-brute", "spawnId": "e2", "level": 18, "elite": true }],
+    "hazards": [{ "id": "thrown-boulder-a", "type": "moving-bumper", "x": 250, "y": 590, "radius": 56, "parameters": { "axis": "y", "distance": 240, "periodTurns": 2 } }, { "id": "thrown-boulder-b", "type": "moving-bumper", "x": 470, "y": 590, "radius": 56, "parameters": { "axis": "y", "distance": 240, "periodTurns": 3 } }],
+    "objective": { "type": "escape", "turnLimit": 9, "targetIds": ["north-exit"], "requiredCount": 1 }, "rewards": { "gold": 390, "heroXp": 138, "materials": { "giant-stone": 4 }, "firstClear": { "kind": "fragment", "id": "aeolus", "amount": 5 } },
+    "modifiers": ["exit-opens-after-one-brute-stagger"], "boss": null
+  },
+  {
+    "id": "r04-s04", "routeId": "route-04-aeolus", "order": 4, "name": "폭주하는 여덟 바람", "recommendedPower": 810,
+    "arena": { "id": "wind-bag-vault", "theme": "wind-palace", "width": 720, "height": 1040, "backgroundKey": "arena-wind-bag-vault", "backgroundAssetUrl": "assets/art/maps/stages/r04-s04-wind-vault.webp", "musicKey": "bgm-boss-wind" },
+    "walls": [{ "id": "seal-left", "shape": "capsule", "x": 105, "y": 250, "x2": 180, "y2": 800, "radius": 32, "material": "bronze", "restitution": 1, "presentation": { "visualId": "wall-aeolus-bronze-gate", "width": 617, "height": 320 } }, { "id": "seal-right", "shape": "capsule", "x": 615, "y": 250, "x2": 540, "y2": 800, "radius": 32, "material": "bronze", "restitution": 1, "presentation": { "visualId": "wall-aeolus-bronze-gate", "width": 617, "height": 320 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 300, "radius": 80 }, { "id": "e1", "kind": "enemy", "x": 210, "y": 500, "radius": 36 }, { "id": "e2", "kind": "enemy", "x": 510, "y": 500, "radius": 36 }],
+    "enemies": [{ "enemyId": "wind-bag-tempest", "spawnId": "boss", "level": 20, "elite": true }, { "enemyId": "storm-ram", "spawnId": "e1", "level": 19 }, { "enemyId": "storm-ram", "spawnId": "e2", "level": 19 }],
+    "hazards": [{ "id": "eight-winds", "type": "wind-vector", "x": 360, "y": 560, "radius": 340, "parameters": { "forceX": 130, "forceY": 0, "rotateEachTurn": 45 } }],
+    "objective": { "type": "seal", "turnLimit": 15, "targetIds": ["wind-knot"], "requiredCount": 4 }, "rewards": { "gold": 520, "heroXp": 190, "materials": { "wind-silk": 12 }, "firstClear": { "kind": "relic", "id": "relic-homeward-star", "amount": 1 } },
+    "modifiers": ["seal-on-four-direction-hits", "wind-speed-rises-per-phase"],
+    "boss": { "bossId": "wind-bag-tempest", "supportBossIds": [], "phaseIds": ["east-west", "four-winds", "eight-winds"], "anatomy": {}, "parts": [{ "id": "wind-knot", "kind": "core", "count": 1, "collider": "circle", "weakpoint": true, "breakable": true }] }
+  },
+
+  {
+    "id": "r05-s01", "routeId": "route-05-circe", "order": 1, "name": "아이아이에의 정원문", "recommendedPower": 840,
+    "arena": { "id": "circe-garden", "theme": "circe", "width": 720, "height": 1040, "backgroundKey": "arena-circe-garden", "backgroundAssetUrl": "assets/art/maps/stages/r05-s01-garden-gate.webp", "musicKey": "bgm-circe" },
+    "walls": [{ "id": "hedge-a", "shape": "capsule", "x": 110, "y": 360, "x2": 330, "y2": 450, "radius": 24, "material": "wood", "restitution": 0.91, "presentation": { "visualId": "wall-circe-hedge", "width": 290, "height": 292 } }, { "id": "hedge-b", "shape": "capsule", "x": 610, "y": 620, "x2": 390, "y2": 710, "radius": 24, "material": "wood", "restitution": 0.91, "presentation": { "visualId": "wall-circe-hedge", "width": 290, "height": 292 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 230, "y": 310, "radius": 34 }, { "id": "e2", "kind": "enemy", "x": 490, "y": 310, "radius": 31 }],
+    "enemies": [{ "enemyId": "circe-apprentice", "spawnId": "e1", "level": 20 }, { "enemyId": "lotus-spitter", "spawnId": "e2", "level": 20 }],
+    "hazards": [{ "id": "mirror-a", "type": "one-way-wall", "x": 360, "y": 540, "radius": 120, "parameters": { "allowedAngle": 45, "blockedArc": 180 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 9, "targetIds": [] }, "rewards": { "gold": 410, "heroXp": 145, "materials": { "moly-leaf": 4 }, "firstClear": { "kind": "material", "id": "moly-flower", "amount": 1 } },
+    "modifiers": ["one-way-wall-arrows-visible"], "boss": null
+  },
+  {
+    "id": "r05-s02", "routeId": "route-05-circe", "order": 2, "name": "변이 약효를 견뎌라", "recommendedPower": 900,
+    "arena": { "id": "circe-lab", "theme": "circe", "width": 720, "height": 1040, "backgroundKey": "arena-circe-lab", "backgroundAssetUrl": "assets/art/maps/stages/r05-s02-alchemy-lab.webp", "musicKey": "bgm-circe" },
+    "walls": [{ "id": "shelf-a", "shape": "capsule", "x": 130, "y": 400, "x2": 280, "y2": 400, "radius": 26, "material": "wood", "restitution": 0.85, "breakable": true, "hp": 220, "presentation": { "visualId": "wall-circe-alchemy-shelf", "width": 225, "height": 210 } }, { "id": "shelf-b", "shape": "capsule", "x": 590, "y": 650, "x2": 440, "y2": 650, "radius": 26, "material": "wood", "restitution": 0.85, "breakable": true, "hp": 220, "presentation": { "visualId": "wall-circe-alchemy-shelf", "width": 225, "height": 210 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 180, "y": 280, "radius": 34 }, { "id": "e2", "kind": "enemy", "x": 360, "y": 260, "radius": 31 }, { "id": "e3", "kind": "enemy", "x": 540, "y": 280, "radius": 34 }],
+    "enemies": [{ "enemyId": "circe-apprentice", "spawnId": "e1", "level": 21 }, { "enemyId": "split-anemone", "spawnId": "e2", "level": 21, "elite": true }, { "enemyId": "circe-apprentice", "spawnId": "e3", "level": 21 }],
+    "hazards": [{ "id": "grow-potion", "type": "moving-bumper", "x": 250, "y": 560, "radius": 45, "parameters": { "onContactRadiusMultiplier": 1.3, "durationTurns": 1 } }, { "id": "shrink-potion", "type": "moving-bumper", "x": 470, "y": 560, "radius": 45, "parameters": { "onContactRadiusMultiplier": 0.7, "durationTurns": 1 } }],
+    "objective": { "type": "survive", "turnLimit": 7, "targetIds": [] }, "rewards": { "gold": 450, "heroXp": 158, "materials": { "moly-leaf": 5 }, "firstClear": { "kind": "relic", "id": "relic-moly-root", "amount": 1 } },
+    "modifiers": ["size-changes-collider"], "boss": null
+  },
+  {
+    "id": "r05-s03", "routeId": "route-05-circe", "order": 3, "name": "거울 회랑 탈출", "recommendedPower": 970,
+    "arena": { "id": "circe-mirrors", "theme": "circe", "width": 720, "height": 1040, "backgroundKey": "arena-circe-mirrors", "backgroundAssetUrl": "assets/art/maps/stages/r05-s03-mirror-corridor.webp", "musicKey": "bgm-circe-deep" },
+    "walls": [{ "id": "mirror-left", "shape": "capsule", "x": 120, "y": 260, "x2": 260, "y2": 760, "radius": 22, "material": "spirit", "restitution": 1.04, "presentation": { "visualId": "wall-circe-mirror-pillar", "width": 592, "height": 277 } }, { "id": "mirror-right", "shape": "capsule", "x": 600, "y": 260, "x2": 460, "y2": 760, "radius": 22, "material": "spirit", "restitution": 1.04, "presentation": { "visualId": "wall-circe-mirror-pillar", "width": 592, "height": 277 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 240, "y": 330, "radius": 34 }, { "id": "e2", "kind": "enemy", "x": 480, "y": 330, "radius": 34 }],
+    "enemies": [{ "enemyId": "circe-apprentice", "spawnId": "e1", "level": 23, "elite": true }, { "enemyId": "circe-apprentice", "spawnId": "e2", "level": 23, "elite": true }],
+    "hazards": [{ "id": "mirror-gate-a", "type": "portal", "x": 220, "y": 540, "radius": 48, "parameters": { "pairId": "mirror-gate-b", "rotation": 90 } }, { "id": "mirror-gate-b", "type": "portal", "x": 500, "y": 650, "radius": 48, "parameters": { "pairId": "mirror-gate-a", "rotation": -90 } }],
+    "objective": { "type": "escape", "turnLimit": 10, "targetIds": ["north-exit"], "requiredCount": 1 }, "rewards": { "gold": 490, "heroXp": 174, "materials": { "mirror-dust": 6 }, "firstClear": { "kind": "relic", "id": "relic-hermes-feather", "amount": 1 } },
+    "modifiers": ["portal-preview-one-exit"], "boss": null
+  },
+  {
+    "id": "r05-s04", "routeId": "route-05-circe", "order": 4, "name": "퍼-씨의 비살상 결투", "recommendedPower": 1050,
+    "arena": { "id": "circe-duel", "theme": "circe", "width": 720, "height": 1040, "backgroundKey": "arena-circe-duel", "backgroundAssetUrl": "assets/art/maps/stages/r05-s04-circe-duel.webp", "musicKey": "bgm-boss-circe" },
+    "walls": [{ "id": "mirror-pillar-a", "shape": "capsule", "x": 170, "y": 380, "x2": 170, "y2": 720, "radius": 32, "material": "spirit", "restitution": 1.03, "presentation": { "visualId": "wall-circe-mirror-pillar", "width": 450, "height": 404 } }, { "id": "mirror-pillar-b", "shape": "capsule", "x": 550, "y": 380, "x2": 550, "y2": 720, "radius": 32, "material": "spirit", "restitution": 1.03, "presentation": { "visualId": "wall-circe-mirror-pillar", "width": 450, "height": 404 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 270, "radius": 68 }, { "id": "e1", "kind": "enemy", "x": 230, "y": 500, "radius": 34 }, { "id": "e2", "kind": "enemy", "x": 490, "y": 500, "radius": 34 }],
+    "enemies": [{ "enemyId": "purr-ce-illusion", "spawnId": "boss", "level": 25, "elite": true }, { "enemyId": "circe-apprentice", "spawnId": "e1", "level": 24 }, { "enemyId": "circe-apprentice", "spawnId": "e2", "level": 24 }],
+    "hazards": [{ "id": "mirror-field", "type": "one-way-wall", "x": 360, "y": 580, "radius": 180, "parameters": { "allowedAngle": 90, "blockedArc": 180, "rotateEachTurn": 45 } }],
+    "objective": { "type": "seal", "turnLimit": 16, "targetIds": ["mirror-core"], "requiredCount": 3 }, "rewards": { "gold": 650, "heroXp": 235, "materials": { "mirror-dust": 12 }, "firstClear": { "kind": "fragment", "id": "purr-ce", "amount": 10 } },
+    "modifiers": ["boss-hp-stops-at-one", "seal-requires-three-angles"],
+    "boss": { "bossId": "purr-ce-illusion", "supportBossIds": [], "phaseIds": ["single-reflection", "three-mirrors", "moly-reveal"], "anatomy": {}, "parts": [{ "id": "mirror-core", "kind": "core", "count": 1, "collider": "circle", "weakpoint": true, "breakable": false }] }
+  },
+
+  {
+    "id": "r06-s01", "routeId": "route-06-underworld", "order": 1, "name": "망자의 강둑", "recommendedPower": 1090,
+    "arena": { "id": "underworld-bank", "theme": "underworld", "width": 720, "height": 1040, "backgroundKey": "arena-underworld-bank", "backgroundAssetUrl": "assets/art/maps/stages/r06-s01-underworld-bank.webp", "musicKey": "bgm-underworld" },
+    "walls": [{ "id": "spirit-bank-a", "shape": "capsule", "x": 90, "y": 300, "x2": 250, "y2": 760, "radius": 16, "material": "spirit", "restitution": 0.95, "presentation": { "visualId": "wall-underworld-spirit-bank", "width": 556, "height": 165 } }, { "id": "spirit-bank-b", "shape": "capsule", "x": 630, "y": 300, "x2": 470, "y2": 760, "radius": 16, "material": "spirit", "restitution": 0.95, "presentation": { "visualId": "wall-underworld-spirit-bank", "width": 556, "height": 165 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 230, "y": 330, "radius": 27 }, { "id": "e2", "kind": "enemy", "x": 490, "y": 330, "radius": 30 }],
+    "enemies": [{ "enemyId": "underworld-wisp", "spawnId": "e1", "level": 26 }, { "enemyId": "shade-archer", "spawnId": "e2", "level": 26 }],
+    "hazards": [{ "id": "spirit-current", "type": "current", "x": 360, "y": 560, "radius": 280, "parameters": { "forceX": 0, "forceY": -75, "spiritOnly": true } }],
+    "objective": { "type": "defeat-all", "turnLimit": 9, "targetIds": [] }, "rewards": { "gold": 520, "heroXp": 184, "materials": { "spirit-ash": 4 }, "firstClear": { "kind": "material", "id": "underworld-coin", "amount": 1 } },
+    "modifiers": ["spirit-walls-phase-every-other-turn"], "boss": null
+  },
+  {
+    "id": "r06-s02", "routeId": "route-06-underworld", "order": 2, "name": "색이 다른 문", "recommendedPower": 1150,
+    "arena": { "id": "underworld-portals", "theme": "underworld", "width": 720, "height": 1040, "backgroundKey": "arena-underworld-portals", "backgroundAssetUrl": "assets/art/maps/stages/r06-s02-colored-gates.webp", "musicKey": "bgm-underworld" },
+    "walls": [{ "id": "bone-wall-a", "shape": "capsule", "x": 120, "y": 520, "x2": 310, "y2": 520, "radius": 26, "material": "spirit", "restitution": 0.96, "presentation": { "visualId": "wall-underworld-bone-barrier", "width": 269, "height": 261 } }, { "id": "bone-wall-b", "shape": "capsule", "x": 600, "y": 650, "x2": 410, "y2": 650, "radius": 26, "material": "spirit", "restitution": 0.96, "presentation": { "visualId": "wall-underworld-bone-barrier", "width": 269, "height": 261 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 180, "y": 300, "radius": 30 }, { "id": "e2", "kind": "enemy", "x": 360, "y": 240, "radius": 31 }, { "id": "e3", "kind": "enemy", "x": 540, "y": 300, "radius": 30 }],
+    "enemies": [{ "enemyId": "shade-archer", "spawnId": "e1", "level": 27 }, { "enemyId": "shade-oracle", "spawnId": "e2", "level": 27 }, { "enemyId": "shade-archer", "spawnId": "e3", "level": 27 }],
+    "hazards": [{ "id": "blue-gate", "type": "portal", "x": 220, "y": 600, "radius": 48, "parameters": { "pairId": "red-gate", "element": "spirit" } }, { "id": "red-gate", "type": "portal", "x": 500, "y": 420, "radius": 48, "parameters": { "pairId": "blue-gate", "element": "earth" } }],
+    "objective": { "type": "defeat-all", "turnLimit": 11, "targetIds": [] }, "rewards": { "gold": 560, "heroXp": 198, "materials": { "spirit-ash": 5 }, "firstClear": { "kind": "relic", "id": "relic-underworld-coin", "amount": 1 } },
+    "modifiers": ["portal-element-changes-wall-collision"], "boss": null
+  },
+  {
+    "id": "r06-s03", "routeId": "route-06-underworld", "order": 3, "name": "어머니의 기억", "recommendedPower": 1220,
+    "arena": { "id": "anticleia-memory", "theme": "underworld", "width": 720, "height": 1040, "backgroundKey": "arena-anticleia-memory", "backgroundAssetUrl": "assets/art/maps/stages/r06-s03-anticleia-memory.webp", "musicKey": "bgm-underworld-memory" },
+    "walls": [{ "id": "memory-left", "shape": "capsule", "x": 120, "y": 300, "x2": 280, "y2": 720, "radius": 12, "material": "spirit", "restitution": 0.98, "presentation": { "visualId": "wall-underworld-memory-veil", "width": 515, "height": 177 } }, { "id": "memory-right", "shape": "capsule", "x": 600, "y": 300, "x2": 440, "y2": 720, "radius": 12, "material": "spirit", "restitution": 0.98, "presentation": { "visualId": "wall-underworld-memory-veil", "width": 515, "height": 177 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "memory", "kind": "prop", "x": 360, "y": 270, "radius": 52, "presentation": { "visualId": "prop-anticleia-memory", "width": 175, "height": 175 } }, { "id": "e1", "kind": "enemy", "x": 210, "y": 470, "radius": 31 }, { "id": "e2", "kind": "enemy", "x": 510, "y": 470, "radius": 31 }],
+    "enemies": [{ "enemyId": "shade-oracle", "spawnId": "e1", "level": 29, "elite": true }, { "enemyId": "shade-oracle", "spawnId": "e2", "level": 29, "elite": true }],
+    "hazards": [{ "id": "memory-ring", "type": "slow-field", "x": 360, "y": 270, "radius": 180, "parameters": { "speedMultiplier": 0.82, "healsOnAllyContact": true } }],
+    "objective": { "type": "protect", "turnLimit": 10, "targetIds": ["memory"], "requiredCount": 1 }, "rewards": { "gold": 610, "heroXp": 216, "materials": { "spirit-ash": 6 }, "firstClear": { "kind": "hero", "id": "anticleia-ghost", "amount": 1 } },
+    "modifiers": ["protected-memory-loses-hp-on-enemy-action"], "boss": null
+  },
+  {
+    "id": "r06-s04", "routeId": "route-06-underworld", "order": 4, "name": "티레시아스의 봉인문", "recommendedPower": 1300,
+    "arena": { "id": "underworld-gate", "theme": "underworld", "width": 720, "height": 1040, "backgroundKey": "arena-underworld-gate", "backgroundAssetUrl": "assets/art/maps/stages/r06-s04-tiresias-gate.webp", "musicKey": "bgm-boss-underworld" },
+    "walls": [{ "id": "gate-pillar-a", "shape": "capsule", "x": 160, "y": 330, "x2": 160, "y2": 760, "radius": 35, "material": "spirit", "restitution": 0.99, "presentation": { "visualId": "wall-underworld-gate-pillar", "width": 556, "height": 434 } }, { "id": "gate-pillar-b", "shape": "capsule", "x": 560, "y": 330, "x2": 560, "y2": 760, "radius": 35, "material": "spirit", "restitution": 0.99, "presentation": { "visualId": "wall-underworld-gate-pillar", "width": 556, "height": 434 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 250, "radius": 90 }, { "id": "e1", "kind": "enemy", "x": 220, "y": 510, "radius": 38 }, { "id": "e2", "kind": "enemy", "x": 500, "y": 510, "radius": 38 }],
+    "enemies": [{ "enemyId": "underworld-gate", "spawnId": "boss", "level": 31, "elite": true }, { "enemyId": "abyss-priest", "spawnId": "e1", "level": 30 }, { "enemyId": "abyss-priest", "spawnId": "e2", "level": 30 }],
+    "hazards": [{ "id": "soul-gate-a", "type": "portal", "x": 210, "y": 650, "radius": 50, "parameters": { "pairId": "soul-gate-b", "rotation": 180 } }, { "id": "soul-gate-b", "type": "portal", "x": 510, "y": 420, "radius": 50, "parameters": { "pairId": "soul-gate-a", "rotation": 180 } }],
+    "objective": { "type": "seal", "turnLimit": 16, "targetIds": ["gate-core"], "requiredCount": 3 }, "rewards": { "gold": 790, "heroXp": 280, "materials": { "spirit-ash": 14 }, "firstClear": { "kind": "hero", "id": "tiresias", "amount": 1 } },
+    "modifiers": ["gate-changes-solid-state", "seal-requires-three-angles"],
+    "boss": { "bossId": "underworld-gate", "supportBossIds": [], "phaseIds": ["solid-gate", "spirit-flood", "oracle-seal"], "anatomy": {}, "parts": [{ "id": "gate-core", "kind": "core", "count": 1, "collider": "polygon", "weakpoint": true, "breakable": false }] }
+  },
+
+  {
+    "id": "r07-s01", "routeId": "route-07-sirens", "order": 1, "name": "첫 번째 노랫결", "recommendedPower": 1340,
+    "arena": { "id": "siren-outer-reef", "theme": "siren", "width": 720, "height": 1040, "backgroundKey": "arena-siren-outer", "backgroundAssetUrl": "assets/art/maps/stages/r07-s01-siren-outer-reef.webp", "musicKey": "bgm-siren" },
+    "walls": [{ "id": "moon-reef-a", "shape": "capsule", "x": 100, "y": 350, "x2": 260, "y2": 720, "radius": 34, "material": "coral", "restitution": 0.96, "presentation": { "visualId": "wall-siren-moon-reef", "width": 523, "height": 402 } }, { "id": "moon-reef-b", "shape": "capsule", "x": 620, "y": 350, "x2": 460, "y2": 720, "radius": 34, "material": "coral", "restitution": 0.96, "presentation": { "visualId": "wall-siren-moon-reef", "width": 523, "height": 402 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 230, "y": 320, "radius": 32 }, { "id": "e2", "kind": "enemy", "x": 490, "y": 320, "radius": 33 }],
+    "enemies": [{ "enemyId": "siren-chorister", "spawnId": "e1", "level": 32 }, { "enemyId": "split-anemone", "spawnId": "e2", "level": 32 }],
+    "hazards": [{ "id": "song-wave", "type": "sound-wave", "x": 360, "y": 510, "radius": 150, "parameters": { "expansion": 90, "periodTurns": 2, "damage": 58 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 9, "targetIds": [] }, "rewards": { "gold": 640, "heroXp": 225, "materials": { "siren-pearl": 4 }, "firstClear": { "kind": "material", "id": "wax-earplug", "amount": 1 } },
+    "modifiers": ["sound-wave-collision-exact"], "boss": null
+  },
+  {
+    "id": "r07-s02", "routeId": "route-07-sirens", "order": 2, "name": "회전하는 달빛 암초", "recommendedPower": 1410,
+    "arena": { "id": "siren-turning-reef", "theme": "siren", "width": 720, "height": 1040, "backgroundKey": "arena-siren-turning", "backgroundAssetUrl": "assets/art/maps/stages/r07-s02-siren-turning-reef.webp", "musicKey": "bgm-siren" },
+    "walls": [{ "id": "spinner-a", "shape": "capsule", "x": 180, "y": 520, "x2": 360, "y2": 520, "radius": 25, "material": "coral", "restitution": 0.99, "presentation": { "visualId": "wall-siren-coral-spinner", "width": 256, "height": 270 } }, { "id": "spinner-b", "shape": "capsule", "x": 540, "y": 650, "x2": 360, "y2": 650, "radius": 25, "material": "coral", "restitution": 0.99, "presentation": { "visualId": "wall-siren-coral-spinner", "width": 256, "height": 270 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 180, "y": 280, "radius": 32 }, { "id": "e2", "kind": "enemy", "x": 360, "y": 240, "radius": 32 }, { "id": "e3", "kind": "enemy", "x": 540, "y": 280, "radius": 32 }],
+    "enemies": [{ "enemyId": "siren-chorister", "spawnId": "e1", "level": 33 }, { "enemyId": "coral-archer", "spawnId": "e2", "level": 33 }, { "enemyId": "siren-chorister", "spawnId": "e3", "level": 33 }],
+    "hazards": [{ "id": "chorus-wave", "type": "sound-wave", "x": 360, "y": 400, "radius": 110, "parameters": { "expansion": 105, "periodTurns": 2, "damage": 66 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 11, "targetIds": [] }, "rewards": { "gold": 690, "heroXp": 242, "materials": { "siren-pearl": 5 }, "firstClear": { "kind": "relic", "id": "relic-siren-shell", "amount": 1 } },
+    "modifiers": ["walls-rotate-after-shot"], "boss": null
+  },
+  {
+    "id": "r07-s03", "routeId": "route-07-sirens", "order": 3, "name": "세 수정의 화음", "recommendedPower": 1490,
+    "arena": { "id": "siren-crystals", "theme": "siren", "width": 720, "height": 1040, "backgroundKey": "arena-siren-crystals", "backgroundAssetUrl": "assets/art/maps/stages/r07-s03-siren-crystals.webp", "musicKey": "bgm-siren-deep" },
+    "walls": [{ "id": "crystal-wall-a", "shape": "capsule", "x": 110, "y": 430, "x2": 300, "y2": 520, "radius": 15, "material": "coral", "restitution": 1.02, "presentation": { "visualId": "wall-siren-harmonic-crystal", "width": 249, "height": 161 } }, { "id": "crystal-wall-b", "shape": "capsule", "x": 610, "y": 430, "x2": 420, "y2": 520, "radius": 15, "material": "coral", "restitution": 1.02, "presentation": { "visualId": "wall-siren-harmonic-crystal", "width": 249, "height": 161 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "crystal-a", "kind": "prop", "x": 180, "y": 280, "radius": 34, "presentation": { "visualId": "prop-siren-song-crystal", "width": 130, "height": 130 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "crystal-b", "kind": "prop", "x": 360, "y": 230, "radius": 34, "presentation": { "visualId": "prop-siren-song-crystal", "width": 130, "height": 130 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "crystal-c", "kind": "prop", "x": 540, "y": 280, "radius": 34, "presentation": { "visualId": "prop-siren-song-crystal", "width": 130, "height": 130 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "e1", "kind": "enemy", "x": 360, "y": 620, "radius": 32 }],
+    "enemies": [{ "enemyId": "siren-chorister", "spawnId": "e1", "level": 35, "elite": true }],
+    "hazards": [{ "id": "triple-wave", "type": "sound-wave", "x": 360, "y": 400, "radius": 180, "parameters": { "expansion": 120, "periodTurns": 1, "damage": 75 } }],
+    "objective": { "type": "break-parts", "turnLimit": 10, "targetIds": ["crystal-a", "crystal-b", "crystal-c"], "requiredCount": 3 }, "rewards": { "gold": 750, "heroXp": 264, "materials": { "siren-pearl": 6 }, "firstClear": { "kind": "material", "id": "song-crystal", "amount": 3 } },
+    "modifiers": ["crystals-must-break-in-lit-order"], "boss": null
+  },
+  {
+    "id": "r07-s04", "routeId": "route-07-sirens", "order": 4, "name": "사이렌 세 자매", "recommendedPower": 1580,
+    "arena": { "id": "siren-moon-stage", "theme": "siren", "width": 720, "height": 1040, "backgroundKey": "arena-siren-moon-stage", "backgroundAssetUrl": "assets/art/maps/stages/r07-s04-siren-moon-stage.webp", "musicKey": "bgm-boss-siren" },
+    "walls": [{ "id": "mast", "shape": "capsule", "x": 360, "y": 540, "x2": 360, "y2": 760, "radius": 28, "material": "wood", "restitution": 0.94, "presentation": { "visualId": "wall-siren-ship-mast", "width": 371, "height": 630 } }, { "id": "reef-upper-left", "shape": "capsule", "x": 360, "y": 105, "x2": 190, "y2": 175, "radius": 22, "material": "coral", "restitution": 1.01, "presentation": { "visualId": "wall-siren-moon-reef", "width": 253, "height": 260 } }, { "id": "reef-left", "shape": "capsule", "x": 190, "y": 175, "x2": 135, "y2": 350, "radius": 22, "material": "coral", "restitution": 1.01, "presentation": { "visualId": "wall-siren-moon-reef", "width": 253, "height": 260 } }, { "id": "reef-lower-left", "shape": "capsule", "x": 135, "y": 350, "x2": 205, "y2": 500, "radius": 22, "material": "coral", "restitution": 1.01, "presentation": { "visualId": "wall-siren-moon-reef", "width": 284, "height": 260 } }, { "id": "reef-upper-right", "shape": "capsule", "x": 360, "y": 105, "x2": 530, "y2": 175, "radius": 22, "material": "coral", "restitution": 1.01, "presentation": { "visualId": "wall-siren-moon-reef", "width": 253, "height": 260 } }, { "id": "reef-right", "shape": "capsule", "x": 530, "y": 175, "x2": 585, "y2": 350, "radius": 22, "material": "coral", "restitution": 1.01, "presentation": { "visualId": "wall-siren-moon-reef", "width": 253, "height": 260 } }, { "id": "reef-lower-right", "shape": "capsule", "x": 585, "y": 350, "x2": 515, "y2": 500, "radius": 22, "material": "coral", "restitution": 1.01, "presentation": { "visualId": "wall-siren-moon-reef", "width": 284, "height": 260 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 280, "radius": 74 }, { "id": "e1", "kind": "enemy", "x": 210, "y": 480, "radius": 32 }, { "id": "e2", "kind": "enemy", "x": 510, "y": 480, "radius": 32 }],
+    "enemies": [{ "enemyId": "siren-triad", "spawnId": "boss", "level": 37, "elite": true }, { "enemyId": "siren-chorister", "spawnId": "e1", "level": 36 }, { "enemyId": "siren-chorister", "spawnId": "e2", "level": 36 }],
+    "hazards": [{ "id": "triad-wave", "type": "sound-wave", "x": 360, "y": 330, "radius": 190, "parameters": { "expansion": 130, "periodTurns": 1, "damage": 84, "rotatingGapDegrees": 60 } }],
+    "objective": { "type": "break-parts", "turnLimit": 17, "targetIds": ["siren-white", "siren-gray", "siren-blue"], "requiredCount": 3 }, "rewards": { "gold": 940, "heroXp": 335, "materials": { "siren-pearl": 14 }, "firstClear": { "kind": "relic", "id": "relic-siren-shell", "amount": 1 } },
+    "modifiers": ["interrupt-song-in-order", "no-control-lock"],
+    "boss": { "bossId": "siren-triad", "supportBossIds": [], "phaseIds": ["solo-song", "duet", "triad"], "anatomy": {}, "parts": [{ "id": "siren-white", "kind": "body", "count": 1, "collider": "circle", "weakpoint": true, "breakable": true }, { "id": "siren-gray", "kind": "body", "count": 1, "collider": "circle", "weakpoint": true, "breakable": true }, { "id": "siren-blue", "kind": "body", "count": 1, "collider": "circle", "weakpoint": true, "breakable": true }] }
+  },
+
+  {
+    "id": "r08-s01", "routeId": "route-08-strait", "order": 1, "name": "당기는 물살", "recommendedPower": 1620,
+    "arena": { "id": "strait-mouth", "theme": "black-strait", "width": 720, "height": 1040, "backgroundKey": "arena-strait-mouth", "backgroundAssetUrl": "assets/art/maps/stages/r08-s01-strait-mouth.webp", "musicKey": "bgm-strait" },
+    "walls": [{ "id": "cliff-left", "shape": "capsule", "x": 85, "y": 180, "x2": 170, "y2": 860, "radius": 38, "material": "stone", "restitution": 0.95, "presentation": { "visualId": "wall-strait-black-cliff", "width": 815, "height": 614 } }, { "id": "cliff-right", "shape": "capsule", "x": 635, "y": 180, "x2": 550, "y2": 860, "radius": 38, "material": "stone", "restitution": 0.95, "presentation": { "visualId": "wall-strait-black-cliff", "width": 815, "height": 614 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 250, "y": 330, "radius": 38 }, { "id": "e2", "kind": "enemy", "x": 470, "y": 330, "radius": 33 }],
+    "enemies": [{ "enemyId": "shell-guard", "spawnId": "e1", "level": 38 }, { "enemyId": "storm-jelly", "spawnId": "e2", "level": 38 }],
+    "hazards": [{ "id": "suction", "type": "whirlpool", "x": 110, "y": 560, "radius": 180, "parameters": { "force": 115, "lethalRadius": 55 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 9, "targetIds": [] }, "rewards": { "gold": 790, "heroXp": 278, "materials": { "black-shell": 4 }, "firstClear": { "kind": "material", "id": "strait-rope", "amount": 1 } },
+    "modifiers": ["suction-vector-visible"], "boss": null
+  },
+  {
+    "id": "r08-s02", "routeId": "route-08-strait", "order": 2, "name": "좁아지는 안전각", "recommendedPower": 1700,
+    "arena": { "id": "strait-narrows", "theme": "black-strait", "width": 720, "height": 1040, "backgroundKey": "arena-strait-narrows", "backgroundAssetUrl": "assets/art/maps/stages/r08-s02-strait-narrows.webp", "musicKey": "bgm-strait" },
+    "walls": [{ "id": "jaw-left", "shape": "capsule", "x": 70, "y": 240, "x2": 280, "y2": 650, "radius": 40, "material": "stone", "restitution": 0.96, "presentation": { "visualId": "wall-strait-stone-jaw", "width": 591, "height": 508 } }, { "id": "jaw-right", "shape": "capsule", "x": 650, "y": 240, "x2": 440, "y2": 650, "radius": 40, "material": "stone", "restitution": 0.96, "presentation": { "visualId": "wall-strait-stone-jaw", "width": 591, "height": 508 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 200, "y": 330, "radius": 39 }, { "id": "e2", "kind": "enemy", "x": 360, "y": 250, "radius": 31 }, { "id": "e3", "kind": "enemy", "x": 520, "y": 330, "radius": 39 }],
+    "enemies": [{ "enemyId": "shell-guard", "spawnId": "e1", "level": 39 }, { "enemyId": "coral-archer", "spawnId": "e2", "level": 39 }, { "enemyId": "shell-guard", "spawnId": "e3", "level": 39 }],
+    "hazards": [{ "id": "left-pull", "type": "whirlpool", "x": 80, "y": 500, "radius": 160, "parameters": { "force": 100, "lethalRadius": 45 } }, { "id": "right-current", "type": "current", "x": 610, "y": 500, "radius": 130, "parameters": { "forceX": -75, "forceY": 0 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 11, "targetIds": [] }, "rewards": { "gold": 850, "heroXp": 300, "materials": { "black-shell": 5 }, "firstClear": { "kind": "relic", "id": "relic-whirlpool-eye", "amount": 1 } },
+    "modifiers": ["safe-lane-shifts-each-turn"], "boss": null
+  },
+  {
+    "id": "r08-s03", "routeId": "route-08-strait", "order": 3, "name": "스킬라의 앞발", "recommendedPower": 1790,
+    "arena": { "id": "scylla-ledge", "theme": "black-strait", "width": 720, "height": 1040, "backgroundKey": "arena-scylla-ledge", "backgroundAssetUrl": "assets/art/maps/stages/r08-s03-scylla-ledge.webp", "musicKey": "bgm-strait-deep" },
+    "walls": [{ "id": "ledge-left", "shape": "capsule", "x": 80, "y": 220, "x2": 200, "y2": 820, "radius": 32, "material": "stone", "restitution": 0.96, "presentation": { "visualId": "wall-strait-ledge", "width": 740, "height": 468 } }, { "id": "ledge-right", "shape": "capsule", "x": 640, "y": 220, "x2": 520, "y2": 820, "radius": 32, "material": "stone", "restitution": 0.96, "presentation": { "visualId": "wall-strait-ledge", "width": 740, "height": 468 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "paw-a", "kind": "prop", "x": 230, "y": 330, "radius": 65, "presentation": { "visualId": "scylla-forepaw", "width": 225, "height": 190, "anchorY": 0.62 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "paw-b", "kind": "prop", "x": 490, "y": 330, "radius": 65, "presentation": { "visualId": "scylla-forepaw", "width": 225, "height": 190, "anchorY": 0.62 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "e1", "kind": "enemy", "x": 360, "y": 520, "radius": 38 }],
+    "enemies": [{ "enemyId": "shell-guard", "spawnId": "e1", "level": 41, "elite": true }],
+    "hazards": [{ "id": "bite-preview", "type": "sound-wave", "x": 360, "y": 240, "radius": 160, "parameters": { "fanDegrees": 70, "fanCount": 1, "gapAngle": 90, "damage": 105, "warningTurns": 1 } }],
+    "objective": { "type": "break-parts", "turnLimit": 11, "targetIds": ["paw-a", "paw-b"], "requiredCount": 2 }, "rewards": { "gold": 920, "heroXp": 325, "materials": { "scylla-scale": 6 }, "firstClear": { "kind": "material", "id": "forepaw-claw", "amount": 2 } },
+    "modifiers": ["sound-wave-collision-exact"], "boss": null
+  },
+  {
+    "id": "r08-s04", "routeId": "route-08-strait", "order": 4, "name": "카리브디스의 중심", "recommendedPower": 1880,
+    "arena": { "id": "charybdis-bowl", "theme": "black-strait", "width": 720, "height": 1040, "backgroundKey": "arena-charybdis-bowl", "backgroundAssetUrl": "assets/art/maps/stages/r08-s04-charybdis-bowl.webp", "musicKey": "bgm-boss-charybdis" },
+    "walls": [{ "id": "bowl-left", "shape": "capsule", "x": 70, "y": 260, "x2": 190, "y2": 800, "radius": 38, "material": "stone", "restitution": 0.97, "presentation": { "visualId": "wall-strait-bowl", "width": 688, "height": 482 } }, { "id": "bowl-right", "shape": "capsule", "x": 650, "y": 260, "x2": 530, "y2": 800, "radius": 38, "material": "stone", "restitution": 0.97, "presentation": { "visualId": "wall-strait-bowl", "width": 688, "height": 482 } }, { "id": "anchor-left", "shape": "circle", "x": 225, "y": 690, "radius": 30, "material": "bronze", "restitution": 1.04, "presentation": { "visualId": "wall-strait-bronze-anchor", "width": 74, "height": 74 } }, { "id": "anchor-right", "shape": "circle", "x": 495, "y": 690, "radius": 30, "material": "bronze", "restitution": 1.04, "presentation": { "visualId": "wall-strait-bronze-anchor", "width": 74, "height": 74 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 350, "radius": 132 }, { "id": "e1", "kind": "enemy", "x": 200, "y": 620, "radius": 33 }, { "id": "e2", "kind": "enemy", "x": 520, "y": 620, "radius": 33 }],
+    "enemies": [{ "enemyId": "charybdis", "spawnId": "boss", "level": 43, "elite": true }, { "enemyId": "storm-jelly", "spawnId": "e1", "level": 42 }, { "enemyId": "storm-jelly", "spawnId": "e2", "level": 42 }],
+    "hazards": [{ "id": "maelstrom", "type": "whirlpool", "x": 360, "y": 350, "radius": 280, "parameters": { "force": 155, "lethalRadius": 80, "pulseTurns": 2 } }],
+    "objective": { "type": "survive", "turnLimit": 10, "targetIds": [] }, "rewards": { "gold": 1040, "heroXp": 370, "materials": { "black-shell": 12 }, "firstClear": { "kind": "relic", "id": "relic-whirlpool-eye", "amount": 1 } },
+    "modifiers": ["hit-anchors-to-reduce-suction", "boss-cannot-be-killed"],
+    "boss": { "bossId": "charybdis", "supportBossIds": [], "phaseIds": ["inhale", "debris-ring", "release"], "anatomy": {}, "parts": [{ "id": "whirlpool-core", "kind": "core", "count": 1, "collider": "circle", "weakpoint": false, "breakable": false }] }
+  },
+  {
+    "id": "r08-s05", "routeId": "route-08-strait", "order": 5, "name": "여섯 머리와 검은 소용돌이", "recommendedPower": 2000,
+    "arena": { "id": "scylla-charybdis", "theme": "black-strait", "width": 720, "height": 1040, "backgroundKey": "arena-scylla-charybdis", "backgroundAssetUrl": "assets/art/maps/stages/r08-s05-scylla-charybdis.webp", "musicKey": "bgm-boss-scylla" },
+    "walls": [{ "id": "cave-left", "shape": "capsule", "x": 60, "y": 180, "x2": 170, "y2": 850, "radius": 44, "material": "stone", "restitution": 0.98, "presentation": { "visualId": "wall-strait-cave", "width": 838, "height": 451 } }, { "id": "cave-right", "shape": "capsule", "x": 660, "y": 180, "x2": 550, "y2": 850, "radius": 44, "material": "stone", "restitution": 0.98, "presentation": { "visualId": "wall-strait-cave", "width": 838, "height": 451 } }, { "id": "safe-rock", "shape": "capsule", "x": 300, "y": 620, "x2": 440, "y2": 620, "radius": 32, "material": "stone", "restitution": 1.02, "presentation": { "visualId": "wall-strait-safe-rock", "width": 223, "height": 321 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 500, "y": 260, "radius": 120 }, { "id": "support", "kind": "boss", "x": 110, "y": 530, "radius": 132 }],
+    "enemies": [{ "enemyId": "scylla-cat", "spawnId": "boss", "level": 46, "elite": true }, { "enemyId": "charybdis", "spawnId": "support", "level": 45, "elite": true }],
+    "hazards": [{ "id": "charybdis-pull", "type": "whirlpool", "x": 110, "y": 530, "radius": 220, "parameters": { "force": 145, "lethalRadius": 65 } }, { "id": "six-bite-fans", "type": "sound-wave", "x": 500, "y": 280, "radius": 210, "parameters": { "fanDegrees": 55, "fanCount": 6, "damage": 125 } }],
+    "objective": { "type": "break-parts", "turnLimit": 19, "targetIds": ["scylla-heads"], "requiredCount": 6 }, "rewards": { "gold": 1380, "heroXp": 490, "materials": { "scylla-scale": 18 }, "firstClear": { "kind": "relic", "id": "relic-scylla-tooth", "amount": 1 } },
+    "modifiers": ["exact-six-head-chain", "forepaws-open-safe-lane", "charybdis-support-hazard"],
+    "boss": { "bossId": "scylla-cat", "supportBossIds": ["charybdis"], "phaseIds": ["two-paws", "six-head-chain", "cave-body-reveal"], "anatomy": { "heads": 6, "necks": 6, "forepaws": 2 }, "parts": [{ "id": "scylla-body", "kind": "body", "count": 1, "collider": "polygon", "weakpoint": false, "breakable": false }, { "id": "scylla-heads", "kind": "head", "count": 6, "collider": "circle", "weakpoint": true, "breakable": true }, { "id": "scylla-necks", "kind": "neck", "count": 6, "collider": "capsule", "weakpoint": false, "breakable": false }, { "id": "scylla-forepaws", "kind": "forepaw", "count": 2, "collider": "capsule", "weakpoint": false, "breakable": true }] }
+  },
+
+  {
+    "id": "r09-s01", "routeId": "route-09-thrinacia", "order": 1, "name": "금빛 목장의 금기", "recommendedPower": 2040,
+    "arena": { "id": "thrinacia-pasture", "theme": "thrinacia", "width": 720, "height": 1040, "backgroundKey": "arena-thrinacia-pasture", "backgroundAssetUrl": "assets/art/maps/stages/r09-s01-thrinacia-pasture.webp", "musicKey": "bgm-thrinacia" },
+    "walls": [{ "id": "sun-fence-a", "shape": "capsule", "x": 100, "y": 450, "x2": 290, "y2": 450, "radius": 24, "material": "wood", "restitution": 0.86, "presentation": { "visualId": "wall-thrinacia-sun-fence", "width": 225, "height": 171 } }, { "id": "sun-fence-b", "shape": "capsule", "x": 620, "y": 650, "x2": 430, "y2": 650, "radius": 24, "material": "wood", "restitution": 0.86, "presentation": { "visualId": "wall-thrinacia-sun-fence", "width": 225, "height": 171 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "cattle-a", "kind": "prop", "x": 220, "y": 330, "radius": 48, "presentation": { "visualId": "prop-thrinacia-sacred-cattle", "width": 128, "height": 128 } }, { "id": "cattle-b", "kind": "prop", "x": 500, "y": 330, "radius": 48, "presentation": { "visualId": "prop-thrinacia-sacred-cattle", "width": 128, "height": 128 } }, { "id": "e1", "kind": "enemy", "x": 360, "y": 520, "radius": 54 }],
+    "enemies": [{ "enemyId": "sacred-bull-guardian", "spawnId": "e1", "level": 47 }],
+    "hazards": [{ "id": "cattle-taboo-a", "type": "forbidden-target", "x": 220, "y": 330, "radius": 60, "parameters": { "failOnHit": true } }, { "id": "cattle-taboo-b", "type": "forbidden-target", "x": 500, "y": 330, "radius": 60, "parameters": { "failOnHit": true } }],
+    "objective": { "type": "protect", "turnLimit": 8, "targetIds": ["cattle-a", "cattle-b"], "requiredCount": 2 }, "rewards": { "gold": 980, "heroXp": 345, "materials": { "sun-grass": 4 }, "firstClear": { "kind": "material", "id": "solar-bell", "amount": 1 } },
+    "modifiers": ["forbidden-target-contact-fails-stage"], "boss": null
+  },
+  {
+    "id": "r09-s02", "routeId": "route-09-thrinacia", "order": 2, "name": "피뢰석의 길", "recommendedPower": 2130,
+    "arena": { "id": "thrinacia-rods", "theme": "thrinacia", "width": 720, "height": 1040, "backgroundKey": "arena-thrinacia-rods", "backgroundAssetUrl": "assets/art/maps/stages/r09-s02-thrinacia-rods.webp", "musicKey": "bgm-thrinacia" },
+    "walls": [{ "id": "rod-a", "shape": "capsule", "x": 180, "y": 350, "x2": 180, "y2": 720, "radius": 28, "material": "bronze", "restitution": 1, "presentation": { "visualId": "wall-thrinacia-bronze-rod", "width": 468, "height": 544 } }, { "id": "rod-b", "shape": "capsule", "x": 540, "y": 350, "x2": 540, "y2": 720, "radius": 28, "material": "bronze", "restitution": 1, "presentation": { "visualId": "wall-thrinacia-bronze-rod", "width": 468, "height": 544 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 250, "y": 300, "radius": 54 }, { "id": "e2", "kind": "enemy", "x": 470, "y": 300, "radius": 36 }],
+    "enemies": [{ "enemyId": "sacred-bull-guardian", "spawnId": "e1", "level": 48 }, { "enemyId": "storm-ram", "spawnId": "e2", "level": 48 }],
+    "hazards": [{ "id": "bolt-a", "type": "lightning", "x": 250, "y": 560, "radius": 90, "parameters": { "warningTurns": 1, "damage": 120, "redirectToBronze": true } }],
+    "objective": { "type": "defeat-all", "turnLimit": 10, "targetIds": [] }, "rewards": { "gold": 1050, "heroXp": 370, "materials": { "sun-grass": 5 }, "firstClear": { "kind": "relic", "id": "relic-thunder-splinter", "amount": 1 } },
+    "modifiers": ["bronze-walls-ground-lightning"], "boss": null
+  },
+  {
+    "id": "r09-s03", "routeId": "route-09-thrinacia", "order": 3, "name": "굶주린 선원들의 밤", "recommendedPower": 2220,
+    "arena": { "id": "thrinacia-night", "theme": "thrinacia", "width": 720, "height": 1040, "backgroundKey": "arena-thrinacia-night", "backgroundAssetUrl": "assets/art/maps/stages/r09-s03-thrinacia-night.webp", "musicKey": "bgm-thrinacia-night" },
+    "walls": [{ "id": "night-fence-a", "shape": "capsule", "x": 100, "y": 420, "x2": 300, "y2": 520, "radius": 24, "material": "wood", "restitution": 0.88, "presentation": { "visualId": "wall-thrinacia-night-fence", "width": 261, "height": 174 } }, { "id": "night-fence-b", "shape": "capsule", "x": 620, "y": 420, "x2": 420, "y2": 520, "radius": 24, "material": "wood", "restitution": 0.88, "presentation": { "visualId": "wall-thrinacia-night-fence", "width": 261, "height": 174 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "cattle", "kind": "prop", "x": 360, "y": 270, "radius": 52, "presentation": { "visualId": "prop-thrinacia-sacred-cattle", "width": 140, "height": 140 } }, { "id": "e1", "kind": "enemy", "x": 210, "y": 450, "radius": 54 }, { "id": "e2", "kind": "enemy", "x": 510, "y": 450, "radius": 54 }],
+    "enemies": [{ "enemyId": "sacred-bull-guardian", "spawnId": "e1", "level": 50, "elite": true }, { "enemyId": "sacred-bull-guardian", "spawnId": "e2", "level": 50, "elite": true }],
+    "hazards": [{ "id": "sacred-cattle", "type": "forbidden-target", "x": 360, "y": 270, "radius": 75, "parameters": { "failOnHit": true, "moving": true } }],
+    "objective": { "type": "protect", "turnLimit": 10, "targetIds": ["cattle"], "requiredCount": 1 }, "rewards": { "gold": 1130, "heroXp": 398, "materials": { "sun-grass": 6 }, "firstClear": { "kind": "fragment", "id": "heli-paws", "amount": 5 } },
+    "modifiers": ["cattle-moves-after-shot", "no-auto-target-cattle", "protect-target-hp-per-extra-hero:200"], "boss": null
+  },
+  {
+    "id": "r09-s04", "routeId": "route-09-thrinacia", "order": 4, "name": "제우-푸스의 심판", "recommendedPower": 2340,
+    "arena": { "id": "zeus-tempest", "theme": "thrinacia-storm", "width": 720, "height": 1040, "backgroundKey": "arena-zeus-tempest", "backgroundAssetUrl": "assets/art/maps/stages/r09-s04-zeus-tempest.webp", "musicKey": "bgm-boss-zeus" },
+    "walls": [{ "id": "lightning-rod-a", "shape": "capsule", "x": 170, "y": 320, "x2": 170, "y2": 780, "radius": 30, "material": "bronze", "restitution": 1.01, "presentation": { "visualId": "wall-thrinacia-lightning-rod", "width": 571, "height": 452 } }, { "id": "lightning-rod-b", "shape": "capsule", "x": 550, "y": 320, "x2": 550, "y2": 780, "radius": 30, "material": "bronze", "restitution": 1.01, "presentation": { "visualId": "wall-thrinacia-lightning-rod", "width": 571, "height": 452 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 250, "radius": 86 }, { "id": "e1", "kind": "enemy", "x": 220, "y": 520, "radius": 36 }, { "id": "e2", "kind": "enemy", "x": 500, "y": 520, "radius": 36 }],
+    "enemies": [{ "enemyId": "zeu-puss-tempest", "spawnId": "boss", "level": 52, "elite": true }, { "enemyId": "storm-ram", "spawnId": "e1", "level": 51 }, { "enemyId": "storm-ram", "spawnId": "e2", "level": 51 }],
+    "hazards": [{ "id": "judgment-grid", "type": "lightning", "x": 360, "y": 560, "radius": 320, "parameters": { "warningTurns": 1, "damage": 145, "safeNearBronze": true, "strikes": 5 } }],
+    "objective": { "type": "survive", "turnLimit": 11, "targetIds": [] }, "rewards": { "gold": 1450, "heroXp": 520, "materials": { "sun-grass": 14 }, "firstClear": { "kind": "relic", "id": "relic-sun-wheel", "amount": 1 } },
+    "modifiers": ["survival-boss", "lightning-pattern-changes-phase"],
+    "boss": { "bossId": "zeu-puss-tempest", "supportBossIds": [], "phaseIds": ["three-bolts", "five-bolts", "shipbreaker"], "anatomy": {}, "parts": [{ "id": "storm-cloud", "kind": "core", "count": 1, "collider": "circle", "weakpoint": false, "breakable": false }] }
+  },
+
+  {
+    "id": "r10-s01", "routeId": "route-10-ithaca", "order": 1, "name": "거지의 귀환", "recommendedPower": 2390,
+    "arena": { "id": "ithaca-harbor", "theme": "ithaca", "width": 720, "height": 1040, "backgroundKey": "arena-ithaca-harbor", "backgroundAssetUrl": "assets/art/maps/stages/r10-s01-ithaca-harbor.webp", "musicKey": "bgm-ithaca" },
+    "walls": [{ "id": "dock-left", "shape": "capsule", "x": 90, "y": 300, "x2": 220, "y2": 800, "radius": 36, "material": "wood", "restitution": 0.89, "presentation": { "visualId": "wall-ithaca-dock", "width": 656, "height": 401 } }, { "id": "dock-right", "shape": "capsule", "x": 630, "y": 300, "x2": 500, "y2": 800, "radius": 36, "material": "wood", "restitution": 0.89, "presentation": { "visualId": "wall-ithaca-dock", "width": 656, "height": 401 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 230, "y": 330, "radius": 34 }, { "id": "e2", "kind": "enemy", "x": 490, "y": 330, "radius": 42 }],
+    "enemies": [{ "enemyId": "palace-hound", "spawnId": "e1", "level": 53 }, { "enemyId": "suitor-hoplon", "spawnId": "e2", "level": 53 }],
+    "hazards": [], "objective": { "type": "defeat-all", "turnLimit": 9, "targetIds": [] },
+    "rewards": { "gold": 1180, "heroXp": 415, "materials": { "ithaca-bronze": 4 }, "firstClear": { "kind": "hero", "id": "eumaeus", "amount": 1 } },
+    "modifiers": ["disguise-first-shot-no-aggro"], "boss": null
+  },
+  {
+    "id": "r10-s02", "routeId": "route-10-ithaca", "order": 2, "name": "방패 진형의 안뜰", "recommendedPower": 2470,
+    "arena": { "id": "ithaca-courtyard", "theme": "ithaca", "width": 720, "height": 1040, "backgroundKey": "arena-ithaca-courtyard", "backgroundAssetUrl": "assets/art/maps/stages/r10-s02-ithaca-courtyard.webp", "musicKey": "bgm-ithaca" },
+    "walls": [{ "id": "column-a", "shape": "capsule", "x": 160, "y": 380, "x2": 160, "y2": 720, "radius": 32, "material": "stone", "restitution": 0.98, "presentation": { "visualId": "wall-ithaca-palace-column", "width": 450, "height": 241 } }, { "id": "column-b", "shape": "capsule", "x": 560, "y": 380, "x2": 560, "y2": 720, "radius": 32, "material": "stone", "restitution": 0.98, "presentation": { "visualId": "wall-ithaca-palace-column", "width": 450, "height": 241 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 180, "y": 320, "radius": 42 }, { "id": "e2", "kind": "enemy", "x": 360, "y": 260, "radius": 43 }, { "id": "e3", "kind": "enemy", "x": 540, "y": 320, "radius": 42 }],
+    "enemies": [{ "enemyId": "suitor-hoplon", "spawnId": "e1", "level": 54 }, { "enemyId": "suitor-captain", "spawnId": "e2", "level": 54, "elite": true }, { "enemyId": "suitor-hoplon", "spawnId": "e3", "level": 54 }],
+    "hazards": [], "objective": { "type": "defeat-all", "turnLimit": 12, "targetIds": [] },
+    "rewards": { "gold": 1270, "heroXp": 447, "materials": { "ithaca-bronze": 5 }, "firstClear": { "kind": "relic", "id": "relic-athena-spear-tip", "amount": 1 } },
+    "modifiers": ["shield-formation-shares-facing", "rear-hit-breaks-formation"], "boss": null
+  },
+  {
+    "id": "r10-s03", "routeId": "route-10-ithaca", "order": 3, "name": "열두 도끼의 고리", "recommendedPower": 2560,
+    "arena": { "id": "ithaca-axe-hall", "theme": "ithaca", "width": 720, "height": 1040, "backgroundKey": "arena-ithaca-axe-hall", "backgroundAssetUrl": "assets/art/maps/stages/r10-s03-ithaca-axe-hall.webp", "musicKey": "bgm-ithaca-trial" },
+    "walls": [{ "id": "axe-line-left", "shape": "capsule", "x": 150, "y": 260, "x2": 150, "y2": 790, "radius": 17, "material": "bronze", "restitution": 1, "presentation": { "visualId": "wall-ithaca-axe-rail", "width": 629, "height": 428 } }, { "id": "axe-line-right", "shape": "capsule", "x": 570, "y": 260, "x2": 570, "y2": 790, "radius": 17, "material": "bronze", "restitution": 1, "presentation": { "visualId": "wall-ithaca-axe-rail", "width": 629, "height": 428 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "ring-a", "kind": "prop", "x": 300, "y": 700, "radius": 18, "presentation": { "visualId": "prop-ithaca-axe-ring", "width": 72, "height": 82, "anchorY": 0.62 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "ring-b", "kind": "prop", "x": 420, "y": 600, "radius": 18, "presentation": { "visualId": "prop-ithaca-axe-ring", "width": 72, "height": 82, "anchorY": 0.62 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "ring-c", "kind": "prop", "x": 300, "y": 500, "radius": 18, "presentation": { "visualId": "prop-ithaca-axe-ring", "width": 72, "height": 82, "anchorY": 0.62 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "ring-d", "kind": "prop", "x": 420, "y": 400, "radius": 18, "presentation": { "visualId": "prop-ithaca-axe-ring", "width": 72, "height": 82, "anchorY": 0.62 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "ring-e", "kind": "prop", "x": 300, "y": 300, "radius": 18, "presentation": { "visualId": "prop-ithaca-axe-ring", "width": 72, "height": 82, "anchorY": 0.62 }, "interaction": { "mode": "destructible", "maxHp": 1 } }, { "id": "ring-f", "kind": "prop", "x": 420, "y": 220, "radius": 18, "presentation": { "visualId": "prop-ithaca-axe-ring", "width": 72, "height": 82, "anchorY": 0.62 }, "interaction": { "mode": "destructible", "maxHp": 1 } }],
+    "enemies": [], "hazards": [],
+    "objective": { "type": "break-parts", "turnLimit": 6, "targetIds": ["ring-a", "ring-b", "ring-c", "ring-d", "ring-e", "ring-f"], "requiredCount": 6 }, "rewards": { "gold": 1360, "heroXp": 480, "materials": { "ithaca-bronze": 6 }, "firstClear": { "kind": "relic", "id": "relic-twelve-axe-ring", "amount": 1 } },
+    "modifiers": ["single-shot-all-rings", "miss-resets-chain"], "boss": null
+  },
+  {
+    "id": "r10-s04", "routeId": "route-10-ithaca", "order": 4, "name": "궁전의 구혼자들", "recommendedPower": 2660,
+    "arena": { "id": "ithaca-feast-hall", "theme": "ithaca", "width": 720, "height": 1040, "backgroundKey": "arena-ithaca-feast", "backgroundAssetUrl": "assets/art/maps/stages/r10-s04-ithaca-feast-hall.webp", "musicKey": "bgm-ithaca-battle" },
+    "walls": [{ "id": "table-a", "shape": "capsule", "x": 120, "y": 470, "x2": 320, "y2": 470, "radius": 28, "material": "wood", "restitution": 0.88, "presentation": { "visualId": "wall-ithaca-banquet-table", "width": 285, "height": 164 } }, { "id": "table-b", "shape": "capsule", "x": 600, "y": 650, "x2": 400, "y2": 650, "radius": 28, "material": "wood", "restitution": 0.88, "presentation": { "visualId": "wall-ithaca-banquet-table", "width": 285, "height": 164 } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "e1", "kind": "enemy", "x": 160, "y": 300, "radius": 42 }, { "id": "e2", "kind": "enemy", "x": 300, "y": 250, "radius": 33 }, { "id": "e3", "kind": "enemy", "x": 440, "y": 250, "radius": 43 }, { "id": "e4", "kind": "enemy", "x": 570, "y": 300, "radius": 42 }],
+    "enemies": [{ "enemyId": "suitor-hoplon", "spawnId": "e1", "level": 57 }, { "enemyId": "suitor-sniper", "spawnId": "e2", "level": 57 }, { "enemyId": "suitor-captain", "spawnId": "e3", "level": 57, "elite": true }, { "enemyId": "suitor-hoplon", "spawnId": "e4", "level": 57 }],
+    "hazards": [{ "id": "sliding-table", "type": "moving-bumper", "x": 360, "y": 560, "radius": 70, "parameters": { "axis": "x", "distance": 250, "periodTurns": 2 } }],
+    "objective": { "type": "defeat-all", "turnLimit": 14, "targetIds": [] }, "rewards": { "gold": 1480, "heroXp": 520, "materials": { "ithaca-bronze": 8 }, "firstClear": { "kind": "fragment", "id": "purr-nelope", "amount": 10 } },
+    "modifiers": ["furniture-moves-after-collision", "reinforcement-at-turn-six"], "boss": null
+  },
+  {
+    "id": "r10-s05", "routeId": "route-10-ithaca", "order": 5, "name": "안티-냐우스 최후의 연회", "recommendedPower": 2800,
+    "arena": { "id": "ithaca-throne-hall", "theme": "ithaca", "width": 720, "height": 1040, "backgroundKey": "arena-ithaca-throne", "backgroundAssetUrl": "assets/art/maps/stages/r10-s05-ithaca-throne-hall.webp", "musicKey": "bgm-boss-final" },
+    "walls": [{ "id": "throne-column-a", "shape": "capsule", "x": 145, "y": 300, "x2": 145, "y2": 770, "radius": 35, "material": "stone", "restitution": 0.99, "presentation": { "visualId": "wall-ithaca-palace-column", "width": 602, "height": 263 } }, { "id": "throne-column-b", "shape": "capsule", "x": 575, "y": 300, "x2": 575, "y2": 770, "radius": 35, "material": "stone", "restitution": 0.99, "presentation": { "visualId": "wall-ithaca-palace-column", "width": 602, "height": 263 } }, { "id": "royal-table", "shape": "capsule", "x": 260, "y": 570, "x2": 460, "y2": 570, "radius": 30, "material": "wood", "restitution": 0.9, "breakable": true, "hp": 480, "presentation": { "visualId": "wall-ithaca-royal-table-intact", "width": 290, "height": 226, "stateVisualIds": { "damaged": "wall-ithaca-royal-table-damaged", "broken": "wall-ithaca-royal-table-broken" } } }],
+    "spawns": [{ "id": "party", "kind": "party", "x": 360, "y": 930, "radius": 42 }, { "id": "boss", "kind": "boss", "x": 360, "y": 260, "radius": 72 }, { "id": "e1", "kind": "enemy", "x": 200, "y": 450, "radius": 42 }, { "id": "e2", "kind": "enemy", "x": 520, "y": 450, "radius": 33 }],
+    "enemies": [{ "enemyId": "anti-nyaus", "spawnId": "boss", "level": 60, "elite": true }, { "enemyId": "suitor-hoplon", "spawnId": "e1", "level": 59 }, { "enemyId": "suitor-sniper", "spawnId": "e2", "level": 59 }],
+    "hazards": [{ "id": "moving-banquet", "type": "moving-bumper", "x": 360, "y": 620, "radius": 80, "parameters": { "axis": "diagonal", "distance": 210, "periodTurns": 2 } }],
+    "objective": { "type": "break-parts", "turnLimit": 20, "targetIds": ["anti-shield", "anti-core"], "requiredCount": 2 }, "rewards": { "gold": 2000, "heroXp": 720, "materials": { "ithaca-crown": 1 }, "firstClear": { "kind": "hero", "id": "purr-nelope", "amount": 1 } },
+    "modifiers": ["father-son-link-opens-core", "furniture-rearranges-each-phase", "final-boss"],
+    "boss": { "bossId": "anti-nyaus", "supportBossIds": [], "phaseIds": ["suitor-formation", "broken-banquet", "throne-duel"], "anatomy": {}, "parts": [{ "id": "anti-shield", "kind": "shield", "count": 1, "collider": "capsule", "weakpoint": false, "breakable": true }, { "id": "anti-core", "kind": "core", "count": 1, "collider": "circle", "weakpoint": true, "breakable": true }] }
+  }
+]

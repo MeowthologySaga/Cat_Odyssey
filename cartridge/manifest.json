@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "contentType": "game_pack",
+  "id": "meowthology.cat-odyssey",
+  "lineageId": "adb6ec88-2557-4fb2-857a-76e5c057f998",
+  "version": "0.1.1",
+  "minPlayZoneVersion": "0.1.0-beta.1",
+  "title": "고양이 오디세이",
+  "description": "고양이 영웅을 당겨 쏘고 벽과 괴수 부위를 연쇄 반사하는 2D 리코셰 액션 RPG입니다. 현재 컷신 음성 및 파생 영상은 비상업 배포 전용입니다.",
+  "releaseNotes": "10개 항로 캠페인, 20편 컷신, 신탁 소환·구조 요청·엔드게임 소비 흐름을 갖춘 최초 공개 비상업 배포본.",
+  "creator": {
+    "name": "MeowthologySaga"
+  },
+  "license": "MIT AND LicenseRef-Meowthology-Official-Builtin AND LicenseRef-Cat-Odyssey-ElevenLabs-NC-1.0",
+  "sourceUrl": "https://github.com/MeowthologySaga/Cat_Odyssey",
+  "category": "action-rpg",
+  "tags": ["official", "action", "ricochet", "rpg", "collector", "boss-hunt"],
+  "entry": {
+    "type": "iframe",
+    "path": "game/index.html"
+  },
+  "metadata": {
+    "language": "ko",
+    "thumbnail": "assets/thumbnail.webp",
+    "distribution": "non-commercial",
+    "cutsceneVoiceAttribution": "elevenlabs.io",
+    "cutsceneLicenseNotice": "CUTSCENE_CREDITS.md",
+    "cutsceneLicenseId": "LicenseRef-Cat-Odyssey-ElevenLabs-NC-1.0",
+    "cutsceneGenerationMode": "ElevenLabs Text to Speech",
+    "cutsceneVoiceDisclosure": "EP1-11 historical ElevenLabs voice; EP12-20 ElevenLabs Voice Library Spuds Oxley; user reports no self-created voice clone"
+  },
+  "permissions": {
+    "walletSpend": true,
+    "storage": true,
+    "network": false,
+    "externalLinks": false,
+    "cardRead": false
+  },
+  "save": {
+    "scope": "pack",
+    "key": "cat-odyssey-save-v1",
+    "schemaVersion": 1
+  },
+  "economy": {
+    "diamondActions": [
+      {
+        "id": "oracle-summon-1",
+        "amount": 100,
+        "reason": "고양이 오디세이 신탁 소환 1회",
+        "requiresConfirm": true,
+        "repeatable": true
+      },
+      {
+        "id": "oracle-summon-10",
+        "amount": 900,
+        "reason": "고양이 오디세이 신탁 소환 10회",
+        "requiresConfirm": true,
+        "repeatable": true
+      },
+      {
+        "id": "battle-rescue",
+        "amount": 60,
+        "reason": "고양이 오디세이 구조 요청",
+        "requiresConfirm": true,
+        "repeatable": true
+      },
+      {
+        "id": "blessing-reroll",
+        "amount": 30,
+        "reason": "고양이 오디세이 가호 재선택",
+        "requiresConfirm": true,
+        "repeatable": true
+      },
+      {
+        "id": "storm-extra-run",
+        "amount": 40,
+        "reason": "고양이 오디세이 폭풍 항로 추가 출항",
+        "requiresConfirm": true,
+        "repeatable": true
+      },
+      {
+        "id": "raid-extra-key",
+        "amount": 50,
+        "reason": "고양이 오디세이 토벌 열쇠 보충",
+        "requiresConfirm": true,
+        "repeatable": true
+      },
+      {
+        "id": "awakening-materials",
+        "amount": 120,
+        "reason": "고양이 오디세이 각성 재료 보충",
+        "requiresConfirm": true,
+        "repeatable": true
+      },
+      {
+        "id": "vault-expansion",
+        "amount": 180,
+        "reason": "고양이 오디세이 보물고 확장",
+        "requiresConfirm": true,
+        "repeatable": false
+      }
+    ]
+  }
+}

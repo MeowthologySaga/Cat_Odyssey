@@ -1,0 +1,10 @@
+# Runtime inventories are byte-for-byte. Do not let Git rewrite line endings.
+* -text whitespace=cr-at-eol,-blank-at-eof
+
+# Preserve upstream legal notices byte-for-byte, including their formatting.
+licenses/** -whitespace
+
+public/assets/art/** filter=lfs diff=lfs merge=lfs -text
+public/assets/audio/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+public/assets/video/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+cartridge/assets/*.webp filter=lfs diff=lfs merge=lfs -text

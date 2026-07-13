@@ -1,0 +1,112 @@
+[
+  {
+    "id": "route-01-ogygia",
+    "order": 1,
+    "name": "오기기아 탈출과 파이아키아 난파",
+    "originalBeat": "Calypso releases Odysseus; Poseidon's storm wrecks the raft before Phaeacia.",
+    "biome": "sunlit-island-and-storm-coast",
+    "signatureMechanic": "moving-bumper-and-wave-current",
+    "coreRoute": false,
+    "stageIds": ["r01-s01", "r01-s02", "r01-s03", "r01-s04"],
+    "bossId": "storm-avatar"
+  },
+  {
+    "id": "route-02-lotus",
+    "order": 2,
+    "name": "망각의 로토스 섬",
+    "originalBeat": "The Lotus-eaters tempt the crew to forget the voyage home.",
+    "biome": "dreaming-lotus-garden",
+    "signatureMechanic": "slow-field-and-rescue",
+    "coreRoute": false,
+    "stageIds": ["r02-s01", "r02-s02", "r02-s03", "r02-s04"],
+    "bossId": "lotus-heart"
+  },
+  {
+    "id": "route-03-cyclops",
+    "order": 3,
+    "name": "외눈박이의 동굴",
+    "originalBeat": "Odysseus escapes Polyphemus through deception, a sharpened stake, and the rams.",
+    "biome": "cyclops-cave",
+    "signatureMechanic": "breakable-rock-and-rear-weakpoint",
+    "coreRoute": true,
+    "stageIds": ["r03-s01", "r03-s02", "r03-s03", "r03-s04", "r03-s05"],
+    "bossId": "poly-meow-mus"
+  },
+  {
+    "id": "route-04-aeolus",
+    "order": 4,
+    "name": "뮤-올로스의 바람 궁전",
+    "originalBeat": "Aeolus gifts the wind bag; the crew opens it and the voyage falls into Laestrygonian peril.",
+    "biome": "floating-wind-palace-and-giant-harbor",
+    "signatureMechanic": "wind-vector-and-moving-gates",
+    "coreRoute": false,
+    "stageIds": ["r04-s01", "r04-s02", "r04-s03", "r04-s04"],
+    "bossId": "wind-bag-tempest"
+  },
+  {
+    "id": "route-05-circe",
+    "order": 5,
+    "name": "퍼-씨의 마법 정원",
+    "originalBeat": "Circe transforms the crew, Hermes gives moly, and Odysseus wins a nonlethal magical contest.",
+    "biome": "enchanted-aiaia-garden",
+    "signatureMechanic": "one-way-mirror-and-transformation",
+    "coreRoute": false,
+    "stageIds": ["r05-s01", "r05-s02", "r05-s03", "r05-s04"],
+    "bossId": "purr-ce-illusion"
+  },
+  {
+    "id": "route-06-underworld",
+    "order": 6,
+    "name": "저승의 기억길",
+    "originalBeat": "Odysseus descends to consult Tiresias and meets the shade of Anticleia.",
+    "biome": "underworld-memory-river",
+    "signatureMechanic": "paired-portals-and-spirit-walls",
+    "coreRoute": false,
+    "stageIds": ["r06-s01", "r06-s02", "r06-s03", "r06-s04"],
+    "bossId": "underworld-gate"
+  },
+  {
+    "id": "route-07-sirens",
+    "order": 7,
+    "name": "사이렌의 달빛 암초",
+    "originalBeat": "The crew passes the Sirens while Odysseus listens bound to the mast.",
+    "biome": "moonlit-siren-reef",
+    "signatureMechanic": "rotating-sound-wave-bumper",
+    "coreRoute": false,
+    "stageIds": ["r07-s01", "r07-s02", "r07-s03", "r07-s04"],
+    "bossId": "siren-triad"
+  },
+  {
+    "id": "route-08-strait",
+    "order": 8,
+    "name": "스킬라·카리브디스 해협",
+    "originalBeat": "The ship must choose a narrow path between six-headed Scylla and the devouring Charybdis.",
+    "biome": "black-cliff-strait",
+    "signatureMechanic": "whirlpool-suction-and-multipart-break",
+    "coreRoute": true,
+    "stageIds": ["r08-s01", "r08-s02", "r08-s03", "r08-s04", "r08-s05"],
+    "bossId": "scylla-cat"
+  },
+  {
+    "id": "route-09-thrinacia",
+    "order": 9,
+    "name": "트리나키아 태양 목장",
+    "originalBeat": "The crew violates the taboo of Helios' cattle and Zeus destroys the ship in judgment.",
+    "biome": "golden-solar-pasture",
+    "signatureMechanic": "forbidden-target-and-lightning-rod",
+    "coreRoute": false,
+    "stageIds": ["r09-s01", "r09-s02", "r09-s03", "r09-s04"],
+    "bossId": "zeu-puss-tempest"
+  },
+  {
+    "id": "route-10-ithaca",
+    "order": 10,
+    "name": "이타-캣 귀환과 궁전 탈환",
+    "originalBeat": "Odysseus returns in disguise, proves the bow, defeats the suitors, and reunites with Penelope.",
+    "biome": "ithacan-harbor-and-palace",
+    "signatureMechanic": "directional-shields-and-twelve-axe-line",
+    "coreRoute": true,
+    "stageIds": ["r10-s01", "r10-s02", "r10-s03", "r10-s04", "r10-s05"],
+    "bossId": "anti-nyaus"
+  }
+]

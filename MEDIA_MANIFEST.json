@@ -1,0 +1,1289 @@
+{
+  "schemaVersion": 1,
+  "delivery": "git-lfs",
+  "checkoutRequirement": "Run git lfs install and git lfs pull before building or packaging.",
+  "fileCount": 256,
+  "totalBytes": 100506143,
+  "files": [
+    {
+      "path": "cartridge/assets/thumbnail.webp",
+      "bytes": 272802,
+      "sha256": "b69111fef39152244f380aaa68a896fbf405fe0b8b791ccbb2179a823f39177e"
+    },
+    {
+      "path": "public/assets/art/bosses/anti-nyaus.webp",
+      "bytes": 55874,
+      "sha256": "4964697b98d0b9a8f1e9680171752d79aed9a8029add48594245b4d7dbb878d0"
+    },
+    {
+      "path": "public/assets/art/bosses/cat-lypso-trial.webp",
+      "bytes": 186368,
+      "sha256": "3aacb02eca49ad1ed4df265c6e9aaa7ade04a26194d2135ab78cb11efa48ffdb"
+    },
+    {
+      "path": "public/assets/art/bosses/charybdis.webp",
+      "bytes": 96186,
+      "sha256": "3e0142ef58655c16bf4e5207f0260a3281d460fa4a01fd48bb207447e731232d"
+    },
+    {
+      "path": "public/assets/art/bosses/lotus-heart.webp",
+      "bytes": 75338,
+      "sha256": "a9ab2c520a7ba62b5c5eb39c0f2bc5290cecbb7b616573af149933d16a6d5266"
+    },
+    {
+      "path": "public/assets/art/bosses/poly-meow-mus.webp",
+      "bytes": 95018,
+      "sha256": "ce3d53e23d8ea532daa486b0ee3cd33364d5755787927ac241630822017b018c"
+    },
+    {
+      "path": "public/assets/art/bosses/purr-ce-illusion.webp",
+      "bytes": 91986,
+      "sha256": "ad73c152b28287cbe56637407c1bc23b07e2c5ebb531e239883fbb8a2fa98bad"
+    },
+    {
+      "path": "public/assets/art/bosses/scylla-cat.webp",
+      "bytes": 95914,
+      "sha256": "47eeae639b51c06038588068dc24a2db8227c977e1a2eb3959e2406966f3c72a"
+    },
+    {
+      "path": "public/assets/art/bosses/siren-triad.webp",
+      "bytes": 114280,
+      "sha256": "9ff7d3f772ade1b4e1ad19ef96b66b5fab71e5e1cba4587a83b714ddbd0b937d"
+    },
+    {
+      "path": "public/assets/art/bosses/storm-avatar.webp",
+      "bytes": 130426,
+      "sha256": "f42a0ee1942db8fa975dc305a3bb258f2b5ceb0a833e8c49a60a5d7b1bafd024"
+    },
+    {
+      "path": "public/assets/art/bosses/underworld-gate.webp",
+      "bytes": 81632,
+      "sha256": "8b4527a91793408bebb75e072af1e2d3dae8d42f444c95257a733b1ac00ea2ae"
+    },
+    {
+      "path": "public/assets/art/bosses/wind-bag-tempest.webp",
+      "bytes": 87250,
+      "sha256": "c9902c918d38c1843f19973f06d570fa21ccb21f60dba39e7e85491b767cc120"
+    },
+    {
+      "path": "public/assets/art/bosses/zeu-puss-tempest.webp",
+      "bytes": 103308,
+      "sha256": "49b7d9b663eda14f23d160700b704d694b17a3149a6b14e80fb064222bf6560a"
+    },
+    {
+      "path": "public/assets/art/characters/a-paw-na-flight.webp",
+      "bytes": 46122,
+      "sha256": "f7c048270787ab6fb78a4242974d9d10eec9465f0166eddf8e8c7f57591c88b1"
+    },
+    {
+      "path": "public/assets/art/characters/aeolus-flight.webp",
+      "bytes": 42362,
+      "sha256": "89821b2be10e6a490b828045380a218c1f8d70a3dc4a866420f973328f160e4c"
+    },
+    {
+      "path": "public/assets/art/characters/anticleia-ghost-flight.webp",
+      "bytes": 44626,
+      "sha256": "c8f53c15adb06bccfa28f0bb602568ce2dd79c347fa1bb34a1a7fc31081e5c18"
+    },
+    {
+      "path": "public/assets/art/characters/argos-flight.webp",
+      "bytes": 37682,
+      "sha256": "2cc4f62dbb8e1014050dd420155d68edc0a2fc4977d6f4cfa13bc5c7327a516c"
+    },
+    {
+      "path": "public/assets/art/characters/cat-lypso-flight.webp",
+      "bytes": 40196,
+      "sha256": "d3b492bf926bbb40c0abe5fe2ef5bd77cf06a8cf5bf026aaf45b1670bea8b6e6"
+    },
+    {
+      "path": "public/assets/art/characters/eumaeus-flight.webp",
+      "bytes": 47566,
+      "sha256": "e76f73e1a21c3986f384a02f04a99b67cad8d47f8489b8c5abee8a48632d1ecf"
+    },
+    {
+      "path": "public/assets/art/characters/heli-paws-flight.webp",
+      "bytes": 74276,
+      "sha256": "6509e626311e860d2c28c999f2f7b198c91ec578d455a89586af1dbb9d075131"
+    },
+    {
+      "path": "public/assets/art/characters/her-meows-flight.webp",
+      "bytes": 37674,
+      "sha256": "61215270e29320849141d1b742503b1fa82600216e8e3b9f1150c986c115b37e"
+    },
+    {
+      "path": "public/assets/art/characters/meow-dysseus-flight.webp",
+      "bytes": 40838,
+      "sha256": "bae2ad6712bcb8539e60dad70510c8bcebddd93d14b66e1a73d92d3a289e81d6"
+    },
+    {
+      "path": "public/assets/art/characters/nausi-cat-flight.webp",
+      "bytes": 36714,
+      "sha256": "0f59117209bf1f0b7665b9ad4aba4c5a7883210cf428ef08aebffcbfe8f646a1"
+    },
+    {
+      "path": "public/assets/art/characters/orange-sailor-flight.webp",
+      "bytes": 37914,
+      "sha256": "81a1fde6d79a090522df79ee3259ddf58c1094cbeb7ba731e67cee453b06e1c1"
+    },
+    {
+      "path": "public/assets/art/characters/purr-ce-flight.webp",
+      "bytes": 34550,
+      "sha256": "014ac9f25b242ec9fe571c5463a7cc12fa1e2a44dd320c5b383113d96cdf552d"
+    },
+    {
+      "path": "public/assets/art/characters/purr-nelope-flight.webp",
+      "bytes": 41040,
+      "sha256": "6ec67bc8b3025fedb690fbe80e7199cc4f5578932c67b89d876f0dbbda7ae63b"
+    },
+    {
+      "path": "public/assets/art/characters/tele-meow-chus-flight.webp",
+      "bytes": 30112,
+      "sha256": "b4b7e13b10213acad81006f90b023d26673fcb4736f20a93a46289cb878da5c3"
+    },
+    {
+      "path": "public/assets/art/characters/tiresias-flight.webp",
+      "bytes": 32698,
+      "sha256": "1123f8abe7d8adfd6c9dda17095fa3f4064ae644449a0c3c6fac0b5ee0691145"
+    },
+    {
+      "path": "public/assets/art/characters/tuxedo-sailor-flight.webp",
+      "bytes": 26504,
+      "sha256": "3aacdfe4716d30196f0ac64fe162f474642dfbc30019966f8c920ba95d97e18d"
+    },
+    {
+      "path": "public/assets/art/enemies/abyss-priest.webp",
+      "bytes": 26236,
+      "sha256": "36bf6638950e3519834ee51d3e1d99948b12f478b211b2c64140aec0f361e24f"
+    },
+    {
+      "path": "public/assets/art/enemies/bronze-shieldcat.webp",
+      "bytes": 37852,
+      "sha256": "2c4a0b5d8e4a66fcada4c073d11f7739c2c561a7d902e46c29cdc1cd56420367"
+    },
+    {
+      "path": "public/assets/art/enemies/cave-herder.webp",
+      "bytes": 35754,
+      "sha256": "01538f6a5e8895db8f328ed317d3b399d3a162dc0d1b2dbb7099c35c9c350a77"
+    },
+    {
+      "path": "public/assets/art/enemies/circe-apprentice.webp",
+      "bytes": 35706,
+      "sha256": "8fb9d9b10b9889a657bbb3de28410c65dd34492ae45a8a98d00bc2e1556b5844"
+    },
+    {
+      "path": "public/assets/art/enemies/coral-archer.webp",
+      "bytes": 51110,
+      "sha256": "53358ec7081546ef470be90934278f1e4b7bcac37886c9f477fe08c07811231c"
+    },
+    {
+      "path": "public/assets/art/enemies/cyclops-stoneguard.webp",
+      "bytes": 31536,
+      "sha256": "4eb38b37630da0ac96302b4941a93e636f43ed1939176d04fbab97a374b5c931"
+    },
+    {
+      "path": "public/assets/art/enemies/foam-crab.webp",
+      "bytes": 38690,
+      "sha256": "b3b49f8413f1af63d8abb08913eed7f3155a77730369953ba1cbd68c990e8a7e"
+    },
+    {
+      "path": "public/assets/art/enemies/laestrygon-brute.webp",
+      "bytes": 32772,
+      "sha256": "be1ed7608f457d8673c658b92b03f1e4d9d9f90e96796716da1235f50e08e0b2"
+    },
+    {
+      "path": "public/assets/art/enemies/lotus-bud.webp",
+      "bytes": 17002,
+      "sha256": "50d1284784a94f345ef295089af049a9db385415dc0c97795e2b953861701c04"
+    },
+    {
+      "path": "public/assets/art/enemies/lotus-healer.webp",
+      "bytes": 30356,
+      "sha256": "9c39675d121aa5b097d74be8fbe0850abd120634dbe5fa5c9296bee279c21f07"
+    },
+    {
+      "path": "public/assets/art/enemies/lotus-spitter.webp",
+      "bytes": 41276,
+      "sha256": "504bd94db001e7215631bb316b48c511f08c0d9e57c9903178447ee98cfdd25e"
+    },
+    {
+      "path": "public/assets/art/enemies/palace-hound.webp",
+      "bytes": 40846,
+      "sha256": "12259df4c05f896ca7e8090a2c83e9638fc174201b9c4e4f23b58ec76e2ef68b"
+    },
+    {
+      "path": "public/assets/art/enemies/reef-boar.webp",
+      "bytes": 38876,
+      "sha256": "f56c8997254f59e8e87011bbdbc52f2c77873f11b96c60ad284872068f2d91f9"
+    },
+    {
+      "path": "public/assets/art/enemies/rock-tortoise.webp",
+      "bytes": 34010,
+      "sha256": "376a851f6b83da25ee8bc2c25747cf94b69d7e7204055d05d4017a92b3b6407c"
+    },
+    {
+      "path": "public/assets/art/enemies/sacred-bull-guardian.webp",
+      "bytes": 47574,
+      "sha256": "c0674abdffebd6844f42f0db0d27702ef7d363c20d50c9dead1fdef2c8e6c197"
+    },
+    {
+      "path": "public/assets/art/enemies/shade-archer.webp",
+      "bytes": 44264,
+      "sha256": "b8ae7b2dea0de9c154ce0ed09be115ac226578c736a97ef6f5ea8fb42787c21b"
+    },
+    {
+      "path": "public/assets/art/enemies/shade-oracle.webp",
+      "bytes": 25266,
+      "sha256": "11c00bace2ca26922f624d909fa62b72433f441a74a485049fc7cc76472dcddc"
+    },
+    {
+      "path": "public/assets/art/enemies/shell-guard.webp",
+      "bytes": 41732,
+      "sha256": "1e96fc88bd807106eefbab1b8df94edc94728e021278385549586e9030968f7f"
+    },
+    {
+      "path": "public/assets/art/enemies/siren-chorister.webp",
+      "bytes": 37462,
+      "sha256": "fdb94d886400fe43c43439647e6f7507984fe46a5097d4350aa3d4360806daae"
+    },
+    {
+      "path": "public/assets/art/enemies/split-anemone.webp",
+      "bytes": 57934,
+      "sha256": "0eb87154ce177727d3240bc226772c4120c8c01206c05d673601ce48e4328608"
+    },
+    {
+      "path": "public/assets/art/enemies/storm-jelly.webp",
+      "bytes": 29208,
+      "sha256": "7f9966fc0e1b6cdfa1aa4fa7fed4a4b184eead462956cfb20b8f4c2d38018944"
+    },
+    {
+      "path": "public/assets/art/enemies/storm-ram.webp",
+      "bytes": 39910,
+      "sha256": "30bcf6d2baf81b8a557028244fd1dcfcac1c658782294ecab1c47da58caab0c9"
+    },
+    {
+      "path": "public/assets/art/enemies/suitor-captain.webp",
+      "bytes": 43890,
+      "sha256": "483167ac5e2e46f98ccca787db0963c4ce2b691e2d9e7c5f089bf12390460233"
+    },
+    {
+      "path": "public/assets/art/enemies/suitor-hoplon.webp",
+      "bytes": 31814,
+      "sha256": "918fba7110832b88f07febbd4f3607b3734fdebcad11372dca8fb9c2ffecf038"
+    },
+    {
+      "path": "public/assets/art/enemies/suitor-sniper.webp",
+      "bytes": 34672,
+      "sha256": "793ed1f061443c019d78590273df2f0a221fcfcc300626212d2ee428b9450c2e"
+    },
+    {
+      "path": "public/assets/art/enemies/tide-chanter.webp",
+      "bytes": 36436,
+      "sha256": "78cc4b6116a352da1bca63e3e987f71258e1b71489892969f7c98f822587aec5"
+    },
+    {
+      "path": "public/assets/art/enemies/underworld-colossus.webp",
+      "bytes": 46530,
+      "sha256": "decd44a7b1845d20cf030c0c6c0c5e81e10af6b75a5390d16d07ef163561bdc7"
+    },
+    {
+      "path": "public/assets/art/enemies/underworld-wisp.webp",
+      "bytes": 32790,
+      "sha256": "af369de47931fb313d54c02a3e09d8bc14d325b8260be1e7c26dab0b798f682f"
+    },
+    {
+      "path": "public/assets/art/fx/friendship-link.webp",
+      "bytes": 25540,
+      "sha256": "4fa05e281f55a3d7d46b47c08e22583eae93205b07bbc279754d815d52fb84af"
+    },
+    {
+      "path": "public/assets/art/fx/ricochet-impact.webp",
+      "bytes": 16374,
+      "sha256": "310f1d5370ae573502a84c8c3807d286746dcb1392af215ff37286ebdb4d2bb7"
+    },
+    {
+      "path": "public/assets/art/fx/shield-break.webp",
+      "bytes": 25018,
+      "sha256": "0d5ec79906ef42f8f1ed6f23563726a99f48395798d621c689f02f3cac0fb55d"
+    },
+    {
+      "path": "public/assets/art/hazards/current.webp",
+      "bytes": 43998,
+      "sha256": "4d2e6f9b6599d4f2fed6f00cdb40d7f000c4a24af2374d0e9b5ec675c99fa0d3"
+    },
+    {
+      "path": "public/assets/art/hazards/forbidden-target.webp",
+      "bytes": 29404,
+      "sha256": "d0154a56f640f524ee47aee02e8baf8bfd562a3cb8bc107f9e117d511082e6cb"
+    },
+    {
+      "path": "public/assets/art/hazards/lightning.webp",
+      "bytes": 56950,
+      "sha256": "58a96fa24a97e33cea06e0a4fc9bd763c69377b90851d7808dab7f77d24ecb05"
+    },
+    {
+      "path": "public/assets/art/hazards/moving-bumper.webp",
+      "bytes": 80020,
+      "sha256": "758d41f370c5166a7f1f2566cfa9a08bab4aefb02182d64ca2f5f312f967a602"
+    },
+    {
+      "path": "public/assets/art/hazards/one-way-wall.webp",
+      "bytes": 18992,
+      "sha256": "236a91e884e96968d29f09b49b1ddf2a64edf57aad479a8b680e878481cf8801"
+    },
+    {
+      "path": "public/assets/art/hazards/portal.webp",
+      "bytes": 36076,
+      "sha256": "f306ccb8d18f76c40ce3860295868f5f21024ed5603bbb8f0bb30a9dbd1f2c12"
+    },
+    {
+      "path": "public/assets/art/hazards/slow-field.webp",
+      "bytes": 85668,
+      "sha256": "7311be7bab4988cc92e5a09d997495285f34ec76364c6bcb3943852cde4b90b7"
+    },
+    {
+      "path": "public/assets/art/hazards/sound-wave.webp",
+      "bytes": 73082,
+      "sha256": "c4d3ea251abbe289e75a0f90ee2ba8c07e84510bf3033acd551ede6c02d180e3"
+    },
+    {
+      "path": "public/assets/art/hazards/wave-front.webp",
+      "bytes": 122916,
+      "sha256": "a7d380e7bd8471a32e448e18cc67f7d03d6dc91208ce098d5eed54d8d12f1ba3"
+    },
+    {
+      "path": "public/assets/art/hazards/whirlpool.webp",
+      "bytes": 41772,
+      "sha256": "43da6c084d81f761ce6b09273fdf0f2f1902758839eb075e8b99b1093e1f827b"
+    },
+    {
+      "path": "public/assets/art/hazards/wind-vector.webp",
+      "bytes": 41788,
+      "sha256": "14d40f11307b3dcad21a53b95a82b7e425d2a472775738dba1024a537a058339"
+    },
+    {
+      "path": "public/assets/art/maps/harbor-hub.webp",
+      "bytes": 245676,
+      "sha256": "7e7d8e70bdf87dd23d0e206e80dc4150a1988bc494641b3c8192666344c7d713"
+    },
+    {
+      "path": "public/assets/art/maps/route-03-cyclops-base.webp",
+      "bytes": 339842,
+      "sha256": "6f80b54a6ecbc1e744969f541e5e4fadb74a601e165abcae4b70bce77c96de5a"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-01-ogygia.webp",
+      "bytes": 165750,
+      "sha256": "603bd84886e6d238b72d2e4c246df1478709655412e29bf16426a9a6ee8065fe"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-02-lotus.webp",
+      "bytes": 98412,
+      "sha256": "ee87cabb11053ccd8899b9340e8019535b5979e0586790252708f04d28082634"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-03-cyclops.webp",
+      "bytes": 133682,
+      "sha256": "15e0b76b812a74ea357d94f1731191101632c1797d1df0775d9104d26432abc9"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-04-aeolus.webp",
+      "bytes": 129986,
+      "sha256": "d4f823ffe0af9e3afa7deb4872b1b340859083a24cc283891fc70b88fce8f043"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-05-circe.webp",
+      "bytes": 107800,
+      "sha256": "696f6917301dc8538bfc74c4fcb2a5179b68b4f8b9a4730daafe9758c95695bd"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-06-underworld.webp",
+      "bytes": 110072,
+      "sha256": "601b9532d75667723dc8bbe41c75eb189f09bf08f1f5724aea23e1d5dea656b0"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-07-sirens.webp",
+      "bytes": 195050,
+      "sha256": "d402a0c8cf959816629bcd9cd9e5e8b3cb8dd5a68363034f59e4fbb75dcf3e72"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-08-strait.webp",
+      "bytes": 147772,
+      "sha256": "fc57594941cf94f97b61957f7c77f8dc6d5508697fd729def386e773150897b0"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-09-thrinacia.webp",
+      "bytes": 202378,
+      "sha256": "16f1d8d2c2fba151d0356189e6d620959888dd38682ecd63c0245d9d442108f8"
+    },
+    {
+      "path": "public/assets/art/maps/routes/route-10-ithaca.webp",
+      "bytes": 149294,
+      "sha256": "67369df1330e4ce0b271718536a2726f0476c8abb173f30be6fe818de90bf406"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r01-s01-forest.webp",
+      "bytes": 201508,
+      "sha256": "483e3333386574df533dde31ec7e8243b13c9423b19b7e52f59bcf37b493286b"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r01-s02-raft-yard.webp",
+      "bytes": 150602,
+      "sha256": "baaa61190e92446c55132bbd0426181f300c6b872453ddbc3e300e3cf19e4ff8"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r01-s03-farewell-grove.webp",
+      "bytes": 205998,
+      "sha256": "a7bca6fa4e5a98e2880c45f6c213915d6bcca5df853e3690ade658f0089864b1"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r01-s04-poseidon-storm.webp",
+      "bytes": 171888,
+      "sha256": "1fd461646efade88824947bf57734523c91075aa2e5e8c4790e95b3389a438e3"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r02-s01-first-scent.webp",
+      "bytes": 129014,
+      "sha256": "3648fcc1989b8225818260558a4cba62aa9cd9992f78b2356c89f0955d635f40"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r02-s02-sleeping-camp.webp",
+      "bytes": 134890,
+      "sha256": "39d163eb878da4d04af1b770fdf219755fd9b9a4c24d4e9f2c93fc13659c5a68"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r02-s03-dream-fork.webp",
+      "bytes": 129756,
+      "sha256": "224bae5c9448c348b5d8b485530ec9ffde1fa5b69e047442d21ce04b7bd398b4"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r02-s04-lotus-heart.webp",
+      "bytes": 132796,
+      "sha256": "d328f2030e9eae2eeb5abd0c40e875874dffc76692299b1cbc484c1bd1bf11d7"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r03-s01-cave-mouth.webp",
+      "bytes": 158674,
+      "sha256": "04b0eca79128d1f638508c5742d814d0ed230984f12593d6fadbb1d8ec57cdc9"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r03-s02-boulder-slope.webp",
+      "bytes": 168208,
+      "sha256": "8ee8eafb812aa1a0c77c13e52b8ca8fcf937bc166e8db4a99e9de97aa92b18dd"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r03-s03-breakwall.webp",
+      "bytes": 171372,
+      "sha256": "c75b9ecb5094e4484de13edb9a51e08e859efd251f578dee401d402fbabf34a2"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r03-s04-feast-hall.webp",
+      "bytes": 192230,
+      "sha256": "b81303dab82e27d7466744b04ddb20e4d8eae116aa8938dea458092183cd7ff0"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r03-s05-poly-throne.webp",
+      "bytes": 218326,
+      "sha256": "17cdde88929ef1173fe6d96ec6be981985dc776e6726bf9b7de975dc88fee144"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r04-s01-wind-gate.webp",
+      "bytes": 105696,
+      "sha256": "fc652746f46e734c6be5f515d523e4fdf54a7ee244ea9bd656cf983ce9783966"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r04-s02-cloud-gates.webp",
+      "bytes": 118902,
+      "sha256": "a49ed1c718b93076986418a56061fd66b53e86e8b1927a468ab4a8aa02b3e2c7"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r04-s03-giant-harbor.webp",
+      "bytes": 221168,
+      "sha256": "899401bb2fe9aaf3b2b6a526b8c71c9d56ef60e7c2ba96b2a231d9f1dbe711bd"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r04-s04-wind-vault.webp",
+      "bytes": 132136,
+      "sha256": "b32b8b756826825e4c0be92f0e1b5f7e61b9552ac8fd302ab6f4bd4e3f5c61b5"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r05-s01-garden-gate.webp",
+      "bytes": 105992,
+      "sha256": "945be1c97d08230314173af67e4de460e01080c6c55fa85169ce2b3e7c8dc4cf"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r05-s02-alchemy-lab.webp",
+      "bytes": 168104,
+      "sha256": "204d9532fa4e9b1d51ea8f31c4356b1ec7a766ac4efe7cab426cb0361bb71855"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r05-s03-mirror-corridor.webp",
+      "bytes": 166410,
+      "sha256": "fbd7cffe2bb3cb86f910ae076c2cf0340f5273279689f7426fa9d3e905e56020"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r05-s04-circe-duel.webp",
+      "bytes": 147692,
+      "sha256": "8f71c02b5d625a8e8bfb22419751562a1a41e53309c0f9fa166e5be69983ddbc"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r06-s01-underworld-bank.webp",
+      "bytes": 146004,
+      "sha256": "da0d7832986d273ce55d21b7716659d56fa879722ed161224a6c655f080da8c2"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r06-s02-colored-gates.webp",
+      "bytes": 126976,
+      "sha256": "fa839b3de629e18ad86a169322249bea82377f8eeccba8d3b6cb5b5256b0d32b"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r06-s03-anticleia-memory.webp",
+      "bytes": 159550,
+      "sha256": "266b8dc35212fa9d9e0bc0f0db6751b2f97726c6b61a877a832b6e5e12364785"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r06-s04-tiresias-gate.webp",
+      "bytes": 170254,
+      "sha256": "dc105db7a2b52743c1452f2adf883617b1f64a3487687eaa2b159bc15f942399"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r07-s01-siren-outer-reef.webp",
+      "bytes": 159202,
+      "sha256": "ed3c4574060ef0b0bc017b175ab6454b071a7f86dbb0b439aa77bdb5ee04cf17"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r07-s02-siren-turning-reef.webp",
+      "bytes": 149030,
+      "sha256": "199d971b4521367c1bff28bd26560c7ec1e0ec7ea80cc9f72e3572b5db4ab013"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r07-s03-siren-crystals.webp",
+      "bytes": 173424,
+      "sha256": "5c43f03be967478118c6d46e78de642cdbe6559050fc8fe54fe642fd217c05bf"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r07-s04-siren-moon-stage.webp",
+      "bytes": 197064,
+      "sha256": "f7e8a03c7a507c8db66b6049ee5786e92deaeaf2ccc0678f6ce45259e9af676f"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r08-s01-strait-mouth.webp",
+      "bytes": 134516,
+      "sha256": "7c5fd22ebed2ea688ab51a847146b7409baef2601305d52aa07e3fd480acaa97"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r08-s02-strait-narrows.webp",
+      "bytes": 167594,
+      "sha256": "6ef83457664ce9388a3258e4d1449ebcbef73c4d3e732bf5cd89bd45ca93058e"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r08-s03-scylla-ledge.webp",
+      "bytes": 130866,
+      "sha256": "cc9aa5ee82c00d1a372e5ba55c6e7df9a4b48d53f4462bbb98b50d9e9cf30c72"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r08-s04-charybdis-bowl.webp",
+      "bytes": 181706,
+      "sha256": "6161c67dd47845c9c7df0827fd8999cd084f1d3fe40451471c0957d086683fb2"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r08-s05-scylla-charybdis.webp",
+      "bytes": 167296,
+      "sha256": "d3cb385e691d56c9fc3635b31baee8ef503e4c8a091499242534ec711b3fe30d"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r09-s01-thrinacia-pasture.webp",
+      "bytes": 189674,
+      "sha256": "0c42cac8a4bc95255b8f02325836f484efb5df0e939ce90124ee1ba70eb44c38"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r09-s02-thrinacia-rods.webp",
+      "bytes": 204632,
+      "sha256": "153b4322f5e3cc4831cebf406b6ec882051fa9a3478e106c0566bd12935ec835"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r09-s03-thrinacia-night.webp",
+      "bytes": 167154,
+      "sha256": "373be18ea0905c0098555693cfad884839ef22e864f92c1c919f656928e93b6b"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r09-s04-zeus-tempest.webp",
+      "bytes": 212242,
+      "sha256": "4b84191067a8f3bba4868d892ad15b780e12d0ebc43128249fb32d737e57b4cd"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r10-s01-ithaca-harbor.webp",
+      "bytes": 171234,
+      "sha256": "3ac6a97268fb74d32ca33bea56691097357d820c544d9ba8aa3d1b5b87907705"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r10-s02-ithaca-courtyard.webp",
+      "bytes": 134642,
+      "sha256": "67c1302c00a536b6d140083d4e611d66714580bb6c0667d046197b84c5442df3"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r10-s03-ithaca-axe-hall.webp",
+      "bytes": 168616,
+      "sha256": "135151a448d94b8a861dabf0d8fce4852665c9a8e60fcdd8650b0ef15ebf8933"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r10-s04-ithaca-feast-hall.webp",
+      "bytes": 145506,
+      "sha256": "4526b338fa81be2f5745a393a4dd706338de9e1616ebabfebda05d66e5831ecb"
+    },
+    {
+      "path": "public/assets/art/maps/stages/r10-s05-ithaca-throne-hall.webp",
+      "bytes": 175746,
+      "sha256": "c9fae64934130ba74d5ffa9d5490b9cdd3fad7d6aeefb0c2350a9a385b524592"
+    },
+    {
+      "path": "public/assets/art/props/axe-ring.webp",
+      "bytes": 30024,
+      "sha256": "ec910b0c79c547e4e59b7f0391366ec0bc2c01011b99795d1db9bcf245180022"
+    },
+    {
+      "path": "public/assets/art/props/prop-anticleia-memory.webp",
+      "bytes": 36174,
+      "sha256": "baaa57130aee38be7a6e40d931b631a1bfa44e6543a9e2f3172d3cfa05554242"
+    },
+    {
+      "path": "public/assets/art/props/prop-island-bond-bonded.webp",
+      "bytes": 31436,
+      "sha256": "21be86f513cdb36aa31b0222b7ec4097ebb4a8a23dcd465cecf86ae290772110"
+    },
+    {
+      "path": "public/assets/art/props/prop-island-bond-fraying.webp",
+      "bytes": 38782,
+      "sha256": "7db454b3c13e52c007e131eb0dff0b8ca4c87990e5f50aed7786b439a278373d"
+    },
+    {
+      "path": "public/assets/art/props/prop-island-bond-severed.webp",
+      "bytes": 38384,
+      "sha256": "4264af0ff1cb9b3b1bcba509d376fa5c723325df6e0b73242d564e20d1911730"
+    },
+    {
+      "path": "public/assets/art/props/prop-ithaca-axe-ring.webp",
+      "bytes": 25436,
+      "sha256": "d2063c648f773a70b06fbe22d9a8c3ae8d30e83d4ca3dce30a30e5071498e221"
+    },
+    {
+      "path": "public/assets/art/props/prop-ogygia-tree-damaged.webp",
+      "bytes": 63000,
+      "sha256": "4f541ec81e95172af655371ed088f699cee1ca36cdfb0c094adaec17f61f0e71"
+    },
+    {
+      "path": "public/assets/art/props/prop-ogygia-tree-fallen.webp",
+      "bytes": 51228,
+      "sha256": "67ba2b59fb324e2cbe5678ed4e99b2c45bf573e84395a4d785874ad93263b1fa"
+    },
+    {
+      "path": "public/assets/art/props/prop-ogygia-tree-intact.webp",
+      "bytes": 54060,
+      "sha256": "83b9f0b8e27944b610bc4dd8604bcb24fb4289ef06b4c22930514635f8bb76dc"
+    },
+    {
+      "path": "public/assets/art/props/prop-ogygia-tree-stump.webp",
+      "bytes": 15292,
+      "sha256": "30bc2049072ae83f59783ea26d20e8f474ef268033153bae2d9c00a79222662d"
+    },
+    {
+      "path": "public/assets/art/props/prop-raft-log-lashed.webp",
+      "bytes": 36166,
+      "sha256": "5d4b02bdec4e97f4b6bb4994b338268169a30ca7da0f614c1ab77fb97b42840b"
+    },
+    {
+      "path": "public/assets/art/props/prop-raft-log-positioned.webp",
+      "bytes": 31012,
+      "sha256": "f02c7150fd75c94d6f5762d59adbf9f7ffe31edb30496abd2cc63524b4ed8972"
+    },
+    {
+      "path": "public/assets/art/props/prop-raft-log-unlashed.webp",
+      "bytes": 24566,
+      "sha256": "fef27533e6208253d3f6af5d861ad99c97997c3517aa8dd335035af122f0d1f9"
+    },
+    {
+      "path": "public/assets/art/props/prop-siren-song-crystal.webp",
+      "bytes": 25590,
+      "sha256": "e3ad4dd18de49ae6a39b399b41ed5c6e8cd0feb89fb1ce41bbcb7ab303ea899e"
+    },
+    {
+      "path": "public/assets/art/props/prop-thrinacia-sacred-cattle.webp",
+      "bytes": 32602,
+      "sha256": "6dab649acb82ed5a5da6ebdf878393abc66d13383f4a8d966eabd44061ff8350"
+    },
+    {
+      "path": "public/assets/art/props/resonance-crystal.webp",
+      "bytes": 22452,
+      "sha256": "34dc63194c029d4728bcd976dd72e5167b400fd8b950f636a51d6a5f5d50f7a3"
+    },
+    {
+      "path": "public/assets/art/props/sacred-cattle.webp",
+      "bytes": 35696,
+      "sha256": "4e452709f120f841ad06c863737d4afa855239370aea0aecf1b2c3654d641f23"
+    },
+    {
+      "path": "public/assets/art/props/scylla-forepaw.webp",
+      "bytes": 60162,
+      "sha256": "e1bd17b7cf82d79f70ee02d71a133ca1a96cdeb29149fc0efa9014f012f5eba0"
+    },
+    {
+      "path": "public/assets/art/props/sleeping-sailor.webp",
+      "bytes": 28272,
+      "sha256": "38effff5d0d6c843fcedc572bce3ae1c4881788e6934581b27c2b3bdd154e0ac"
+    },
+    {
+      "path": "public/assets/art/walls/wall-aeolus-bronze-gate.webp",
+      "bytes": 28900,
+      "sha256": "beff3b063fa38acda9db227a2a96e54eeebc3b6299ed6ba35c9b796ebb27708c"
+    },
+    {
+      "path": "public/assets/art/walls/wall-aeolus-cloud-crest.webp",
+      "bytes": 32704,
+      "sha256": "3002bba71ddf873676472d113b3405dada106cee4390d9c5486d80621a512446"
+    },
+    {
+      "path": "public/assets/art/walls/wall-black-reef.webp",
+      "bytes": 66958,
+      "sha256": "5dd0e68984ef42c7e33fe567333b7c6d92b4f93dbf67494db00d0d751b7bd905"
+    },
+    {
+      "path": "public/assets/art/walls/wall-circe-alchemy-shelf.webp",
+      "bytes": 31858,
+      "sha256": "6cce99a77414337236af88f095176bef44638194f07a5f506370d96e9160fecf"
+    },
+    {
+      "path": "public/assets/art/walls/wall-circe-hedge.webp",
+      "bytes": 44712,
+      "sha256": "ab9686d3bd6db0388d9494a2fccb2a27254cd238939a0456978b122729eeb636"
+    },
+    {
+      "path": "public/assets/art/walls/wall-circe-mirror-pillar.webp",
+      "bytes": 20774,
+      "sha256": "c87e1cd0d98a3fe838bf6ef7add09b4e860f583da5006b0903f5196ddbbf6705"
+    },
+    {
+      "path": "public/assets/art/walls/wall-cyclops-slab.webp",
+      "bytes": 40264,
+      "sha256": "03cac3c550add7f3ba0eb3e659a8af8cceadd532720e9a7881af178487e6f4a8"
+    },
+    {
+      "path": "public/assets/art/walls/wall-cyclops-wine-rack.webp",
+      "bytes": 63438,
+      "sha256": "83902064bd5fea56b16e3bd4eeaa29ef33a878f29a6069ba09872dfb60f6ed95"
+    },
+    {
+      "path": "public/assets/art/walls/wall-giant-harbor-breakwater.webp",
+      "bytes": 42860,
+      "sha256": "d62b88a3458e2dd96b1dd13a873dca16b199a9a56737baed85c5211af07b4be7"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ithaca-axe-rail.webp",
+      "bytes": 9378,
+      "sha256": "ed52dc74348c06fc5731d6e928f0c1611fcbf0cd7ba366e65c209620efaa8733"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ithaca-banquet-table.webp",
+      "bytes": 35032,
+      "sha256": "417cb7e6b82358dc7be036babdf0d99e807b17347e34a8c1b750a59ddf06beb3"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ithaca-dock.webp",
+      "bytes": 18566,
+      "sha256": "f4079a8c14bfaab98ef73bd66658387483de5ec18d22d22e65b1826db073f866"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ithaca-palace-column.webp",
+      "bytes": 26558,
+      "sha256": "422b1564deddb6890e3de5d7b0cdc3ea825fafa8a719575e3a2747d3bbe54080"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ithaca-royal-table-broken.webp",
+      "bytes": 56662,
+      "sha256": "9580650eb290aa1a257e0edf4e9029877ee4d06f7a17bb2a13d21cc126bae194"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ithaca-royal-table-damaged.webp",
+      "bytes": 45798,
+      "sha256": "4702b72441bc35865967dbeab26de802ff01122388e4603fd0e6835d54b9c763"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ithaca-royal-table-intact.webp",
+      "bytes": 38374,
+      "sha256": "7f9ed7b00480289945912bb616ed84904dcab21f8aa42b9cf136b88397afbe15"
+    },
+    {
+      "path": "public/assets/art/walls/wall-lotus-dream-petal.webp",
+      "bytes": 40982,
+      "sha256": "b5d7ab67377055e605f8ffdb9c6bbbc60494ebed065aaa47ee304a286084f961"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ogygia-cliff.webp",
+      "bytes": 19346,
+      "sha256": "8c917500f441fe5da6bbc4b8f046ebf6c4f7d2df70fe2bf89bc128118526785d"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ogygia-raft-rail.webp",
+      "bytes": 16398,
+      "sha256": "28dbdba2cad9420ee172ccb86712253e0a38958c66edc50ce9f6454ce6c80dc3"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ogygia-root.webp",
+      "bytes": 20802,
+      "sha256": "05e516ee5ce13e0a8fb7507fee7eca499c30f08d6222e78f59305329f2e9c33f"
+    },
+    {
+      "path": "public/assets/art/walls/wall-ogygia-vine.webp",
+      "bytes": 22052,
+      "sha256": "03f1e84f7b42518703fe98ae3d2986f743018c82a03bc7120838d5f518a9fa0d"
+    },
+    {
+      "path": "public/assets/art/walls/wall-siren-coral-spinner.webp",
+      "bytes": 27460,
+      "sha256": "996a7c3fc52057634c8e13dba937ec377f2f6e090b1090248e09baedf9915769"
+    },
+    {
+      "path": "public/assets/art/walls/wall-siren-harmonic-crystal.webp",
+      "bytes": 35766,
+      "sha256": "a8ce5f8ce3b347cc1081dc53c1471a25bf98aa486ac7a3aeec107f4566cd8a91"
+    },
+    {
+      "path": "public/assets/art/walls/wall-siren-moon-reef.webp",
+      "bytes": 39054,
+      "sha256": "28b87d04cc50c2537ff8b45fcd2520a9b72b6283b342f9884690a3876cf7834a"
+    },
+    {
+      "path": "public/assets/art/walls/wall-siren-ship-mast.webp",
+      "bytes": 20544,
+      "sha256": "448ecc1f7991caa77c067da67e58117219a2ee18f8545d67fc829c01c3fe112a"
+    },
+    {
+      "path": "public/assets/art/walls/wall-strait-black-cliff.webp",
+      "bytes": 25852,
+      "sha256": "350dba4a3a322c785a527a5e9c2181d99e3ecf39b49bb0d92b29ac9101283edb"
+    },
+    {
+      "path": "public/assets/art/walls/wall-strait-bowl.webp",
+      "bytes": 31730,
+      "sha256": "ae9bd1eaa6fd7894fd7f485156094815e8a976250973ba4a90c40306ee3e00ea"
+    },
+    {
+      "path": "public/assets/art/walls/wall-strait-bronze-anchor.webp",
+      "bytes": 98896,
+      "sha256": "7801a5547fe3b6b2adeb91f7d61f671e6fc0a2bcdef60535e3a281ebde7ce1b7"
+    },
+    {
+      "path": "public/assets/art/walls/wall-strait-cave.webp",
+      "bytes": 30552,
+      "sha256": "0d8b4c50b019ef7ea0e8c08834ab68436d3e3250b50fb3ece2bce6a6090e5e06"
+    },
+    {
+      "path": "public/assets/art/walls/wall-strait-ledge.webp",
+      "bytes": 26778,
+      "sha256": "420450f64ba34a1e6c2a5db67af442c42f12c2b6fab96a73ecd604047753224c"
+    },
+    {
+      "path": "public/assets/art/walls/wall-strait-safe-rock.webp",
+      "bytes": 46114,
+      "sha256": "b6be79ee64fce957c6bb9be13b4bc09b241c8515ada3d3432d86df65788872c6"
+    },
+    {
+      "path": "public/assets/art/walls/wall-strait-stone-jaw.webp",
+      "bytes": 30760,
+      "sha256": "9c6db7f55577de0deb2074aa2d33877feab8a945c2743cb0a12b6d65a7dcda62"
+    },
+    {
+      "path": "public/assets/art/walls/wall-thrinacia-bronze-rod.webp",
+      "bytes": 15786,
+      "sha256": "4732c3716aade2afacbef0575c142181f0a48c57188020a72fc7756ab0ac8f8b"
+    },
+    {
+      "path": "public/assets/art/walls/wall-thrinacia-lightning-rod.webp",
+      "bytes": 21918,
+      "sha256": "12fb3ab7cc3640613e2874c846995903c40ddfa655956ddcaef647fc33796070"
+    },
+    {
+      "path": "public/assets/art/walls/wall-thrinacia-night-fence.webp",
+      "bytes": 19572,
+      "sha256": "c3985f6183b0a37780cdec855cb8f2ef2d55249a6ede9878f789459016a09418"
+    },
+    {
+      "path": "public/assets/art/walls/wall-thrinacia-sun-fence.webp",
+      "bytes": 19592,
+      "sha256": "fc7de1fd63a60c5bdb7520b1f47970d95185e303cd76df35685ed9283457eadb"
+    },
+    {
+      "path": "public/assets/art/walls/wall-underworld-bone-barrier.webp",
+      "bytes": 30000,
+      "sha256": "67d1175f3649f408afdf121c6dd7bfa437d2b6798c03703d33edc9df054e6d86"
+    },
+    {
+      "path": "public/assets/art/walls/wall-underworld-gate-pillar.webp",
+      "bytes": 29136,
+      "sha256": "dc767902999b163f1cad7cd061ee0f09fd96422b3a68c4f7163c03268b4e1cdd"
+    },
+    {
+      "path": "public/assets/art/walls/wall-underworld-memory-veil.webp",
+      "bytes": 36936,
+      "sha256": "f694ac6e32792666c2776344c2131b59ab283ddcef9b62cb656aa56f118ccb30"
+    },
+    {
+      "path": "public/assets/art/walls/wall-underworld-spirit-bank.webp",
+      "bytes": 36502,
+      "sha256": "6f638639e555a69a1f5df6c30d3803b2be9733c8abc8f99240a9fb66b79bc515"
+    },
+    {
+      "path": "public/assets/audio/bgm/boss-cyclops.mp3",
+      "bytes": 1793043,
+      "sha256": "0e3be043208e02c791e3c6de6034f67e68fd9e9d378cfbc6b13fddf3a2fbf362"
+    },
+    {
+      "path": "public/assets/audio/bgm/boss-homecoming-duel.mp3",
+      "bytes": 1510272,
+      "sha256": "139938fcdef98d62e632ddef80b515f1e7a643a68bffa1282aed11fbb1768f92"
+    },
+    {
+      "path": "public/assets/audio/bgm/endgame-oracle.mp3",
+      "bytes": 3117312,
+      "sha256": "f32ad079fb14efa79af7275d3c9ad0aec0c197e29a9d68f886a6f10428f1284c"
+    },
+    {
+      "path": "public/assets/audio/bgm/harbor-homeward.mp3",
+      "bytes": 2202643,
+      "sha256": "71503808f31b8d7a8158397e5d603cd0bff52dffd7b1b007003035e397cffe10"
+    },
+    {
+      "path": "public/assets/audio/bgm/oracle-summon.mp3",
+      "bytes": 885312,
+      "sha256": "05edd99a0b38d98f04a61d7284b6fb6b2c39d7dd26d5b42167e6df204c6d9494"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-black-strait.mp3",
+      "bytes": 1282752,
+      "sha256": "ff01077d28feae4707b65ed21c2b3c3fe004207fadd98653b8a2f5fd198f804c"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-circe-palace.mp3",
+      "bytes": 1510272,
+      "sha256": "e3d5e5839298ea972d5ccd83f73f8a511881ba0712cf7e865e66b46ebdf9192c"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-cyclops-cave.mp3",
+      "bytes": 2635776,
+      "sha256": "3c5659468e715febec0de0d2b7d9fceb5bc4d7322b7d0d038d318ce43ba91721"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-enchanted.mp3",
+      "bytes": 1200377,
+      "sha256": "6d1e2fe30d7e1114f175bc00d1d7bda17adf652cc0f5f58a87ce61fa55f31e9a"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-homecoming.mp3",
+      "bytes": 2655293,
+      "sha256": "d5f242a6c3abdfc6e9c91a756846f5941d285615a6acd751941f3b78c1fc929a"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-open-sea.mp3",
+      "bytes": 1918431,
+      "sha256": "cfbddb3d043434308ea80e93f95803685d6c47045064b6528c66cde89409cd11"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-ricochet.mp3",
+      "bytes": 480960,
+      "sha256": "0679c9293eb79d28267699297ea59aab56eeee2fa3a70761e54d9b905508cbc7"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-sirens.mp3",
+      "bytes": 942914,
+      "sha256": "d3c98dd390f47b68157a6dbb1cf302977598c58a599c716663d602a70412de54"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-thrinacia-sun.mp3",
+      "bytes": 3859776,
+      "sha256": "d185b44501bcfbbfe9a601e952cfbb19bf1377c5ef184b88d92f9023ca6608ae"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-underworld.mp3",
+      "bytes": 1435270,
+      "sha256": "4468cf52805385dd02a3f2ec92e26d2c42a68754b2419ca86d1c6f0e14a53520"
+    },
+    {
+      "path": "public/assets/audio/bgm/voyage-winds.mp3",
+      "bytes": 2017488,
+      "sha256": "5b56570c63e2079cfc051511b2e20e7e131f89d7fe175c542dd7e831276f9734"
+    },
+    {
+      "path": "public/assets/audio/sfx/active-cast.mp3",
+      "bytes": 6912,
+      "sha256": "2f05d3a5b3399062f2b3dc31607818c48dd2d3181f96d9eef5704bd2feeebdd9"
+    },
+    {
+      "path": "public/assets/audio/sfx/active-ready.mp3",
+      "bytes": 21314,
+      "sha256": "ee72a83eaa38615b218da0a71286c173725188fa1e0c725edc46bc4cb6dc9192"
+    },
+    {
+      "path": "public/assets/audio/sfx/boss-phase.mp3",
+      "bytes": 41377,
+      "sha256": "ebb49c9ac83de08f00d9bfae3afc1a9366075ff4357582fcd20b53548adc3294"
+    },
+    {
+      "path": "public/assets/audio/sfx/defeat.mp3",
+      "bytes": 43008,
+      "sha256": "fb9815a997ad88c1086516d7531ebdfd264367ac599824368074a4dbca7287f6"
+    },
+    {
+      "path": "public/assets/audio/sfx/enemy-heal.mp3",
+      "bytes": 66432,
+      "sha256": "24c65176d7b3b1fcfdfd6ccc76ff5f77d260d65102be383261f822fbd55e27c3"
+    },
+    {
+      "path": "public/assets/audio/sfx/enemy-heavy.mp3",
+      "bytes": 9612,
+      "sha256": "be4511036688a648efa31da26a5976abe09b0bf8bd53e66b99477b4f2a8a67d6"
+    },
+    {
+      "path": "public/assets/audio/sfx/enemy-projectile.mp3",
+      "bytes": 8832,
+      "sha256": "9f064a1461b3d5e4fb19763f6416971a038fe517e14412e4edf8c3a0c63e17fa"
+    },
+    {
+      "path": "public/assets/audio/sfx/enemy-spawn.mp3",
+      "bytes": 59520,
+      "sha256": "f9a1d0f848ca6fa91aa7e1e10897113c7c58b3a618a2c36f6c24851c0d01b64c"
+    },
+    {
+      "path": "public/assets/audio/sfx/enemy-telegraph.mp3",
+      "bytes": 8448,
+      "sha256": "54c573681eb32d13d23b88c4f0afac1cc879db3aa444376e3f360dfe1be8ec8e"
+    },
+    {
+      "path": "public/assets/audio/sfx/friendship-link.mp3",
+      "bytes": 19968,
+      "sha256": "92ce2d9658b3171e82eac374f1e2e7ebeb69d72a466bbbcad14b774edf5c230b"
+    },
+    {
+      "path": "public/assets/audio/sfx/hazard-warning.mp3",
+      "bytes": 10030,
+      "sha256": "c85de32cebc11347130b549d04645f8f4c1efc31b3823fc1c2892836521585ba"
+    },
+    {
+      "path": "public/assets/audio/sfx/hero-damage.mp3",
+      "bytes": 11701,
+      "sha256": "287dfe5e4b5508cc4a5225039fc5d4d98986b400474eab91e9af8d8b72643570"
+    },
+    {
+      "path": "public/assets/audio/sfx/hero-defeated.mp3",
+      "bytes": 43008,
+      "sha256": "fb9815a997ad88c1086516d7531ebdfd264367ac599824368074a4dbca7287f6"
+    },
+    {
+      "path": "public/assets/audio/sfx/hit-critical.mp3",
+      "bytes": 10368,
+      "sha256": "2f2f6c8415d577b21ca15a897bf03301b6b2cc6611cf1a89772671f9153fe8b1"
+    },
+    {
+      "path": "public/assets/audio/sfx/hit-light.mp3",
+      "bytes": 5850,
+      "sha256": "8bff5bb82c417a301f59888d2cc2ca354d3898ec7172c1a15283b6327bdb8533"
+    },
+    {
+      "path": "public/assets/audio/sfx/launch-heavy.mp3",
+      "bytes": 7680,
+      "sha256": "90da6dd8140519ea80b47a163d6482f9d093989d75ec610620766616f8c68672"
+    },
+    {
+      "path": "public/assets/audio/sfx/launch-light.mp3",
+      "bytes": 8064,
+      "sha256": "418f1c1bdf113ced27997ded30c6263858ecabcd8ced384746ee9bc05647df3b"
+    },
+    {
+      "path": "public/assets/audio/sfx/objective-fail.mp3",
+      "bytes": 12955,
+      "sha256": "a8bbd985dab91852893606447fd6cd0e58c7b64eedc804760ccae71bde2d8f65"
+    },
+    {
+      "path": "public/assets/audio/sfx/objective-success.mp3",
+      "bytes": 20061,
+      "sha256": "478d68fda513e654eee83e92bb0f9de6fb0f4d11f6c2c5d63ca2113ba53d9897"
+    },
+    {
+      "path": "public/assets/audio/sfx/reward-chest.mp3",
+      "bytes": 42630,
+      "sha256": "9916c853c9619698d56909002c11307f7d1a0d6716b595e1bd22205cff07fce2"
+    },
+    {
+      "path": "public/assets/audio/sfx/ricochet-hit.mp3",
+      "bytes": 18180,
+      "sha256": "d30c0794e6c9da018d3c9609869ec470604caeb95e8a5f25553bfcd4e7529488"
+    },
+    {
+      "path": "public/assets/audio/sfx/ricochet-magic.mp3",
+      "bytes": 13824,
+      "sha256": "fd3c51aacd44eba9826471d3549cc36d40ce1d9e79fd8108623030cd42993d26"
+    },
+    {
+      "path": "public/assets/audio/sfx/ricochet-stone.mp3",
+      "bytes": 9216,
+      "sha256": "de51b1c1ff87487097cb645dbcf409b5fdf4565e4580cd3c4f05e6beba95116d"
+    },
+    {
+      "path": "public/assets/audio/sfx/ricochet-wood.mp3",
+      "bytes": 5760,
+      "sha256": "0a4182e1764a7265eb46a56c9e7edf021b95bc38f7d78ba6b105ba154f7e4a70"
+    },
+    {
+      "path": "public/assets/audio/sfx/shield-block.mp3",
+      "bytes": 11136,
+      "sha256": "8e2fbf1963974a928930df7353c23134562afb4f6643318da161cfd22e1ab074"
+    },
+    {
+      "path": "public/assets/audio/sfx/shield-break.mp3",
+      "bytes": 10368,
+      "sha256": "9fff0c9bed5f1c0ef187b20a8db91d300e5e664ab6c9a72d83c203494d91f43c"
+    },
+    {
+      "path": "public/assets/audio/sfx/summon-rare.mp3",
+      "bytes": 104448,
+      "sha256": "95e6645731ad403ab9a146462f307da485dc690dd3cdd980be3a7108d942cc7b"
+    },
+    {
+      "path": "public/assets/audio/sfx/summon-reveal.mp3",
+      "bytes": 44511,
+      "sha256": "e51628b0a5dbb9f535a1bd339f5e3c7e9a562ff544caf272e32993d677a4db03"
+    },
+    {
+      "path": "public/assets/audio/sfx/turn-enemy.mp3",
+      "bytes": 10866,
+      "sha256": "b4d0f71a7a62b67e9fd27aa43be97697af6ff58d4f9244b38519522922b2ff8a"
+    },
+    {
+      "path": "public/assets/audio/sfx/turn-player.mp3",
+      "bytes": 17971,
+      "sha256": "867a994a58239d4f94467ae3257135be77ca18b623e28caf2c3ad2c1b48d33c5"
+    },
+    {
+      "path": "public/assets/audio/sfx/ui-cancel.mp3",
+      "bytes": 7296,
+      "sha256": "8b8fbb514c3563c08440c306cebb02b6f689182c12275d2444b7dbd5978c1088"
+    },
+    {
+      "path": "public/assets/audio/sfx/ui-confirm.mp3",
+      "bytes": 21888,
+      "sha256": "7d4468e2823070d91c8fe2f40447d74b29671977a2567d7437a6d3442a2da776"
+    },
+    {
+      "path": "public/assets/audio/sfx/ui-error.mp3",
+      "bytes": 7522,
+      "sha256": "9198aaacd86ebead72784c9e80a74416acdd362a7227941be2b6cb5b9298c391"
+    },
+    {
+      "path": "public/assets/audio/sfx/victory.mp3",
+      "bytes": 44544,
+      "sha256": "71c3801561aa4425d8f2e95ce0550bc4d4e3a15bdd4c57021b6ad0a5196938fe"
+    },
+    {
+      "path": "public/assets/audio/sfx/weakpoint-break.mp3",
+      "bytes": 14976,
+      "sha256": "79fb1071e1a938e647133b7fe0a39bffd441477dab2f617fb334f803fb28d83b"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep1.mp4",
+      "bytes": 3554820,
+      "sha256": "391f61fb74d2a746e80d2a04e54dab502970637f87d90eddaa63a324233b12b8"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep10.mp4",
+      "bytes": 3082387,
+      "sha256": "1e12e03946b8b0da5bd6851cd277b4bfe6c376861d1c183b35a52356457fa1dd"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep11.mp4",
+      "bytes": 3015212,
+      "sha256": "26a3888444d348a133f4502146d4529a15b8c944e4bbf75ef1bd9853480fda98"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep12.mp4",
+      "bytes": 1775980,
+      "sha256": "822252e6aad0c2f2a52dfa703cb5d1a1b1e948017814cfd8e075bed782f56e0b"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep13.mp4",
+      "bytes": 1911017,
+      "sha256": "f5e9e3429ec2ac0a596b5e77d1742404861e425ef75bc11cd61762b76cf1152a"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep14.mp4",
+      "bytes": 2160571,
+      "sha256": "362368c52a79719e946d4a8c9ba05fb293f60651de828cfacf77d670cd4d7788"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep15.mp4",
+      "bytes": 2791879,
+      "sha256": "6903137fb731284ed2eea085cf92b43f28a292a090dfa97f46c0334e19a1dddd"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep16.mp4",
+      "bytes": 2683328,
+      "sha256": "6f8d316cd5365ef1ea09b53bcdcf77ab2347856724a74e19ec176dce52e3bbd3"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep17.mp4",
+      "bytes": 2429936,
+      "sha256": "43a77e9da1dcd9fb76e1f25a19d9ade7b65433a9d2b526001fbacb4a111c9cdd"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep18.mp4",
+      "bytes": 2408076,
+      "sha256": "88a16705028252ea0ee459a227a07352462eb0e158b9fb8d6a36d2ea924aaf23"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep19.mp4",
+      "bytes": 2446838,
+      "sha256": "a950d792ff1821d88e3ede2a3574962f8059101f14b16d81611311c292c54c66"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep2.mp4",
+      "bytes": 3115353,
+      "sha256": "1756a211bec242dbea6c03b8d28c753c762b7fc97f0bc4c7c6204cbfeb5b0ae1"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep20.mp4",
+      "bytes": 4345340,
+      "sha256": "a07c4affd30ff0bb07c6b82be1f65086938e5b65585fa3d24677093bd3b663bc"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep3.mp4",
+      "bytes": 2591034,
+      "sha256": "12c2949c52a891da63e7033c609bf50c151bf61c3d240ffe9f45d303818ddf18"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep4.mp4",
+      "bytes": 2734812,
+      "sha256": "17fe1201fba127c997f4fc0644476cdfb0b63519b960cac07d162e2b8523c08d"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep5.mp4",
+      "bytes": 3191660,
+      "sha256": "0030170cf542be373610b56e899f17bef6a22c13830360a93d9ab35ffde7d460"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep6.mp4",
+      "bytes": 2253361,
+      "sha256": "11db36361ebe1136fec9e2a0e056144c320e0b248dc90720d5820c508371203e"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep7.mp4",
+      "bytes": 2582343,
+      "sha256": "f04af33fec2945f1e0bec14699ca480ef48ca85de05c3e1923cbc5d2e58fb6f7"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep8.mp4",
+      "bytes": 3554133,
+      "sha256": "4c1cff1dfc316f257961c608b8a00fcbe95b5e0c4fc3fae0c653097bd795eb36"
+    },
+    {
+      "path": "public/assets/video/cutscenes/ep9.mp4",
+      "bytes": 2737836,
+      "sha256": "b2cd714b3931d64fb4d9a87d88ce4e85b23003c5eccec1f8bb5df4a590dac394"
+    }
+  ]
+}

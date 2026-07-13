@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#07151d" />
+    <title>고양이 오디세이</title>
+  </head>
+  <body>
+    <main id="game-shell" aria-label="고양이 오디세이 게임">
+      <div id="game-root"></div>
+      <div id="game-modal-root" aria-live="polite"></div>
+    </main>
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace(new URL("./standalone/index.html", window.location.href).href);
+      }
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

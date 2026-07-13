@@ -1,0 +1,712 @@
+{
+  "schemaVersion": 1,
+  "description": "Runtime audio integrity and public provenance categories.",
+  "bgm": [
+    {
+      "id": "bgm-harbor-homeward",
+      "src": "assets/audio/bgm/harbor-homeward.mp3",
+      "durationSeconds": 137.6,
+      "bytes": 2202643,
+      "sha256": "71503808f31b8d7a8158397e5d603cd0bff52dffd7b1b007003035e397cffe10",
+      "role": "title-harbor-party-settings",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-ricochet",
+      "src": "assets/audio/bgm/voyage-ricochet.mp3",
+      "durationSeconds": 24,
+      "bytes": 480960,
+      "sha256": "0679c9293eb79d28267699297ea59aab56eeee2fa3a70761e54d9b905508cbc7",
+      "role": "legacy-route-fallback",
+      "origin": {
+        "category": "project-owned-procedural",
+        "rightsStatus": "project-owned"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-open-sea",
+      "src": "assets/audio/bgm/voyage-open-sea.mp3",
+      "durationSeconds": 119.84,
+      "bytes": 1918431,
+      "sha256": "cfbddb3d043434308ea80e93f95803685d6c47045064b6528c66cde89409cd11",
+      "role": "ogygia-and-poseidon-route",
+      "origin": {
+        "category": "suno-paid-user-owned-remaster",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-enchanted",
+      "src": "assets/audio/bgm/voyage-enchanted.mp3",
+      "durationSeconds": 74.96,
+      "bytes": 1200377,
+      "sha256": "6d1e2fe30d7e1114f175bc00d1d7bda17adf652cc0f5f58a87ce61fa55f31e9a",
+      "role": "lotus-island-route",
+      "origin": {
+        "category": "suno-paid-user-owned-remaster",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-cyclops-cave",
+      "src": "assets/audio/bgm/voyage-cyclops-cave.mp3",
+      "durationSeconds": 109.76,
+      "bytes": 2635776,
+      "sha256": "3c5659468e715febec0de0d2b7d9fceb5bc4d7322b7d0d038d318ce43ba91721",
+      "role": "cyclops-cave-route",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-boss-cyclops",
+      "src": "assets/audio/bgm/boss-cyclops.mp3",
+      "durationSeconds": 112,
+      "bytes": 1793043,
+      "sha256": "0e3be043208e02c791e3c6de6034f67e68fd9e9d378cfbc6b13fddf3a2fbf362",
+      "role": "poly-meow-mus-boss-battle",
+      "origin": {
+        "category": "suno-paid-user-owned-remaster",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-winds",
+      "src": "assets/audio/bgm/voyage-winds.mp3",
+      "durationSeconds": 126.04,
+      "bytes": 2017488,
+      "sha256": "5b56570c63e2079cfc051511b2e20e7e131f89d7fe175c542dd7e831276f9734",
+      "role": "aeolus-and-wind-palace-route",
+      "origin": {
+        "category": "suno-paid-user-owned-remaster",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-circe-palace",
+      "src": "assets/audio/bgm/voyage-circe-palace.mp3",
+      "durationSeconds": 62.88,
+      "bytes": 1510272,
+      "sha256": "e3d5e5839298ea972d5ccd83f73f8a511881ba0712cf7e865e66b46ebdf9192c",
+      "role": "circe-palace-route",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-underworld",
+      "src": "assets/audio/bgm/voyage-underworld.mp3",
+      "durationSeconds": 89.64,
+      "bytes": 1435270,
+      "sha256": "4468cf52805385dd02a3f2ec92e26d2c42a68754b2419ca86d1c6f0e14a53520",
+      "role": "underworld-and-anticleia-memory-route",
+      "origin": {
+        "category": "suno-paid-user-owned-remaster",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-black-strait",
+      "src": "assets/audio/bgm/voyage-black-strait.mp3",
+      "durationSeconds": 53.4,
+      "bytes": 1282752,
+      "sha256": "ff01077d28feae4707b65ed21c2b3c3fe004207fadd98653b8a2f5fd198f804c",
+      "role": "scylla-charybdis-strait-route",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-thrinacia-sun",
+      "src": "assets/audio/bgm/voyage-thrinacia-sun.mp3",
+      "durationSeconds": 160.76,
+      "bytes": 3859776,
+      "sha256": "d185b44501bcfbbfe9a601e952cfbb19bf1377c5ef184b88d92f9023ca6608ae",
+      "role": "thrinacia-sun-route",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-sirens",
+      "src": "assets/audio/bgm/voyage-sirens.mp3",
+      "durationSeconds": 58.88,
+      "bytes": 942914,
+      "sha256": "d3c98dd390f47b68157a6dbb1cf302977598c58a599c716663d602a70412de54",
+      "role": "siren-reef-route",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-voyage-homecoming",
+      "src": "assets/audio/bgm/voyage-homecoming.mp3",
+      "durationSeconds": 165.88,
+      "bytes": 2655293,
+      "sha256": "d5f242a6c3abdfc6e9c91a756846f5941d285615a6acd751941f3b78c1fc929a",
+      "role": "ithaca-homecoming-route",
+      "origin": {
+        "category": "suno-paid-user-owned-remaster",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-boss-homecoming-duel",
+      "src": "assets/audio/bgm/boss-homecoming-duel.mp3",
+      "durationSeconds": 62.88,
+      "bytes": 1510272,
+      "sha256": "139938fcdef98d62e632ddef80b515f1e7a643a68bffa1282aed11fbb1768f92",
+      "role": "homecoming-duel-boss-battle",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-endgame-oracle",
+      "src": "assets/audio/bgm/endgame-oracle.mp3",
+      "durationSeconds": 129.84,
+      "bytes": 3117312,
+      "sha256": "f32ad079fb14efa79af7275d3c9ad0aec0c197e29a9d68f886a6f10428f1284c",
+      "role": "endgame-oracle-tower-and-raid",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "bgm-oracle-summon",
+      "src": "assets/audio/bgm/oracle-summon.mp3",
+      "durationSeconds": 36.84,
+      "bytes": 885312,
+      "sha256": "05edd99a0b38d98f04a61d7284b6fb6b2c39d7dd26d5b42167e6df204c6d9494",
+      "role": "oracle-summon-and-meta",
+      "origin": {
+        "category": "suno-paid-dedicated",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    }
+  ],
+  "sfx": [
+    {
+      "id": "sfx-ricochet-hit",
+      "src": "assets/audio/sfx/ricochet-hit.mp3",
+      "durationSeconds": 0.7,
+      "bytes": 18180,
+      "sha256": "d30c0794e6c9da018d3c9609869ec470604caeb95e8a5f25553bfcd4e7529488",
+      "role": "ricochet-hit",
+      "semanticFamily": "ricochet-hit",
+      "origin": {
+        "category": "project-owned-procedural",
+        "rightsStatus": "project-owned"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-summon-reveal",
+      "src": "assets/audio/sfx/summon-reveal.mp3",
+      "durationSeconds": 1.8,
+      "bytes": 44511,
+      "sha256": "e51628b0a5dbb9f535a1bd339f5e3c7e9a562ff544caf272e32993d677a4db03",
+      "role": "summon-reveal",
+      "semanticFamily": "summon-reveal",
+      "origin": {
+        "category": "project-owned-procedural",
+        "rightsStatus": "project-owned"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-ui-confirm",
+      "src": "assets/audio/sfx/ui-confirm.mp3",
+      "durationSeconds": 1.299,
+      "bytes": 21888,
+      "sha256": "7d4468e2823070d91c8fe2f40447d74b29671977a2567d7437a6d3442a2da776",
+      "role": "ui-confirm",
+      "semanticFamily": "ui-confirm",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-ui-cancel",
+      "src": "assets/audio/sfx/ui-cancel.mp3",
+      "durationSeconds": 0.387,
+      "bytes": 7296,
+      "sha256": "8b8fbb514c3563c08440c306cebb02b6f689182c12275d2444b7dbd5978c1088",
+      "role": "ui-cancel",
+      "semanticFamily": "ui-cancel",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-ui-error",
+      "src": "assets/audio/sfx/ui-error.mp3",
+      "durationSeconds": 0.403,
+      "bytes": 7522,
+      "sha256": "9198aaacd86ebead72784c9e80a74416acdd362a7227941be2b6cb5b9298c391",
+      "role": "ui-error",
+      "semanticFamily": "ui-error",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-launch-light",
+      "src": "assets/audio/sfx/launch-light.mp3",
+      "durationSeconds": 0.437,
+      "bytes": 8064,
+      "sha256": "418f1c1bdf113ced27997ded30c6263858ecabcd8ced384746ee9bc05647df3b",
+      "role": "launch-light",
+      "semanticFamily": "launch-light",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-launch-heavy",
+      "src": "assets/audio/sfx/launch-heavy.mp3",
+      "durationSeconds": 0.409,
+      "bytes": 7680,
+      "sha256": "90da6dd8140519ea80b47a163d6482f9d093989d75ec610620766616f8c68672",
+      "role": "launch-heavy",
+      "semanticFamily": "launch-heavy",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-ricochet-stone",
+      "src": "assets/audio/sfx/ricochet-stone.mp3",
+      "durationSeconds": 0.516,
+      "bytes": 9216,
+      "sha256": "de51b1c1ff87487097cb645dbcf409b5fdf4565e4580cd3c4f05e6beba95116d",
+      "role": "ricochet-stone",
+      "semanticFamily": "ricochet-stone",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-ricochet-wood",
+      "src": "assets/audio/sfx/ricochet-wood.mp3",
+      "durationSeconds": 0.307,
+      "bytes": 5760,
+      "sha256": "0a4182e1764a7265eb46a56c9e7edf021b95bc38f7d78ba6b105ba154f7e4a70",
+      "role": "ricochet-wood",
+      "semanticFamily": "ricochet-wood",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-ricochet-magic",
+      "src": "assets/audio/sfx/ricochet-magic.mp3",
+      "durationSeconds": 0.813,
+      "bytes": 13824,
+      "sha256": "fd3c51aacd44eba9826471d3549cc36d40ce1d9e79fd8108623030cd42993d26",
+      "role": "ricochet-magic",
+      "semanticFamily": "ricochet-magic",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-hit-light",
+      "src": "assets/audio/sfx/hit-light.mp3",
+      "durationSeconds": 0.298,
+      "bytes": 5850,
+      "sha256": "8bff5bb82c417a301f59888d2cc2ca354d3898ec7172c1a15283b6327bdb8533",
+      "role": "hit-light",
+      "semanticFamily": "hit-light",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-hit-critical",
+      "src": "assets/audio/sfx/hit-critical.mp3",
+      "durationSeconds": 0.599,
+      "bytes": 10368,
+      "sha256": "2f2f6c8415d577b21ca15a897bf03301b6b2cc6611cf1a89772671f9153fe8b1",
+      "role": "hit-critical",
+      "semanticFamily": "hit-critical",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-weakpoint-break",
+      "src": "assets/audio/sfx/weakpoint-break.mp3",
+      "durationSeconds": 0.874,
+      "bytes": 14976,
+      "sha256": "79fb1071e1a938e647133b7fe0a39bffd441477dab2f617fb334f803fb28d83b",
+      "role": "weakpoint-break",
+      "semanticFamily": "weakpoint-break",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-shield-block",
+      "src": "assets/audio/sfx/shield-block.mp3",
+      "durationSeconds": 0.626,
+      "bytes": 11136,
+      "sha256": "8e2fbf1963974a928930df7353c23134562afb4f6643318da161cfd22e1ab074",
+      "role": "shield-block",
+      "semanticFamily": "shield-block",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-shield-break",
+      "src": "assets/audio/sfx/shield-break.mp3",
+      "durationSeconds": 0.583,
+      "bytes": 10368,
+      "sha256": "9fff0c9bed5f1c0ef187b20a8db91d300e5e664ab6c9a72d83c203494d91f43c",
+      "role": "shield-break",
+      "semanticFamily": "shield-break",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-friendship-link",
+      "src": "assets/audio/sfx/friendship-link.mp3",
+      "durationSeconds": 1.177,
+      "bytes": 19968,
+      "sha256": "92ce2d9658b3171e82eac374f1e2e7ebeb69d72a466bbbcad14b774edf5c230b",
+      "role": "friendship-link",
+      "semanticFamily": "friendship-link",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-active-ready",
+      "src": "assets/audio/sfx/active-ready.mp3",
+      "durationSeconds": 1.263,
+      "bytes": 21314,
+      "sha256": "ee72a83eaa38615b218da0a71286c173725188fa1e0c725edc46bc4cb6dc9192",
+      "role": "active-ready",
+      "semanticFamily": "active-ready",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-active-cast",
+      "src": "assets/audio/sfx/active-cast.mp3",
+      "durationSeconds": 0.377,
+      "bytes": 6912,
+      "sha256": "2f05d3a5b3399062f2b3dc31607818c48dd2d3181f96d9eef5704bd2feeebdd9",
+      "role": "active-cast",
+      "semanticFamily": "active-cast",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-turn-player",
+      "src": "assets/audio/sfx/turn-player.mp3",
+      "durationSeconds": 1.068,
+      "bytes": 17971,
+      "sha256": "867a994a58239d4f94467ae3257135be77ca18b623e28caf2c3ad2c1b48d33c5",
+      "role": "turn-player",
+      "semanticFamily": "turn-player",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-turn-enemy",
+      "src": "assets/audio/sfx/turn-enemy.mp3",
+      "durationSeconds": 0.614,
+      "bytes": 10866,
+      "sha256": "b4d0f71a7a62b67e9fd27aa43be97697af6ff58d4f9244b38519522922b2ff8a",
+      "role": "turn-enemy",
+      "semanticFamily": "turn-enemy",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-enemy-telegraph",
+      "src": "assets/audio/sfx/enemy-telegraph.mp3",
+      "durationSeconds": 0.463,
+      "bytes": 8448,
+      "sha256": "54c573681eb32d13d23b88c4f0afac1cc879db3aa444376e3f360dfe1be8ec8e",
+      "role": "enemy-telegraph",
+      "semanticFamily": "enemy-telegraph",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-enemy-heavy",
+      "src": "assets/audio/sfx/enemy-heavy.mp3",
+      "durationSeconds": 0.543,
+      "bytes": 9612,
+      "sha256": "be4511036688a648efa31da26a5976abe09b0bf8bd53e66b99477b4f2a8a67d6",
+      "role": "enemy-heavy",
+      "semanticFamily": "enemy-heavy",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-enemy-projectile",
+      "src": "assets/audio/sfx/enemy-projectile.mp3",
+      "durationSeconds": 0.503,
+      "bytes": 8832,
+      "sha256": "9f064a1461b3d5e4fb19763f6416971a038fe517e14412e4edf8c3a0c63e17fa",
+      "role": "enemy-projectile",
+      "semanticFamily": "enemy-projectile",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-enemy-heal",
+      "src": "assets/audio/sfx/enemy-heal.mp3",
+      "durationSeconds": 4.096,
+      "bytes": 66432,
+      "sha256": "24c65176d7b3b1fcfdfd6ccc76ff5f77d260d65102be383261f822fbd55e27c3",
+      "role": "enemy-heal",
+      "semanticFamily": "enemy-heal",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-enemy-spawn",
+      "src": "assets/audio/sfx/enemy-spawn.mp3",
+      "durationSeconds": 3.651,
+      "bytes": 59520,
+      "sha256": "f9a1d0f848ca6fa91aa7e1e10897113c7c58b3a618a2c36f6c24851c0d01b64c",
+      "role": "enemy-spawn",
+      "semanticFamily": "enemy-spawn",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-hero-damage",
+      "src": "assets/audio/sfx/hero-damage.mp3",
+      "durationSeconds": 0.669,
+      "bytes": 11701,
+      "sha256": "287dfe5e4b5508cc4a5225039fc5d4d98986b400474eab91e9af8d8b72643570",
+      "role": "hero-damage",
+      "semanticFamily": "hero-damage",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-hero-defeated",
+      "src": "assets/audio/sfx/hero-defeated.mp3",
+      "durationSeconds": 2.636,
+      "bytes": 43008,
+      "sha256": "fb9815a997ad88c1086516d7531ebdfd264367ac599824368074a4dbca7287f6",
+      "role": "hero-defeated",
+      "semanticFamily": "defeat",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-hazard-warning",
+      "src": "assets/audio/sfx/hazard-warning.mp3",
+      "durationSeconds": 0.56,
+      "bytes": 10030,
+      "sha256": "c85de32cebc11347130b549d04645f8f4c1efc31b3823fc1c2892836521585ba",
+      "role": "hazard-warning",
+      "semanticFamily": "hazard-warning",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-boss-phase",
+      "src": "assets/audio/sfx/boss-phase.mp3",
+      "durationSeconds": 2.512,
+      "bytes": 41377,
+      "sha256": "ebb49c9ac83de08f00d9bfae3afc1a9366075ff4357582fcd20b53548adc3294",
+      "role": "boss-phase",
+      "semanticFamily": "boss-phase",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-victory",
+      "src": "assets/audio/sfx/victory.mp3",
+      "durationSeconds": 2.734,
+      "bytes": 44544,
+      "sha256": "71c3801561aa4425d8f2e95ce0550bc4d4e3a15bdd4c57021b6ad0a5196938fe",
+      "role": "victory",
+      "semanticFamily": "victory",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-defeat",
+      "src": "assets/audio/sfx/defeat.mp3",
+      "durationSeconds": 2.636,
+      "bytes": 43008,
+      "sha256": "fb9815a997ad88c1086516d7531ebdfd264367ac599824368074a4dbca7287f6",
+      "role": "defeat",
+      "semanticFamily": "defeat",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-objective-success",
+      "src": "assets/audio/sfx/objective-success.mp3",
+      "durationSeconds": 1.186,
+      "bytes": 20061,
+      "sha256": "478d68fda513e654eee83e92bb0f9de6fb0f4d11f6c2c5d63ca2113ba53d9897",
+      "role": "objective-success",
+      "semanticFamily": "objective-success",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-objective-fail",
+      "src": "assets/audio/sfx/objective-fail.mp3",
+      "durationSeconds": 0.754,
+      "bytes": 12955,
+      "sha256": "a8bbd985dab91852893606447fd6cd0e58c7b64eedc804760ccae71bde2d8f65",
+      "role": "objective-fail",
+      "semanticFamily": "objective-fail",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-reward-chest",
+      "src": "assets/audio/sfx/reward-chest.mp3",
+      "durationSeconds": 2.603,
+      "bytes": 42630,
+      "sha256": "9916c853c9619698d56909002c11307f7d1a0d6716b595e1bd22205cff07fce2",
+      "role": "reward-chest",
+      "semanticFamily": "reward-chest",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    },
+    {
+      "id": "sfx-summon-rare",
+      "src": "assets/audio/sfx/summon-rare.mp3",
+      "durationSeconds": 6.472,
+      "bytes": 104448,
+      "sha256": "95e6645731ad403ab9a146462f307da485dc690dd3cdd980be3a7108d942cc7b",
+      "role": "summon-rare",
+      "semanticFamily": "summon-rare",
+      "origin": {
+        "category": "suno-paid-user-owned",
+        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
+      },
+      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+    }
+  ],
+  "provenanceCategories": {
+    "suno-paid-dedicated": "Generated for Cat Odyssey while the rights holder had a paid Suno plan.",
+    "suno-paid-user-owned-remaster": "User-owned remaster music generated while the rights holder had a paid Suno plan.",
+    "suno-paid-user-owned": "User-owned Suno audio generated while the rights holder had a paid plan and adapted for this game.",
+    "project-owned-procedural": "Deterministically synthesized by the project and not generated by Suno."
+  }
+}

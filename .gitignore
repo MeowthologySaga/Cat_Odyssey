@@ -1,0 +1,27 @@
+node_modules/
+dist/
+standalone/
+releases/
+coverage/
+.vite/
+.cache/
+.tmp/
+tmp/
+*.log
+*.lem
+*.lemgame
+*.zip
+.env
+.env.*
+!.env.example
+
+# Private production workspaces are never part of the public source export.
+art-source/
+audio-source/
+exports/
+references/
+concept/
+.agents/
+.codex/
+.codex-tmp/
+

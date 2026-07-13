@@ -1,0 +1,36 @@
+{
+  "name": "cat-odyssey-ricochet",
+  "version": "0.1.1",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeowthologySaga/Cat_Odyssey.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4173",
+    "assets:sanitize": "node scripts/sanitize-public-assets.mjs",
+    "assets:sanitize:video": "node scripts/sanitize-public-assets.mjs --remux-video",
+    "assets:inventory": "node scripts/generate-public-inventories.mjs",
+    "build": "tsc -p tsconfig.json --noEmit && vite build && npm run build:standalone",
+    "build:standalone": "vite build --config vite.standalone.config.mjs",
+    "test": "vitest run",
+    "test:physics": "vitest run tests/physics",
+    "validate:content": "node scripts/validate-content.mjs",
+    "validate:pack": "node scripts/validate-pack.mjs",
+    "package:lemgame": "npm run build && node scripts/package-lem.mjs",
+    "package:lem": "npm run package:lemgame",
+    "qa": "npm run test && npm run validate:content && npm run build && npm run validate:pack",
+    "release:check": "npm run assets:inventory && node scripts/check-public-release-readiness.mjs && npm run qa"
+  },
+  "dependencies": {
+    "phaser": "3.90.0"
+  },
+  "devDependencies": {
+    "jszip": "3.10.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "3.2.7"
+  }
+}

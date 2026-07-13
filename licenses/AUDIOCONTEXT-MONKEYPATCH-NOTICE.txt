@@ -1,0 +1,7 @@
+AudioContextMonkeyPatch
+
+Copyright 2013 Chris Wilson
+
+Licensed under the Apache License, Version 2.0. The complete license text is in
+APACHE-2.0.txt in this directory.
+

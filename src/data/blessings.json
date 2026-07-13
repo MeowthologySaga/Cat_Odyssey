@@ -1,0 +1,37 @@
+[
+  { "id": "athena-true-line", "name": "아-포-나의 정확한 선", "deity": "a-paw-na", "rarity": "common", "tags": ["aim", "weakpoint"], "effects": [{ "kind": "preview-bounces", "value": 1, "target": "party" }] },
+  { "id": "athena-rear-strike", "name": "방패 뒤의 해답", "deity": "a-paw-na", "rarity": "rare", "tags": ["shield-break"], "effects": [{ "kind": "rear-hit-damage", "value": 35, "target": "party" }] },
+  { "id": "athena-first-guard", "name": "첫 충돌의 가호", "deity": "a-paw-na", "rarity": "common", "tags": ["guard"], "effects": [{ "kind": "stationary-guard", "value": 24, "target": "party" }] },
+  { "id": "athena-gorgon-turn", "name": "고르곤의 시선", "deity": "a-paw-na", "rarity": "rare", "tags": ["control"], "effects": [{ "kind": "first-countdown-delay", "value": 1, "target": "all-enemies" }] },
+  { "id": "athena-perfect-plan", "name": "완전한 작전", "deity": "a-paw-na", "rarity": "epic", "tags": ["aim", "combo"], "effects": [{ "kind": "preview-bounces", "value": 7, "target": "party" }, { "kind": "precision-chain", "value": 28, "target": "party" }] },
+
+  { "id": "hermes-winged-start", "name": "날개 달린 출발", "deity": "her-meows", "rarity": "common", "tags": ["speed"], "effects": [{ "kind": "party-speed", "value": 12, "target": "party" }] },
+  { "id": "hermes-second-message", "name": "두 번째 전갈", "deity": "her-meows", "rarity": "rare", "tags": ["follow-up"], "effects": [{ "kind": "friendship-radius", "value": 45, "target": "party" }] },
+  { "id": "hermes-shortcut", "name": "전령의 지름길", "deity": "her-meows", "rarity": "common", "tags": ["portal"], "effects": [{ "kind": "first-shot-speed", "value": 20, "target": "party" }] },
+  { "id": "hermes-quick-recovery", "name": "서두르는 회복", "deity": "her-meows", "rarity": "rare", "tags": ["skill"], "effects": [{ "kind": "active-charge-speed", "value": 10, "target": "party" }] },
+  { "id": "hermes-eightfold-path", "name": "여덟 겹의 항로", "deity": "her-meows", "rarity": "epic", "tags": ["bounce", "speed"], "effects": [{ "kind": "max-bounces", "value": 8, "target": "party" }, { "kind": "precision-chain", "value": 7, "target": "party" }] },
+
+  { "id": "helios-warm-ray", "name": "따뜻한 햇살", "deity": "heli-paws", "rarity": "common", "tags": ["heal"], "effects": [{ "kind": "regeneration", "value": 8, "target": "lowest-hp-ally" }] },
+  { "id": "helios-burning-edge", "name": "태양날의 가장자리", "deity": "heli-paws", "rarity": "rare", "tags": ["sun", "damage-over-time"], "effects": [{ "kind": "burn-damage", "value": 24, "target": "enemy", "durationTurns": 2 }] },
+  { "id": "helios-noon-shadow", "name": "정오의 짧은 그림자", "deity": "heli-paws", "rarity": "common", "tags": ["precision"], "effects": [{ "kind": "weakpoint-damage", "value": 12, "target": "party" }] },
+  { "id": "helios-sacred-oath", "name": "신성한 목장의 맹세", "deity": "heli-paws", "rarity": "rare", "tags": ["protect"], "effects": [{ "kind": "protect-target-hp", "value": 130, "target": "protected-target" }] },
+  { "id": "helios-solar-wheel", "name": "거대한 태양 바퀴", "deity": "heli-paws", "rarity": "epic", "tags": ["area-damage"], "effects": [{ "kind": "chain-lightning", "value": 110, "target": "third-contact" }] },
+
+  { "id": "aeolus-tailwind", "name": "뮤-올로스의 순풍", "deity": "aeolus", "rarity": "common", "tags": ["wind", "speed"], "effects": [{ "kind": "wind-force-reduction", "value": 25, "target": "party" }] },
+  { "id": "aeolus-sealed-gust", "name": "봉인된 돌풍", "deity": "aeolus", "rarity": "rare", "tags": ["wind", "burst"], "effects": [{ "kind": "wall-damage", "value": 54, "target": "party" }] },
+  { "id": "aeolus-crosswind", "name": "교차하는 바람", "deity": "aeolus", "rarity": "common", "tags": ["ricochet"], "effects": [{ "kind": "party-speed", "value": 6, "target": "party" }] },
+  { "id": "aeolus-calm-eye", "name": "폭풍의 고요한 눈", "deity": "aeolus", "rarity": "rare", "tags": ["guard"], "effects": [{ "kind": "wind-force-reduction", "value": 100, "target": "party" }, { "kind": "whirlpool-resistance", "value": 100, "target": "party" }] },
+  { "id": "aeolus-all-winds", "name": "모든 바람의 왕", "deity": "aeolus", "rarity": "epic", "tags": ["wind", "combo"], "effects": [{ "kind": "wind-force-reduction", "value": 15, "target": "party" }, { "kind": "precision-chain", "value": 22, "target": "party" }] },
+
+  { "id": "circe-moly", "name": "몰리 약초", "deity": "purr-ce", "rarity": "common", "tags": ["cleanse"], "effects": [{ "kind": "debuff-duration", "value": -1, "target": "party" }] },
+  { "id": "circe-mirror-paw", "name": "거울 속 발톱", "deity": "purr-ce", "rarity": "rare", "tags": ["clone"], "effects": [{ "kind": "chain-lightning", "value": 36, "target": "third-contact" }] },
+  { "id": "circe-small-curse", "name": "작아지는 저주", "deity": "purr-ce", "rarity": "common", "tags": ["debuff"], "effects": [{ "kind": "weakpoint-damage", "value": 8, "target": "party" }] },
+  { "id": "circe-turning-potion", "name": "뒤집히는 약병", "deity": "purr-ce", "rarity": "rare", "tags": ["control"], "effects": [{ "kind": "rear-hit-damage", "value": 25, "target": "party" }] },
+  { "id": "circe-palace-of-mirrors", "name": "거울 궁전", "deity": "purr-ce", "rarity": "epic", "tags": ["clone", "ricochet"], "effects": [{ "kind": "mirror-wall-count", "value": 2, "target": "arena" }, { "kind": "chain-lightning", "value": 52, "target": "third-contact" }] },
+
+  { "id": "calypso-still-water", "name": "캣-립소의 고요한 물", "deity": "cat-lypso", "rarity": "common", "tags": ["heal"], "effects": [{ "kind": "regeneration", "value": 3, "target": "lowest-hp-ally" }] },
+  { "id": "calypso-immortal-thread", "name": "불사의 실", "deity": "cat-lypso", "rarity": "rare", "tags": ["survival"], "effects": [{ "kind": "route-revive", "value": 35, "target": "first-fallen-hero" }] },
+  { "id": "calypso-island-vine", "name": "오기기아 덩굴", "deity": "cat-lypso", "rarity": "common", "tags": ["bind"], "effects": [{ "kind": "first-countdown-delay", "value": 1, "target": "all-enemies" }] },
+  { "id": "calypso-seven-years", "name": "일곱 해의 인내", "deity": "cat-lypso", "rarity": "rare", "tags": ["scaling"], "effects": [{ "kind": "party-attack", "value": 28, "target": "party" }] },
+  { "id": "calypso-undying-island", "name": "죽지 않는 섬", "deity": "cat-lypso", "rarity": "epic", "tags": ["regeneration", "survival"], "effects": [{ "kind": "regeneration", "value": 7, "target": "lowest-hp-ally" }, { "kind": "first-countdown-delay", "value": 1, "target": "all-enemies" }] }
+]

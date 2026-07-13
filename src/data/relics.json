@@ -1,0 +1,37 @@
+[
+  { "id": "relic-ithacan-bow", "name": "이타-캣의 오래된 활", "tier": 1, "set": "homecoming", "tags": ["weakpoint"], "effects": [{ "kind": "weakpoint-damage", "value": 12, "target": "party" }] },
+  { "id": "relic-olive-bedpost", "name": "올리브나무 침대 기둥", "tier": 2, "set": "homecoming", "tags": ["guard"], "effects": [{ "kind": "stationary-guard", "value": 18, "target": "party" }] },
+  { "id": "relic-woven-shroud", "name": "풀리지 않은 수의", "tier": 2, "set": "homecoming", "tags": ["delay"], "effects": [{ "kind": "first-countdown-delay", "value": 1, "target": "all-enemies" }] },
+  { "id": "relic-argos-collar", "name": "아르고스의 낡은 목걸이", "tier": 1, "set": "homecoming", "tags": ["speed"], "effects": [{ "kind": "first-shot-speed", "value": 20, "target": "active-hero" }] },
+  { "id": "relic-blue-travel-cloak", "name": "푸른 여행 망토", "tier": 1, "set": "homecoming", "tags": ["pierce"], "effects": [{ "kind": "pierce-retained-speed", "value": 14, "target": "pierce-heroes" }] },
+  { "id": "relic-eumaeus-fence", "name": "목동의 짧은 울타리", "tier": 2, "set": "homecoming", "tags": ["wall"], "effects": [{ "kind": "temporary-wall-hp", "value": 45, "target": "summoned-walls" }] },
+  { "id": "relic-twelve-axe-ring", "name": "열두 도끼의 고리", "tier": 3, "set": "homecoming", "tags": ["precision", "combo"], "effects": [{ "kind": "precision-chain", "value": 12, "target": "party", "condition": "consecutive-weakpoints" }] },
+  { "id": "relic-palace-key", "name": "이타-캣 궁전 열쇠", "tier": 3, "set": "homecoming", "tags": ["reward"], "effects": [{ "kind": "first-clear-material", "value": 25, "target": "stage-reward" }] },
+
+  { "id": "relic-cyclops-cup", "name": "외눈박이의 술잔", "tier": 1, "set": "monster-hunt", "tags": ["boss"], "effects": [{ "kind": "boss-damage", "value": 9, "target": "party" }] },
+  { "id": "relic-ram-hide", "name": "동굴 숫양의 가죽", "tier": 1, "set": "monster-hunt", "tags": ["rear-hit"], "effects": [{ "kind": "rear-hit-damage", "value": 15, "target": "party" }] },
+  { "id": "relic-siren-shell", "name": "사이렌의 울림 조개", "tier": 2, "set": "monster-hunt", "tags": ["friendship"], "effects": [{ "kind": "friendship-radius", "value": 16, "target": "party" }] },
+  { "id": "relic-scylla-tooth", "name": "스킬라의 부러진 이빨", "tier": 3, "set": "monster-hunt", "tags": ["part-break"], "effects": [{ "kind": "part-break-damage", "value": 28, "target": "party" }] },
+  { "id": "relic-whirlpool-eye", "name": "소용돌이의 검은 중심", "tier": 3, "set": "monster-hunt", "tags": ["hazard"], "effects": [{ "kind": "whirlpool-resistance", "value": 45, "target": "party" }] },
+  { "id": "relic-giant-stone", "name": "라이스트리곤 투석", "tier": 2, "set": "monster-hunt", "tags": ["heavy"], "effects": [{ "kind": "mass", "value": 18, "target": "heavy-heroes" }] },
+  { "id": "relic-gorgon-emblem", "name": "고르곤 방패 문장", "tier": 2, "set": "monster-hunt", "tags": ["control"], "effects": [{ "kind": "stun-duration", "value": 1, "target": "first-stun-each-wave" }] },
+  { "id": "relic-monster-ledger", "name": "괴수 부위 도감", "tier": 1, "set": "monster-hunt", "tags": ["preview"], "effects": [{ "kind": "boss-part-hp-visible", "value": 1, "target": "boss-ui" }] },
+
+  { "id": "relic-aeolus-bag-knot", "name": "바람 주머니의 매듭", "tier": 1, "set": "voyage", "tags": ["wind"], "effects": [{ "kind": "wind-force-reduction", "value": 18, "target": "party" }] },
+  { "id": "relic-bronze-oar", "name": "청동 끝 노", "tier": 1, "set": "voyage", "tags": ["bounce"], "effects": [{ "kind": "wall-damage", "value": 10, "target": "party" }] },
+  { "id": "relic-phaeacian-sail", "name": "파이아키아의 흰 돛", "tier": 2, "set": "voyage", "tags": ["speed"], "effects": [{ "kind": "speed-after-ally", "value": 16, "target": "active-hero", "durationTurns": 1 }] },
+  { "id": "relic-sea-foam-jar", "name": "바다 거품 항아리", "tier": 1, "set": "voyage", "tags": ["heal"], "effects": [{ "kind": "heal-on-hazard-exit", "value": 5, "target": "active-hero" }] },
+  { "id": "relic-storm-compass", "name": "폭풍 나침반", "tier": 2, "set": "voyage", "tags": ["aim"], "effects": [{ "kind": "hazard-vector-visible", "value": 1, "target": "arena" }] },
+  { "id": "relic-broken-mast", "name": "부러진 돛대 조각", "tier": 2, "set": "voyage", "tags": ["survival"], "effects": [{ "kind": "low-hp-restitution", "value": 22, "target": "party", "condition": "hp-below-35" }] },
+  { "id": "relic-inky-route-map", "name": "먹물 번진 항로도", "tier": 1, "set": "voyage", "tags": ["reward"], "effects": [{ "kind": "route-gold", "value": 12, "target": "stage-reward" }] },
+  { "id": "relic-homeward-star", "name": "귀향을 가리키는 별", "tier": 3, "set": "voyage", "tags": ["revive"], "effects": [{ "kind": "route-revive", "value": 25, "target": "first-fallen-hero", "condition": "once-per-route" }] },
+
+  { "id": "relic-moly-root", "name": "몰리의 검은 뿌리", "tier": 1, "set": "divine", "tags": ["cleanse"], "effects": [{ "kind": "debuff-duration", "value": -1, "target": "party" }] },
+  { "id": "relic-hermes-feather", "name": "전령의 금빛 깃", "tier": 2, "set": "divine", "tags": ["speed"], "effects": [{ "kind": "active-charge-speed", "value": 15, "target": "party" }] },
+  { "id": "relic-sun-wheel", "name": "작은 태양 바퀴", "tier": 2, "set": "divine", "tags": ["sun"], "effects": [{ "kind": "burn-damage", "value": 24, "target": "party" }] },
+  { "id": "relic-thunder-splinter", "name": "번개의 파편", "tier": 3, "set": "divine", "tags": ["storm"], "effects": [{ "kind": "chain-lightning", "value": 72, "target": "third-contact" }] },
+  { "id": "relic-underworld-coin", "name": "저승길의 동전", "tier": 2, "set": "divine", "tags": ["spirit"], "effects": [{ "kind": "phase-chance", "value": 18, "target": "party" }] },
+  { "id": "relic-athena-spear-tip", "name": "신탁의 창끝", "tier": 3, "set": "divine", "tags": ["weakpoint", "shield-break"], "effects": [{ "kind": "first-weakpoint-critical", "value": 100, "target": "active-hero" }] },
+  { "id": "relic-calypso-thread", "name": "오기기아의 은실", "tier": 1, "set": "divine", "tags": ["regeneration"], "effects": [{ "kind": "regeneration", "value": 4, "target": "lowest-hp-ally", "durationTurns": 3 }] },
+  { "id": "relic-oracle-ash", "name": "예언자의 재", "tier": 3, "set": "divine", "tags": ["oracle", "aim"], "effects": [{ "kind": "enemy-action-preview", "value": 1, "target": "next-enemy-action" }, { "kind": "preview-bounces", "value": 1, "target": "party" }] }
+]
