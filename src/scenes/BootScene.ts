@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { CORE_IMAGE_ASSETS, queueImageAssets } from "../assets/assetStreaming";
+import { assetUrl } from "../assets/assetUrl";
 import { BGM_ASSETS, BOOT_BGM_KEYS, SFX_ASSETS } from "../audio/audioAssets";
 import { fadeInScene, uiTextSize } from "../ui/gameUi";
 import { getServices } from "../core/services";
@@ -11,17 +12,17 @@ export class BootScene extends Phaser.Scene {
     queueImageAssets(this, CORE_IMAGE_ASSETS);
     // Keep startup light: only the title/hub cue is boot-critical. Route and
     // boss BGM is streamed on first use by AudioDirector.
-    for (const key of BOOT_BGM_KEYS) this.load.audio(key, BGM_ASSETS[key]);
-    for (const [key, source] of Object.entries(SFX_ASSETS)) this.load.audio(key, source);
-    this.load.spritesheet("fx-ricochet-impact-sheet", "assets/art/fx/ricochet-impact.webp", {
+    for (const key of BOOT_BGM_KEYS) this.load.audio(key, assetUrl(BGM_ASSETS[key]));
+    for (const [key, source] of Object.entries(SFX_ASSETS)) this.load.audio(key, assetUrl(source));
+    this.load.spritesheet("fx-ricochet-impact-sheet", assetUrl("assets/art/fx/ricochet-impact.webp"), {
       frameWidth: 128,
       frameHeight: 128,
     });
-    this.load.spritesheet("fx-shield-break-sheet", "assets/art/fx/shield-break.webp", {
+    this.load.spritesheet("fx-shield-break-sheet", assetUrl("assets/art/fx/shield-break.webp"), {
       frameWidth: 128,
       frameHeight: 128,
     });
-    this.load.spritesheet("fx-friendship-link-sheet", "assets/art/fx/friendship-link.webp", {
+    this.load.spritesheet("fx-friendship-link-sheet", assetUrl("assets/art/fx/friendship-link.webp"), {
       frameWidth: 128,
       frameHeight: 128,
     });

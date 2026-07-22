@@ -20,6 +20,7 @@ import {
   stageWallImageAssets,
   type RuntimeImageAsset,
 } from "./runtimeAssetCatalog";
+import { assetUrl } from "./assetUrl";
 
 export const CORE_IMAGE_ASSETS: readonly RuntimeImageAsset[] = Object.freeze([
   { key: "arena-cyclops", url: "assets/art/maps/route-03-cyclops-base.webp", kind: "route-map", sourceId: "fallback-arena" },
@@ -152,7 +153,7 @@ export function queueImageAssets(
   let queued = 0;
   for (const asset of assets) {
     if (!scene.textures.exists(asset.key)) {
-      scene.load.image(asset.key, asset.url);
+      scene.load.image(asset.key, assetUrl(asset.url));
       queued += 1;
     }
   }

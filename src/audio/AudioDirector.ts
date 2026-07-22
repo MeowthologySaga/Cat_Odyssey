@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import { getServices } from "../core/services";
 import { BGM_ASSETS } from "./audioAssets";
+import { assetUrl } from "../assets/assetUrl";
 import type { SfxKey } from "./audioAssets";
 import {
   BGM_FIRST_FADE_MS,
@@ -418,7 +419,7 @@ function queueBgmLoad(request: PendingBgmRequest): void {
     };
     loader.once(completeEvent, clearOnComplete);
     loader.on(Phaser.Loader.Events.FILE_LOAD_ERROR, clearOnError);
-    loader.audio(request.key, BGM_ASSETS[request.key]);
+    loader.audio(request.key, assetUrl(BGM_ASSETS[request.key]));
     if (!loader.isLoading()) loader.start();
   }
 }
