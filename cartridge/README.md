@@ -2,14 +2,26 @@
 
 고양이 영웅 자체를 당겨 쏘고 벽·적·괴수 부위에 튕겨 연속 타격하는 PC용 2D 리코셰 액션 RPG입니다. Language Miner는 게임 목록, 실행, 저장소와 다이아 지갑만 제공하며 게임 안에는 퀴즈나 학습 화면이 없습니다.
 
-> **비상업 컷신 고지:** EP1–20은 ElevenLabs Text to Speech 음성을
-> 포함합니다. EP1–11의 당시 플랜은 확인되지 않아 무료 플랜과 같은
-> 비상업 조건으로 다루며, EP12–20은 무료 플랜 기록이 확인됐습니다.
-> MP4 제목·게임 제목·회상 목록·배포 문서에는 `elevenlabs.io`가
-> 표시됩니다. 이 영상은
-> `LicenseRef-Cat-Odyssey-ElevenLabs-NC-1.0`에 따라 비상업 배포만
-> 허용됩니다. 자세한 내용은 pack 최상위의 `CUTSCENE_CREDITS.md`와
-> `ASSET_LICENSES.md`를 확인하세요.
+## Language support / 언어 지원
+
+- Supported languages: `ko` (한국어), `en` (English).
+- 지원 언어: `ko`(한국어), `en`(English). 기존 한국어 콘텐츠는 그대로 유지됩니다.
+- 첫 실행 기본값은 PlayZone Host가 공식 `locale` 힌트를 제공하면 그 값을 사용하고, 그렇지 않으면 브라우저/OS 언어를 감지합니다. 저장된 사용자 선택이 항상 우선합니다.
+- On first launch, a supported PlayZone Host `locale` hint is preferred; otherwise the browser/OS language is detected. A saved player choice always wins.
+- 게임 안 `설정 · 도움말 > 소리 · 언어`에서 언제든 바꿀 수 있으며 선택은 pack save에 저장됩니다.
+- Change the language any time under `Settings & Help > Audio & Language`; the choice is persisted in the pack save.
+- 제목, 튜토리얼, HUD, 메뉴, 스토리, 성장, 보상, 다이아 흐름과 컷신 자막에 같은 언어가 적용됩니다.
+- The selected language applies to the title, tutorial, HUD, menus, story, progression, rewards, Diamond flows, and cutscene subtitles.
+
+English quick start:
+
+```text
+npm run build
+open standalone/index.html
+Settings & Help > Audio & Language > English
+```
+
+The game is fully offline. The standalone build uses the local mock Host; a packaged `.lemgame` uses `window.LEM_GAME_HOST_API` when launched by Language Miner.
 
 ## 실행
 
@@ -114,4 +126,15 @@ pending 구매 저장
 - `lineageId`: `adb6ec88-2557-4fb2-857a-76e5c057f998` — 모든 버전에서 유지합니다.
 - 새 `.lemgame` 배포마다 `version`과 `releaseNotes`를 갱신합니다.
 - 저장 구조가 바뀔 때만 `save.schemaVersion`을 올리고 migration을 제공합니다.
-- 상업 배포로 전환할 때는 기존 음성을 소급 전환하지 않습니다. 유료 플랜 기간에 음성을 새로 생성하고 그 음성이 들어간 EP1–20 영상과 파생물을 다시 만든 뒤 자산 감사를 갱신합니다.
+
+## Credits and localized-media constraints / 크레딧과 언어 자산 제약
+
+- Game and original assets: Meowthology.
+- Original music and sound effects are unchanged and keep their existing licenses and provenance.
+- 기존 음악·효과음과 자산 라이선스/출처는 변경하지 않았습니다.
+- 컷신 원본 영상과 음성은 복제·합성하지 않습니다. `ko`와 `en` 모두 정확한 별도 자막 레이어를 사용합니다.
+- Cutscene video and voice are never cloned or synthesized. Accurate separate subtitle layers are provided for both `ko` and `en`.
+- 일부 원본 영상에는 제작 단계에서 포함된 캡션이 보일 수 있어 런타임 자막과 겹칠 수 있습니다. 런타임 자막이 게임의 공식 번역입니다.
+- Some source videos may retain production-baked captions, which can overlap the runtime subtitle layer. The runtime subtitle is the authoritative game translation.
+- 현재 PlayZone manifest v1은 다이아 `reason`의 다국어 선택 필드를 표준화하지 않았습니다. 보안 parity를 위해 canonical `reason`은 변경하지 않으며, `localizedReason` 메타데이터와 게임 내 현지화 확인 문구를 함께 제공합니다.
+- PlayZone manifest v1 does not yet standardize locale selection for Diamond action `reason` text. The canonical reason remains unchanged for security parity; localized metadata and in-game confirmation copy are supplied alongside it.

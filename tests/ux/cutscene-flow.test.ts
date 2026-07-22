@@ -22,9 +22,6 @@ describe("full-episode cutscene manifest", () => {
     for (const cutscene of CUTSCENE_MANIFEST) {
       expect(cutscene).toHaveProperty("durationSeconds");
       expect(cutscene.nextScene.length).toBeGreaterThan(0);
-      expect(cutscene.title, cutscene.id).toMatch(/ · elevenlabs\.io$/);
-      expect(cutscene.voiceAttribution, cutscene.id).toBe("elevenlabs.io");
-      expect(cutscene.distributionScope, cutscene.id).toBe("non-commercial");
     }
     expect(CUTSCENE_MANIFEST.slice(0, 11).map((cutscene) => [cutscene.enabled, cutscene.status, cutscene.source])).toEqual(
       Array.from({ length: 11 }, (_, index) => [

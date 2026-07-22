@@ -6,19 +6,12 @@ export type CutsceneTrigger =
 
 export type CutsceneStatus = "ready" | "missing";
 
-export const CUTSCENE_VOICE_ATTRIBUTION = "elevenlabs.io" as const;
-export const CUTSCENE_DISTRIBUTION_SCOPE = "non-commercial" as const;
-
 export interface CutsceneDefinition {
   readonly id: string;
   readonly episode: number;
   readonly routeId: string;
   readonly trigger: CutsceneTrigger;
   readonly title: string;
-  /** Required free-plan attribution displayed with every published episode title. */
-  readonly voiceAttribution: typeof CUTSCENE_VOICE_ATTRIBUTION;
-  /** The current narration and every derivative video containing it are non-commercial only. */
-  readonly distributionScope: typeof CUTSCENE_DISTRIBUTION_SCOPE;
   /** Automatic playback requires enabled=true, status=ready, and a non-null source. */
   readonly enabled: boolean;
   readonly status: CutsceneStatus;
@@ -61,9 +54,7 @@ const episode = (
   episode: episodeNumber,
   routeId,
   trigger,
-  title: `${title} · ${CUTSCENE_VOICE_ATTRIBUTION}`,
-  voiceAttribution: CUTSCENE_VOICE_ATTRIBUTION,
-  distributionScope: CUTSCENE_DISTRIBUTION_SCOPE,
+  title,
   enabled: ready,
   status: ready ? "ready" : "missing",
   source: ready ? `assets/video/cutscenes/ep${episodeNumber}.mp4` : null,
@@ -90,7 +81,7 @@ const integratedEpisode = (
 );
 
 /**
- * Cat Odyssey canon, using the authoritative untrimmed full
+ * CatTube Cat Odyssey canon, using the user's authoritative untrimmed full
  * episodes. EP1–11 are active source slots. EP12–20 are always present as
  * canonical metadata slots and become active only after the integration script
  * has copied a completed MP4 into the packaged public assets. Every active slot

@@ -10,7 +10,7 @@ describe("production debug bridge", () => {
 
   it("removes stale debug state and does not construct a release payload", () => {
     const target: DebugBridgeTarget = { __CAT_ODYSSEY_DEBUG__: { stale: true } };
-    const createPayload = vi.fn(() => ({ internalState: "mutable internals" }));
+    const createPayload = vi.fn(() => ({ internalMarker: "mutable internals" }));
     configureDebugBridge(target, false, createPayload);
     expect(target.__CAT_ODYSSEY_DEBUG__).toBeUndefined();
     expect(createPayload).not.toHaveBeenCalled();

@@ -37,6 +37,7 @@ import {
   type RestorableCampaignBattle,
 } from "../core/meta";
 import { getServices, reconcileWalletAfterPurchase } from "../core/services";
+import { translateText } from "../localization";
 import {
   markTutorialCoachmarkSeen,
   shouldOfferTutorialCoachmark,
@@ -418,7 +419,7 @@ export class BattleScene extends Phaser.Scene {
       : undefined;
     this.battleRescue = battleRescue;
     if (this.rescueResumeRequested && !battleRescue) {
-      services.host.ui.toast("구조 기록이 현재 콘텐츠와 맞지 않아 소비하지 않았습니다.");
+      services.host.ui.toast(translateText("구조 기록이 현재 콘텐츠와 맞지 않아 소비하지 않았습니다."));
       this.scene.start("Harbor");
       return;
     }
@@ -478,7 +479,7 @@ export class BattleScene extends Phaser.Scene {
       try {
         restored = restoreBattleRuntime(battleSetup, battleRescue.preparedSnapshot);
       } catch {
-        services.host.ui.toast("구조 전투를 복원하지 못해 기록을 소비하지 않았습니다.");
+        services.host.ui.toast(translateText("구조 전투를 복원하지 못해 기록을 소비하지 않았습니다."));
         this.scene.start("Harbor");
         return;
       }
@@ -486,7 +487,7 @@ export class BattleScene extends Phaser.Scene {
       // frozen snapshot and party definitions.
       const consumed = consumePreparedBattleRescue(save, battleRescue);
       if (!consumed.ok) {
-        services.host.ui.toast(consumed.message);
+        services.host.ui.toast(translateText(consumed.message));
         this.scene.start("Harbor");
         return;
       }
@@ -4509,7 +4510,10 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private async confirmRetreat(): Promise<void> {
-    const approved = await getServices().host.ui.confirm({ title: "항구로 귀환", message: "현재 전투 진행은 사라집니다. 귀환할까요?" });
+    const approved = await getServices().host.ui.confirm({
+      title: translateText("항구로 귀환"),
+      message: translateText("현재 전투 진행은 사라집니다. 귀환할까요?"),
+    });
     if (approved) {
       this.discardCampaignCheckpoint();
       fadeTo(this, "Harbor");

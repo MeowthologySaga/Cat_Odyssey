@@ -26,6 +26,8 @@ declare global {
   interface LemGameHostApi {
     packId: string;
     appVersion: string;
+    /** Optional forward-compatible locale hint. Current PlayZone hosts may omit it. */
+    locale?: string;
     wallet: {
       getBalance(): Promise<{ balance: number }>;
       spend(input: LemSpendInput): Promise<LemSpendResult>;

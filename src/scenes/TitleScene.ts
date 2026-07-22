@@ -46,7 +46,7 @@ export class TitleScene extends Phaser.Scene {
     if (heroTexture === HERO_FALLBACK_TEXTURE_KEY) hero.setTint(0x78dce2);
     if (!save.settings.reducedMotion) this.tweens.add({ targets: hero, y: 454, angle: -3, duration: 1800, ease: "Sine.InOut", yoyo: true, repeat: -1 });
 
-    this.add.text(W / 2, 118, "MEOWTHOLOGY SAGA", {
+    this.add.text(W / 2, 118, "MEOWTHOLOGY", {
       fontFamily: "Georgia, serif", fontSize: `${uiTextSize(19)}px`, letterSpacing: 8, color: "#8cd6d2",
     }).setOrigin(0.5);
     addTitle(this, "고양이 오디세이", 760, 50);
@@ -86,6 +86,13 @@ export class TitleScene extends Phaser.Scene {
     this.add.text(W / 2, 1110, "고양이를 당겨 튕기고 · 벽을 읽고 · 약점을 노려라", {
       fontFamily: "Malgun Gothic, sans-serif", fontSize: `${uiTextSize(15)}px`, color: "#82a5a2",
     }).setOrigin(0.5);
+    this.add.text(W / 2, 1192, "Meowthology · 지원 언어: 한국어 / English · 원본 음악·효과음 유지", {
+      fontFamily: "Malgun Gothic, sans-serif",
+      fontSize: `${uiTextSize(12)}px`,
+      color: "#78928f",
+      align: "center",
+      wordWrap: { width: 610, useAdvancedWrap: true },
+    }).setOrigin(0.5).setMaxLines(2);
     this.add.text(W / 2, 1228, "CAT ODYSSEY  ·  PLAYZONE EDITION", {
       fontFamily: "Georgia, serif", fontSize: `${uiTextSize(12)}px`, letterSpacing: 3, color: "#6c827f",
     }).setOrigin(0.5);

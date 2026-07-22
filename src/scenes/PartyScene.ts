@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import { ENDGAME, HEROES, HERO_BY_ID, RELICS, RELIC_BY_ID, STAGE_BY_ID, type HeroDefinition } from "../data";
 import { getServices, reconcileWalletAfterPurchase } from "../core/services";
+import { translateText } from "../localization";
 import {
   battleRewardMode,
   battleRescueEndgameMode,
@@ -1383,8 +1384,8 @@ export class PartyScene extends Phaser.Scene {
       if (differentTicket || activeCheckpoint) {
         const currentStageId = activeCheckpoint?.stageId ?? differentTicket?.stageId ?? "진행 중 전투";
         const approved = await services.host.ui.confirm({
-          title: "진행 중인 전투 포기",
-          message: `${currentStageId} 전투 기록이 남아 있습니다. 이 기록과 미정산 전투표를 포기하고 새 전투를 시작할까요?`,
+          title: translateText("진행 중인 전투 포기"),
+          message: translateText(`${currentStageId} 전투 기록이 남아 있습니다. 이 기록과 미정산 전투표를 포기하고 새 전투를 시작할까요?`),
         });
         if (!approved) {
           addToast(this, "기존 전투를 그대로 보존했습니다", COLORS.cyan);

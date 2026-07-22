@@ -4,6 +4,7 @@ import {
   createDefaultSave,
   migrateSave,
   normalizeSave,
+  type GameLanguage,
   type GameSaveV1
 } from "./saveSchema";
 
@@ -15,7 +16,7 @@ export type SavePersistenceStatus = {
 };
 
 export class GameSaveStore {
-  private state: GameSaveV1 = createDefaultSave();
+  private state: GameSaveV1;
   /**
    * An opt-in, memory-only save used by the explicit developer voyage mode.
    *
@@ -28,13 +29,17 @@ export class GameSaveStore {
   private persistenceStatus: SavePersistenceStatus = { writeReady: true };
   readonly queue: SaveWriteQueue<GameSaveV1>;
 
-  constructor(private readonly host: LemGameHostApi) {
+  constructor(
+    private readonly host: LemGameHostApi,
+    private readonly defaultLanguage: GameLanguage = "ko",
+  ) {
+    this.state = createDefaultSave(defaultLanguage);
     this.queue = new SaveWriteQueue(host.save, cloneSave);
   }
 
   async load(): Promise<GameSaveV1> {
-    const raw = await this.host.save.load(createDefaultSave());
-    this.state = migrateSave(raw);
+    const raw = await this.host.save.load(createDefaultSave(this.defaultLanguage));
+    this.state = migrateSave(raw, this.defaultLanguage);
     // Persist the canonical v1 shape immediately so schema-less prototypes, malformed values,
     // and forbidden legacy wallet fields do not survive another launch.
     // A temporary write outage must not make an otherwise readable save unbootable. Mutating
@@ -78,10 +83,10 @@ export class GameSaveStore {
 
   async replace(next: unknown): Promise<GameSaveV1> {
     if (this.volatileState) {
-      this.volatileState = normalizeSave(next);
+      this.volatileState = normalizeSave(next, this.defaultLanguage);
       return this.getSnapshot();
     }
-    this.state = normalizeSave(next);
+    this.state = normalizeSave(next, this.defaultLanguage);
     await this.persistCurrentState();
     return this.getSnapshot();
   }
@@ -112,11 +117,11 @@ export class GameSaveStore {
 
   async clear(): Promise<GameSaveV1> {
     if (this.volatileState) {
-      this.volatileState = createDefaultSave();
+      this.volatileState = createDefaultSave(this.defaultLanguage);
       return this.getSnapshot();
     }
     await this.host.save.clear();
-    this.state = createDefaultSave();
+    this.state = createDefaultSave(this.defaultLanguage);
     await this.persistCurrentState();
     return this.getSnapshot();
   }

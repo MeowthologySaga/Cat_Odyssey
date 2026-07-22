@@ -4,7 +4,7 @@
 
 - Pack id: `meowthology.cat-odyssey`
 - Lineage id: `adb6ec88-2557-4fb2-857a-76e5c057f998`
-- Version: `0.1.1`
+- Version: `0.2.3`
 - Content type: `game_pack`
 - Runtime: sandboxed iframe static bundle
 
@@ -39,6 +39,13 @@
 - `walletSpend`: true
 
 The game receives no Node/Electron primitives, user file paths, environment variables, clipboard access or raw IPC objects.
+
+## Localization Boundary
+
+- Supported game languages: `ko`, `en`; saved selection remains inside the existing pack save.
+- The optional root `host.locale` hint is read only when present. No deprecated `window.LanguageMiner` API is used.
+- Runtime translation never changes Diamond action id, amount, canonical reason, confirmation requirement, idempotency key, transaction id or purchase journal.
+- English cutscene subtitles are local static data. Localization adds no network or filesystem permission.
 
 ## Economy
 
@@ -92,3 +99,5 @@ Required Host protections:
 - Force-close once before spend, after spend, and during reward commit; confirm recovery grants exactly once.
 - Confirm manifest action parity and that save JSON has no `diamonds` or `walletBalance` field.
 - Confirm image/audio/font assets use stable relative URLs and do not flicker on wallet or save updates.
+- Run the English hardcoding check and 940×680 browser smoke at 100%, 125%, and 150% zoom.
+- Validate both the standalone build and a local `.lemgame` archive before publication.

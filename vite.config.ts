@@ -1,6 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
+  test: {
+    include: ["tests/**/*.test.ts"],
+    exclude: ["**/node_modules/**", "**/.git/**", "**/.upgrade/**"],
+  },
   base: "./",
   publicDir: "public",
   plugins: [

@@ -8,7 +8,7 @@ function validStage() {
     arena: {
       width: 720,
       height: 1040,
-      backgroundAssetUrl: "assets/art/maps/stages/ugc-raft-01.webp",
+      backgroundAssetUrl: "assets/art/maps/stages/ugc-raft-01.png",
     },
     walls: [{
       id: "rail",
@@ -67,11 +67,11 @@ function validStage() {
 }
 
 const validAssets = new Set([
-  "assets/art/maps/stages/ugc-raft-01.webp",
-  "assets/art/walls/wall-raft-rail.webp",
-  "assets/art/props/prop-log-idle.webp",
-  "assets/art/props/prop-log-positioned.webp",
-  "assets/art/props/prop-log-lashed.webp",
+  "assets/art/maps/stages/ugc-raft-01.png",
+  "assets/art/walls/wall-raft-rail.png",
+  "assets/art/props/prop-log-idle.png",
+  "assets/art/props/prop-log-positioned.png",
+  "assets/art/props/prop-log-lashed.png",
 ]);
 const assetExists = (assetUrl) => validAssets.has(assetUrl);
 
@@ -140,8 +140,8 @@ describe("generic stage contract validator", () => {
     const errors = validateStageContract(validStage(), { assetExists: () => false });
     expect(errors).toEqual(expect.arrayContaining([
       expect.stringContaining("background asset is missing"),
-      expect.stringContaining("prop-log-lashed.webp"),
-      expect.stringContaining("wall-raft-rail.webp"),
+      expect.stringContaining("prop-log-lashed.png"),
+      expect.stringContaining("wall-raft-rail.png"),
     ]));
   });
 
@@ -161,7 +161,7 @@ describe("generic stage contract validator", () => {
 
   it("rejects unsafe background paths and incomplete wave-front parameters", () => {
     const stage = validStage();
-    stage.arena.backgroundAssetUrl = "../private/map.webp";
+    stage.arena.backgroundAssetUrl = "../private/map.png";
     stage.hazards[0].parameters = {
       axis: "diagonal",
       direction: 0,
@@ -175,7 +175,7 @@ describe("generic stage contract validator", () => {
     };
     const errors = validateStageContract(stage, { assetExists });
     expect(errors).toEqual(expect.arrayContaining([
-      expect.stringContaining("safe public WebP"),
+      expect.stringContaining("safe public PNG"),
       expect.stringContaining("axis must"),
       expect.stringContaining("direction must"),
       expect.stringContaining("activeTurns"),

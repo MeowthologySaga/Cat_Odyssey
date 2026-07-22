@@ -23,6 +23,7 @@ import {
   STORM_EXTRA_ENTRY_MATERIAL_ID,
 } from "./meta/endgameLoop";
 import { DEFAULT_ORACLE_BANNER } from "./meta/summons";
+import { detectPreferredLanguage, setLanguage, translateText } from "../localization";
 
 export interface GameServices {
   readonly host: LemGameHostApi;
@@ -62,10 +63,10 @@ export function announceRecoveredPurchases(
     (result) => !result.ok && result.status === "recoverable",
   ).length;
   if (recoveredCount > 0) {
-    host.ui.toast(`이전 결제 ${recoveredCount}건의 보상을 안전하게 복구했습니다.`);
+    host.ui.toast(translateText(`이전 결제 ${recoveredCount}건의 보상을 안전하게 복구했습니다.`));
   }
   if (unresolvedCount > 0) {
-    host.ui.toast(`확인 중인 결제 ${unresolvedCount}건이 있습니다. 같은 구매를 다시 누르면 이어서 확인합니다.`);
+    host.ui.toast(translateText(`확인 중인 결제 ${unresolvedCount}건이 있습니다. 같은 구매를 다시 누르면 이어서 확인합니다.`));
   }
 }
 
@@ -82,9 +83,13 @@ export function getServices(): GameServices {
 
 export async function initializeServices(options: InitializeServicesOptions = {}): Promise<GameServices> {
   const debugMode = options.debugMode === true;
-  const { host, mode } = resolveGameHost({ mock: { initialBalance: 2_000 } });
-  const save = new GameSaveStore(host);
+  const { host: rawHost, mode } = resolveGameHost({ mock: { initialBalance: 2_000 } });
+  const preferredLanguage = await detectPreferredLanguage(rawHost);
+  setLanguage(preferredLanguage);
+  const host = rawHost;
+  const save = new GameSaveStore(host, preferredLanguage);
   await save.load();
+  setLanguage(save.getSnapshot().settings.language);
   await repairLegacyDefaults(save);
   if (debugMode) save.beginVolatileSession();
   const dispose = save.bindLifecycle();

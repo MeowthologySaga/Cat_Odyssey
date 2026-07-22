@@ -20,7 +20,7 @@ import type {
 export * from "./types";
 
 export const CONTENT_SCHEMA_VERSION = 1 as const;
-export const CONTENT_VERSION = "0.1.1" as const;
+export const CONTENT_VERSION = "0.1.0" as const;
 
 export const HEROES = heroesData as unknown as readonly HeroDefinition[];
 export const ENEMY_BEHAVIORS = enemiesData.behaviors as unknown as readonly EnemyBehaviorDefinition[];

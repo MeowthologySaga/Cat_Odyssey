@@ -41,9 +41,11 @@ describe("localized cutscene subtitles", () => {
     expect(cues.at(-1)?.text).toContain("모든 생존이 승리처럼");
   });
 
-  it("shows the Korean overlay only for the Korean language selection", () => {
+  it("shows an accurate overlay for both language selections", () => {
     expect(cutsceneSubtitleAt("cat-odyssey-ep01", 1, "ko")).toContain("아-포-나");
-    expect(cutsceneSubtitleAt("cat-odyssey-ep01", 1, "en")).toBe("");
+    const english = cutsceneSubtitleAt("cat-odyssey-ep01", 1, "en");
+    expect(english).toContain("A-paw-na");
+    expect(english).not.toMatch(/[\u3131-\u318e\uac00-\ud7a3]/u);
     expect(cutsceneSubtitleAt("cat-odyssey-ep01", Number.NaN, "ko")).toBe("");
     expect(cutsceneSubtitleAt("missing", 1, "ko")).toBe("");
   });

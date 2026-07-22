@@ -114,7 +114,7 @@ export class CutsceneScene extends Phaser.Scene {
     const subtitleBackdrop = this.add.rectangle(W / 2, 978, 640, 72, 0x010407, 0.96)
       .setStrokeStyle(1, 0x264d55, 0.72)
       .setDepth(126)
-      .setVisible(this.language === "ko");
+      .setVisible(true);
     this.subtitleText = this.add.text(W / 2, 978, "", {
       fontFamily: "Malgun Gothic, sans-serif",
       fontStyle: "bold",
@@ -125,7 +125,7 @@ export class CutsceneScene extends Phaser.Scene {
       stroke: "#000000",
       strokeThickness: 5,
       wordWrap: { width: 610 },
-    }).setOrigin(0.5).setDepth(127).setVisible(this.language === "ko");
+    }).setOrigin(0.5).setDepth(127).setVisible(true);
     subtitleBackdrop.setData("localizedSubtitle", true);
 
     const progressBackground = this.add.graphics().setDepth(120);

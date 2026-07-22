@@ -19,10 +19,12 @@ import { GAME_INPUT_CONFIG } from "./input/gameInput";
 import { configureDebugBridge } from "./core/debugBridge";
 import { isDebugModeRequested } from "./core/debugMode";
 import { DebugScene } from "./scenes/DebugScene";
+import { installPhaserTextLocalization, translateText } from "./localization";
 
 async function start(): Promise<void> {
   const debugMode = isDebugModeRequested(window.location.search);
   const services = await initializeServices({ debugMode });
+  installPhaserTextLocalization(Phaser);
   const directFilePreview = window.location.protocol === "file:";
   const game = new Phaser.Game({
     type: directFilePreview ? Phaser.CANVAS : Phaser.AUTO,
@@ -53,13 +55,13 @@ async function start(): Promise<void> {
   configureDebugBridge(window, debugMode, () => ({
     game,
     services,
-    version: "0.1.1",
+    version: "0.2.3",
     content: "10 routes / 43 stages",
   }));
 }
 
 start().catch((error: unknown) => {
   const root = document.querySelector<HTMLElement>("#game-root");
-  if (root) root.textContent = `항해 준비에 실패했습니다: ${error instanceof Error ? error.message : String(error)}`;
+  if (root) root.textContent = translateText(`항해 준비에 실패했습니다: ${error instanceof Error ? error.message : String(error)}`);
   throw error;
 });

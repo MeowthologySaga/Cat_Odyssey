@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import { getServices } from "../core/services";
 import { playSfx } from "../audio/AudioDirector";
+import { translateText } from "../localization";
 import {
   accessibilityPaletteFor,
   nextFocusableIndex,
@@ -207,6 +208,8 @@ export function addButton(
   label: string,
   options: GameButtonOptions,
 ): Phaser.GameObjects.Container {
+  const displayLabel = translateText(label);
+  const displaySubtitle = options.subtitle ? translateText(options.subtitle) : undefined;
   const width = options.width ?? 280;
   const height = options.height ?? 74;
   const enabled = options.enabled ?? true;
@@ -236,7 +239,7 @@ export function addButton(
     }).setOrigin(0.5));
   }
   const titleY = options.subtitle ? -Math.min(12, height * 0.15) : 0;
-  const title = scene.add.text(iconOffset, titleY, label, {
+  const title = scene.add.text(iconOffset, titleY, displayLabel, {
     fontFamily: "Malgun Gothic, sans-serif",
     fontStyle: "bold",
     fontSize: `${Math.min(uiTextSize(Math.max(14, options.fontSize ?? 24)), options.subtitle ? height * 0.36 : height * 0.54)}px`,
@@ -245,8 +248,8 @@ export function addButton(
     wordWrap: { width: Math.max(44, width - Math.abs(iconOffset) - 42), useAdvancedWrap: true },
   }).setOrigin(0.5).setMaxLines(options.subtitle ? 1 : 2);
   children.push(title);
-  if (options.subtitle) {
-    children.push(scene.add.text(iconOffset, 18, options.subtitle, {
+  if (displaySubtitle) {
+    children.push(scene.add.text(iconOffset, 18, displaySubtitle, {
       fontFamily: "Malgun Gothic, sans-serif",
       fontSize: `${Math.min(uiTextSize(14), height * 0.24)}px`,
       color: enabled ? settings.highContrast ? "#d9ffff" : "#9ec8c2" : "#5c6669",
@@ -255,6 +258,8 @@ export function addButton(
     }).setOrigin(0.5).setMaxLines(1));
   }
   const container = scene.add.container(x, y, children).setSize(width, height).setDepth(50);
+  container.setName(displayLabel);
+  container.setData("uiAriaLabel", [displayLabel, displaySubtitle].filter(Boolean).join(". "));
   container.setData("uiFocusRing", focusRing);
   container.setData("uiFocusKey", options.focusKey ?? `${label}:${Math.round(x)}:${Math.round(y)}`);
   container.setData("uiPrimary", Boolean(options.primary));
@@ -310,7 +315,7 @@ export function addTitle(
   y: number,
   size = 34,
 ): Phaser.GameObjects.Text {
-  return scene.add.text(W / 2, y, text, {
+  return scene.add.text(W / 2, y, translateText(text), {
     fontFamily: "Malgun Gothic, sans-serif",
     fontStyle: "bold",
     fontSize: `${uiTextSize(size)}px`,
@@ -344,11 +349,12 @@ export function addTopBar(
       fontFamily: "Georgia, serif", fontSize: `${uiTextSize(58)}px`, color: highContrast ? "#ffffff" : "#f7e7bb",
     }).setOrigin(0.5);
     const hit = scene.add.zone(36, 44, 70, 80).setInteractive({ useHandCursor: true });
+    hit.setName(translateText("뒤로")).setData("uiAriaLabel", translateText("뒤로"));
     hit.on("pointerup", navigateBack);
     items.push(backText, hit);
     if (options.bindKeyboardBack !== false) bindBackNavigation(scene, back);
   }
-  items.push(scene.add.text(back ? 78 : 28, 43, title, {
+  items.push(scene.add.text(back ? 78 : 28, 43, translateText(title), {
     fontFamily: "Malgun Gothic, sans-serif", fontStyle: "bold", fontSize: `${uiTextSize(24)}px`, color: highContrast ? "#ffffff" : "#f7e7bb",
     wordWrap: { width: back ? 330 : 380, useAdvancedWrap: true },
   }).setOrigin(0, 0.5).setMaxLines(1));
@@ -388,7 +394,7 @@ export function addToast(scene: Phaser.Scene, message: string, color: number = C
   const height = settings.textScale === 115 ? 84 : 68;
   const panel = scene.add.graphics().fillStyle(0x030c10, 0.96).lineStyle(2, color, 0.9);
   panel.fillRoundedRect(-280, -height / 2, 560, height, 18).strokeRoundedRect(-280, -height / 2, 560, height, 18);
-  const text = scene.add.text(0, 0, message, {
+  const text = scene.add.text(0, 0, translateText(message), {
     fontFamily: "Malgun Gothic, sans-serif", fontStyle: "bold", fontSize: `${uiTextSize(20)}px`, color: settings.highContrast ? "#ffffff" : "#f7e7bb", align: "center",
     wordWrap: { width: 510, useAdvancedWrap: true },
   }).setOrigin(0.5).setMaxLines(2);
@@ -525,7 +531,19 @@ function focusButton(
   if (!button.active || !button.visible || !button.input?.enabled) return;
   scene.data.set(FOCUSED_KEY, String(button.getData("uiFocusKey") ?? ""));
   if (userInitiated) scene.data.set(FOCUS_USER_SET_KEY, true);
+  announceAccessibleFocus(button);
   refreshFocusRings(scene);
+}
+
+function announceAccessibleFocus(button: Phaser.GameObjects.Container): void {
+  if (typeof document === "undefined") return;
+  const label = String(button.getData("uiAriaLabel") ?? button.name ?? "").trim();
+  if (!label) return;
+  const liveRegion = document.querySelector<HTMLElement>("#game-modal-root");
+  if (!liveRegion) return;
+  liveRegion.setAttribute("role", "status");
+  liveRegion.setAttribute("aria-live", "polite");
+  liveRegion.textContent = label;
 }
 
 function refreshFocusRings(scene: Phaser.Scene): void {

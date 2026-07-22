@@ -3,25 +3,38 @@
   "contentType": "game_pack",
   "id": "meowthology.cat-odyssey",
   "lineageId": "adb6ec88-2557-4fb2-857a-76e5c057f998",
-  "version": "0.1.1",
+  "version": "0.2.3",
   "minPlayZoneVersion": "0.1.0-beta.1",
-  "title": "고양이 오디세이",
-  "description": "고양이 영웅을 당겨 쏘고 벽과 괴수 부위를 연쇄 반사하는 2D 리코셰 액션 RPG입니다. 현재 컷신 음성 및 파생 영상은 비상업 배포 전용입니다.",
-  "releaseNotes": "10개 항로 캠페인, 20편 컷신, 신탁 소환·구조 요청·엔드게임 소비 흐름을 갖춘 최초 공개 비상업 배포본.",
+  "title": "고양이 오디세이 (Cat Odyssey)",
+  "description": "고양이 영웅을 당겨 쏘고 벽과 괴수 부위를 연쇄 반사하는 한국어/English 2D 리코셰 액션 RPG입니다.",
+  "releaseNotes": "한국어를 유지하면서 English 전체 플레이, 영어 컷신 자막, 언어 저장과 로컬라이제이션 QA를 추가했습니다.",
   "creator": {
     "name": "MeowthologySaga"
   },
   "license": "MIT AND LicenseRef-Meowthology-Official-Builtin AND LicenseRef-Cat-Odyssey-ElevenLabs-NC-1.0",
   "sourceUrl": "https://github.com/MeowthologySaga/Cat_Odyssey",
   "category": "action-rpg",
-  "tags": ["official", "action", "ricochet", "rpg", "collector", "boss-hunt"],
   "entry": {
     "type": "iframe",
     "path": "game/index.html"
   },
   "metadata": {
     "language": "ko",
-    "thumbnail": "assets/thumbnail.webp",
+    "supportedLanguages": ["ko", "en"],
+    "defaultLanguage": "ko",
+    "localized": {
+      "ko": {
+        "title": "고양이 오디세이",
+        "description": "고양이 영웅을 당겨 쏘고 벽과 괴수 부위를 연쇄 반사하는 2D 리코셰 액션 RPG입니다."
+      },
+      "en": {
+        "title": "Cat Odyssey",
+        "description": "A 2D ricochet action RPG where cat heroes chain shots off walls and monster parts."
+      }
+    },
+    "tags": ["official", "action", "ricochet", "rpg", "collector", "boss-hunt"],
+    "thumbnail": "assets/thumbnail.png",
+    "icon": "assets/icon.png",
     "distribution": "non-commercial",
     "cutsceneVoiceAttribution": "elevenlabs.io",
     "cutsceneLicenseNotice": "CUTSCENE_CREDITS.md",
@@ -30,11 +43,15 @@
     "cutsceneVoiceDisclosure": "EP1-11 historical ElevenLabs voice; EP12-20 ElevenLabs Voice Library Spuds Oxley; user reports no self-created voice clone"
   },
   "permissions": {
-    "walletSpend": true,
     "storage": true,
+    "walletSpend": true,
     "network": false,
     "externalLinks": false,
-    "cardRead": false
+    "cardRead": false,
+    "filesystem": false,
+    "clipboard": false,
+    "cardsRead": false,
+    "cardsCreate": false
   },
   "save": {
     "scope": "pack",
@@ -47,6 +64,7 @@
         "id": "oracle-summon-1",
         "amount": 100,
         "reason": "고양이 오디세이 신탁 소환 1회",
+        "localizedReason": { "ko": "고양이 오디세이 신탁 소환 1회", "en": "Cat Odyssey Oracle Summon ×1" },
         "requiresConfirm": true,
         "repeatable": true
       },
@@ -54,6 +72,7 @@
         "id": "oracle-summon-10",
         "amount": 900,
         "reason": "고양이 오디세이 신탁 소환 10회",
+        "localizedReason": { "ko": "고양이 오디세이 신탁 소환 10회", "en": "Cat Odyssey Oracle Summon ×10" },
         "requiresConfirm": true,
         "repeatable": true
       },
@@ -61,6 +80,7 @@
         "id": "battle-rescue",
         "amount": 60,
         "reason": "고양이 오디세이 구조 요청",
+        "localizedReason": { "ko": "고양이 오디세이 구조 요청", "en": "Cat Odyssey Battle Rescue" },
         "requiresConfirm": true,
         "repeatable": true
       },
@@ -68,6 +88,7 @@
         "id": "blessing-reroll",
         "amount": 30,
         "reason": "고양이 오디세이 가호 재선택",
+        "localizedReason": { "ko": "고양이 오디세이 가호 재선택", "en": "Cat Odyssey Blessing Reroll" },
         "requiresConfirm": true,
         "repeatable": true
       },
@@ -75,6 +96,7 @@
         "id": "storm-extra-run",
         "amount": 40,
         "reason": "고양이 오디세이 폭풍 항로 추가 출항",
+        "localizedReason": { "ko": "고양이 오디세이 폭풍 항로 추가 출항", "en": "Cat Odyssey Extra Storm Route Run" },
         "requiresConfirm": true,
         "repeatable": true
       },
@@ -82,6 +104,7 @@
         "id": "raid-extra-key",
         "amount": 50,
         "reason": "고양이 오디세이 토벌 열쇠 보충",
+        "localizedReason": { "ko": "고양이 오디세이 토벌 열쇠 보충", "en": "Cat Odyssey Raid Key Refill" },
         "requiresConfirm": true,
         "repeatable": true
       },
@@ -89,6 +112,7 @@
         "id": "awakening-materials",
         "amount": 120,
         "reason": "고양이 오디세이 각성 재료 보충",
+        "localizedReason": { "ko": "고양이 오디세이 각성 재료 보충", "en": "Cat Odyssey Awakening Materials" },
         "requiresConfirm": true,
         "repeatable": true
       },
@@ -96,6 +120,7 @@
         "id": "vault-expansion",
         "amount": 180,
         "reason": "고양이 오디세이 보물고 확장",
+        "localizedReason": { "ko": "고양이 오디세이 보물고 확장", "en": "Cat Odyssey Vault Expansion" },
         "requiresConfirm": true,
         "repeatable": false
       }

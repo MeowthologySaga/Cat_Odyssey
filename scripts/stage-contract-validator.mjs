@@ -1,5 +1,5 @@
 const VISUAL_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
-const SAFE_ASSET_URL_PATTERN = /^assets\/[a-z0-9_./-]+\.webp$/;
+const SAFE_ASSET_URL_PATTERN = /^assets\/[a-z0-9_./-]+\.png$/;
 
 export const COMMERCIAL_ART_GATES = Object.freeze([
   "backgroundAssetUrl",
@@ -86,7 +86,7 @@ function validatePresentation(presentation, ownerLabel, folder, assetExists, err
     }
   }
   for (const visualId of new Set(visualIds.filter((value) => typeof value === "string" && value.length > 0))) {
-    const assetUrl = `assets/art/${folder}/${visualId}.webp`;
+    const assetUrl = `assets/art/${folder}/${visualId}.png`;
     if (!assetExists(assetUrl)) errors.push(`${ownerLabel} presentation asset is missing: ${assetUrl}`);
   }
 }
@@ -335,7 +335,7 @@ export function validateStageContract(stage, options = {}) {
 
   if (arena.backgroundAssetUrl !== undefined) {
     if (!isSafeAssetUrl(arena.backgroundAssetUrl)) {
-      errors.push(`${stage.id} backgroundAssetUrl must be a safe public WebP asset path.`);
+      errors.push(`${stage.id} backgroundAssetUrl must be a safe public PNG asset path.`);
     } else if (!assetExists(arena.backgroundAssetUrl)) {
       errors.push(`${stage.id} background asset is missing: ${arena.backgroundAssetUrl}`);
     }

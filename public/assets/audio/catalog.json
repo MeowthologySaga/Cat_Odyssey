@@ -1,712 +1,1017 @@
 {
-  "schemaVersion": 1,
-  "description": "Runtime audio integrity and public provenance categories.",
+  "version": 5,
+  "generatedBy": "scripts/build-audio-catalog.mjs",
+  "source": "cat-odyssey-and-user-approved-cattube",
+  "measurement": {
+    "bgm": "ffmpeg loudnorm analysis (I target per track, TP=-1.5 dBTP, LRA=11)",
+    "sfx": "ffmpeg volumedetect max_volume"
+  },
   "bgm": [
     {
       "id": "bgm-harbor-homeward",
       "src": "assets/audio/bgm/harbor-homeward.mp3",
-      "durationSeconds": 137.6,
-      "bytes": 2202643,
-      "sha256": "71503808f31b8d7a8158397e5d603cd0bff52dffd7b1b007003035e397cffe10",
+      "duration": 137.6,
+      "bytes": 2202688,
       "role": "title-harbor-party-settings",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.44,
+      "truePeakDbtp": -8.95,
+      "measuredLra": 7.9,
+      "sha256": "5606281858492c9ba12ba62a71cea62a3e24d7628f84454aec56787019c670f2",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "Echoes of the Aegean",
+        "sunoSongId": "f9824d81-1a37-4a22-a74d-5d06d04a1b94",
+        "sunoSongUrl": "https://suno.com/song/f9824d81-1a37-4a22-a74d-5d06d04a1b94",
+        "sourceArchive": "art-source/audio/suno/downloads/Echoes of the Aegean.mp3"
+      }
     },
     {
       "id": "bgm-voyage-ricochet",
       "src": "assets/audio/bgm/voyage-ricochet.mp3",
-      "durationSeconds": 24,
-      "bytes": 480960,
-      "sha256": "0679c9293eb79d28267699297ea59aab56eeee2fa3a70761e54d9b905508cbc7",
+      "duration": 24,
+      "bytes": 481005,
       "role": "legacy-route-fallback",
-      "origin": {
-        "category": "project-owned-procedural",
-        "rightsStatus": "project-owned"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.61,
+      "truePeakDbtp": -8.51,
+      "measuredLra": 1.3,
+      "sha256": "3e9d49a11007aea93db85b73d5d34645a49bece800ee4de325f237bce1e62471",
+      "source": {
+        "type": "deterministic-procedural-master",
+        "sourceArchive": "audio-source/generated/voyage-ricochet.wav"
+      }
     },
     {
       "id": "bgm-voyage-open-sea",
       "src": "assets/audio/bgm/voyage-open-sea.mp3",
-      "durationSeconds": 119.84,
-      "bytes": 1918431,
-      "sha256": "cfbddb3d043434308ea80e93f95803685d6c47045064b6528c66cde89409cd11",
+      "duration": 119.84,
+      "bytes": 1918476,
       "role": "ogygia-and-poseidon-route",
-      "origin": {
-        "category": "suno-paid-user-owned-remaster",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.58,
+      "truePeakDbtp": -4.03,
+      "measuredLra": 17.8,
+      "sha256": "8c287913ca52aa581272c8eb2b58efb82881ba26875a9e3a42d483593f2972bd",
+      "source": {
+        "type": "cattube-remaster",
+        "ownership": "user-approved",
+        "project": "CatTube",
+        "episode": 2,
+        "sourceFile": "The Wrath of Paw-seidon.mp3",
+        "sourceSha256": "682b3bf0fd1d0a552a5f4346458c9c9dff3342db10404809c7f074652aa06bb6",
+        "auditRecord": "art-source/audio/cattube-ep1-11-sources.json"
+      }
     },
     {
       "id": "bgm-voyage-enchanted",
       "src": "assets/audio/bgm/voyage-enchanted.mp3",
-      "durationSeconds": 74.96,
-      "bytes": 1200377,
-      "sha256": "6d1e2fe30d7e1114f175bc00d1d7bda17adf652cc0f5f58a87ce61fa55f31e9a",
+      "duration": 74.96,
+      "bytes": 1200422,
       "role": "lotus-island-route",
-      "origin": {
-        "category": "suno-paid-user-owned-remaster",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.43,
+      "truePeakDbtp": -6.76,
+      "measuredLra": 7.8,
+      "sha256": "873c75d36306a956f0887effbb99698fe3d773d452db44eb96c29d2b50836bda",
+      "source": {
+        "type": "cattube-remaster",
+        "ownership": "user-approved",
+        "project": "CatTube",
+        "episode": 4,
+        "sourceFile": "Lotus Island Trance Escape.wav",
+        "sourceSha256": "46ee19febde422b7651ef94369b74c7288ce46eb7601bd7d656298f9779e8cdc",
+        "auditRecord": "art-source/audio/cattube-ep1-11-sources.json"
+      }
     },
     {
       "id": "bgm-voyage-cyclops-cave",
       "src": "assets/audio/bgm/voyage-cyclops-cave.mp3",
-      "durationSeconds": 109.76,
-      "bytes": 2635776,
-      "sha256": "3c5659468e715febec0de0d2b7d9fceb5bc4d7322b7d0d038d318ce43ba91721",
+      "duration": 109.76,
+      "bytes": 2760163,
       "role": "cyclops-cave-route",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -19.68,
+      "truePeakDbtp": -6.16,
+      "measuredLra": 2.2,
+      "sha256": "146fa13a151cbd5385f15e56b2d0919360e55476fda894643176c04f8923800f",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "Cavern of the One-Eyed King",
+        "sunoSongId": "3b011a1e-1bd9-418e-8d88-d373bf06acd6",
+        "sunoSongUrl": "https://suno.com/song/3b011a1e-1bd9-418e-8d88-d373bf06acd6",
+        "sourceArchive": "art-source/audio/suno/downloads/Cavern of the One-Eyed King.mp3"
+      }
     },
     {
       "id": "bgm-boss-cyclops",
       "src": "assets/audio/bgm/boss-cyclops.mp3",
-      "durationSeconds": 112,
-      "bytes": 1793043,
-      "sha256": "0e3be043208e02c791e3c6de6034f67e68fd9e9d378cfbc6b13fddf3a2fbf362",
+      "duration": 112,
+      "bytes": 1793088,
       "role": "poly-meow-mus-boss-battle",
-      "origin": {
-        "category": "suno-paid-user-owned-remaster",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -19,
+      "measuredLufs": -19.42,
+      "truePeakDbtp": -8.92,
+      "measuredLra": 7.6,
+      "sha256": "3b420e0263159e86bde12bb24db28a576896ec20252ec158483c9a5279b9456c",
+      "source": {
+        "type": "cattube-remaster",
+        "ownership": "user-approved",
+        "project": "CatTube",
+        "episode": 5,
+        "sourceFile": "Cy-Claws.wav",
+        "sourceSha256": "56f187cdfdeec76e81c6aa07e4f4e833acc5edfbe6385841748de1962c058ce8",
+        "auditRecord": "art-source/audio/cattube-ep1-11-sources.json"
+      }
     },
     {
       "id": "bgm-voyage-winds",
       "src": "assets/audio/bgm/voyage-winds.mp3",
-      "durationSeconds": 126.04,
-      "bytes": 2017488,
-      "sha256": "5b56570c63e2079cfc051511b2e20e7e131f89d7fe175c542dd7e831276f9734",
+      "duration": 126.04,
+      "bytes": 2017533,
       "role": "aeolus-and-wind-palace-route",
-      "origin": {
-        "category": "suno-paid-user-owned-remaster",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -19,
+      "measuredLufs": -19.43,
+      "truePeakDbtp": -7.91,
+      "measuredLra": 8.7,
+      "sha256": "e667aa3abaa91d37f7627e7c63288d6c2702b92cc1089740d4d71ee154f1ac9b",
+      "source": {
+        "type": "cattube-remaster",
+        "ownership": "user-approved",
+        "project": "CatTube",
+        "episode": 8,
+        "sourceFile": "Cursed Winds of Meow.wav",
+        "sourceSha256": "5e7cbafd67b51bf47e3091cd33c3159ccf1f56d3b7236c30f83e1101b01d15ce",
+        "auditRecord": "art-source/audio/cattube-ep1-11-sources.json"
+      }
     },
     {
       "id": "bgm-voyage-circe-palace",
       "src": "assets/audio/bgm/voyage-circe-palace.mp3",
-      "durationSeconds": 62.88,
-      "bytes": 1510272,
-      "sha256": "e3d5e5839298ea972d5ccd83f73f8a511881ba0712cf7e865e66b46ebdf9192c",
+      "duration": 62.88,
+      "bytes": 1710677,
       "role": "circe-palace-route",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.27,
+      "truePeakDbtp": -5.87,
+      "measuredLra": 5.2,
+      "sha256": "4444f9040b50892e8c13c646d430df5a91b19cce033724319da6f30cb16f5981",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "Moonlit Mirrors of Purr-ce",
+        "sunoSongId": "9d16c507-b567-4c0f-87fb-d4f13d399f76",
+        "sunoSongUrl": "https://suno.com/song/9d16c507-b567-4c0f-87fb-d4f13d399f76",
+        "sourceArchive": "art-source/audio/suno/downloads/Moonlit Mirrors of Purr-ce.mp3"
+      }
     },
     {
       "id": "bgm-voyage-underworld",
       "src": "assets/audio/bgm/voyage-underworld.mp3",
-      "durationSeconds": 89.64,
-      "bytes": 1435270,
-      "sha256": "4468cf52805385dd02a3f2ec92e26d2c42a68754b2419ca86d1c6f0e14a53520",
+      "duration": 89.64,
+      "bytes": 1435315,
       "role": "underworld-and-anticleia-memory-route",
-      "origin": {
-        "category": "suno-paid-user-owned-remaster",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.43,
+      "truePeakDbtp": -8.03,
+      "measuredLra": 9.5,
+      "sha256": "1af95fc1b32e274eb31f863e920a9d89c3c7c03aefd2cda12eded94a4a4f3902",
+      "source": {
+        "type": "cattube-remaster",
+        "ownership": "user-approved",
+        "project": "CatTube",
+        "episode": 10,
+        "sourceFile": "A Year Before Hades.wav",
+        "sourceSha256": "8ccfad02318a2b9009e306225ce294ac453fb55e0cad8cffcd5dc97a5fdbd65f",
+        "auditRecord": "art-source/audio/cattube-ep1-11-sources.json"
+      }
     },
     {
       "id": "bgm-voyage-black-strait",
       "src": "assets/audio/bgm/voyage-black-strait.mp3",
-      "durationSeconds": 53.4,
-      "bytes": 1282752,
-      "sha256": "ff01077d28feae4707b65ed21c2b3c3fe004207fadd98653b8a2f5fd198f804c",
+      "duration": 53.4,
+      "bytes": 1425767,
       "role": "scylla-charybdis-strait-route",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.29,
+      "truePeakDbtp": -7.08,
+      "measuredLra": 5,
+      "sha256": "e5637782c313b5d2bccf2a2f1e6d333ec500a8bb48f8884f0664d9ec5890aeaf",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "Between Six Fangs and the Abyss",
+        "sunoSongId": "88c331d1-c73d-47b8-bf2f-af060f242456",
+        "sunoSongUrl": "https://suno.com/song/88c331d1-c73d-47b8-bf2f-af060f242456",
+        "sourceArchive": "art-source/audio/suno/downloads/Between Six Fangs and the Abyss.mp3"
+      }
     },
     {
       "id": "bgm-voyage-thrinacia-sun",
       "src": "assets/audio/bgm/voyage-thrinacia-sun.mp3",
-      "durationSeconds": 160.76,
-      "bytes": 3859776,
-      "sha256": "d185b44501bcfbbfe9a601e952cfbb19bf1377c5ef184b88d92f9023ca6608ae",
+      "duration": 160.76,
+      "bytes": 4000468,
       "role": "thrinacia-sun-route",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -19.77,
+      "truePeakDbtp": -4.74,
+      "measuredLra": 2.7,
+      "sha256": "d0d11294fbb10accaa68746b31b8f5bcf02b2928383c737536b064aa19211e24",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "The Forbidden Herd of the Sun",
+        "sunoSongId": "11bf7662-9b27-4b74-9676-52c77fb576e0",
+        "sunoSongUrl": "https://suno.com/song/11bf7662-9b27-4b74-9676-52c77fb576e0",
+        "sourceArchive": "art-source/audio/suno/downloads/The Forbidden Herd of the Sun.mp3"
+      }
     },
     {
       "id": "bgm-voyage-sirens",
       "src": "assets/audio/bgm/voyage-sirens.mp3",
-      "durationSeconds": 58.88,
-      "bytes": 942914,
-      "sha256": "d3c98dd390f47b68157a6dbb1cf302977598c58a599c716663d602a70412de54",
+      "duration": 58.88,
+      "bytes": 942959,
       "role": "siren-reef-route",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.76,
+      "truePeakDbtp": -7.15,
+      "measuredLra": 11.9,
+      "sha256": "63ef6865fb4bfd39659f46b24b7d8b46319e14fe10829332fef880fdb318cce4",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "Whispers of the Mew-Sirens",
+        "sunoSongId": "7e58ac8a-3926-400a-9d34-fd073534e45c",
+        "sunoSongUrl": "https://suno.com/song/7e58ac8a-3926-400a-9d34-fd073534e45c",
+        "sourceArchive": "art-source/audio/suno/downloads/Whispers of the Mew-Sirens.mp3"
+      }
     },
     {
       "id": "bgm-voyage-homecoming",
       "src": "assets/audio/bgm/voyage-homecoming.mp3",
-      "durationSeconds": 165.88,
-      "bytes": 2655293,
-      "sha256": "d5f242a6c3abdfc6e9c91a756846f5941d285615a6acd751941f3b78c1fc929a",
+      "duration": 165.88,
+      "bytes": 2655338,
       "role": "ithaca-homecoming-route",
-      "origin": {
-        "category": "suno-paid-user-owned-remaster",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.64,
+      "truePeakDbtp": -4.13,
+      "measuredLra": 17,
+      "sha256": "e4b4ba91b9e2d384e6feb3c6f8078b747a32a0b30336834a6aceb39640d3a631",
+      "source": {
+        "type": "cattube-remaster",
+        "ownership": "user-approved",
+        "project": "CatTube",
+        "episode": 11,
+        "sourceFile": "Hands Through Blue Ghost.wav",
+        "sourceSha256": "0738c4b3009de819b34c7b4355665efb565487c70667b4cc2b3eb1fe84f6756c",
+        "auditRecord": "art-source/audio/cattube-ep1-11-sources.json"
+      }
     },
     {
       "id": "bgm-boss-homecoming-duel",
       "src": "assets/audio/bgm/boss-homecoming-duel.mp3",
-      "durationSeconds": 62.88,
-      "bytes": 1510272,
-      "sha256": "139938fcdef98d62e632ddef80b515f1e7a643a68bffa1282aed11fbb1768f92",
+      "duration": 62.88,
+      "bytes": 1608388,
       "role": "homecoming-duel-boss-battle",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -19,
+      "measuredLufs": -19.23,
+      "truePeakDbtp": -6.29,
+      "measuredLra": 2.6,
+      "sha256": "31c62d0681a3db1589ee46311398a1273b85cdfb44bc1841bcfaf8d86ef4bf1b",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "The Last Hall of Itha-Cat",
+        "sunoSongId": "d92e81d1-5d62-45d7-a51f-30f55e23d7f1",
+        "sunoSongUrl": "https://suno.com/song/d92e81d1-5d62-45d7-a51f-30f55e23d7f1",
+        "sourceArchive": "art-source/audio/suno/downloads/The Last Hall of Itha-Cat.mp3"
+      }
     },
     {
       "id": "bgm-endgame-oracle",
       "src": "assets/audio/bgm/endgame-oracle.mp3",
-      "durationSeconds": 129.84,
-      "bytes": 3117312,
-      "sha256": "f32ad079fb14efa79af7275d3c9ad0aec0c197e29a9d68f886a6f10428f1284c",
+      "duration": 129.84,
+      "bytes": 3255381,
       "role": "endgame-oracle-tower-and-raid",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.25,
+      "truePeakDbtp": -5.31,
+      "measuredLra": 3.5,
+      "sha256": "03e42c3d7d99402d3f7fc272e5c18bd97690f3e4b4455f9296a9d072b58aef2b",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "Oracle Beyond the Last Horizon",
+        "sunoSongId": "45ba7dfe-f01b-4853-8c1e-91bcb59e11ea",
+        "sunoSongUrl": "https://suno.com/song/45ba7dfe-f01b-4853-8c1e-91bcb59e11ea",
+        "sourceArchive": "art-source/audio/suno/downloads/Oracle Beyond the Last Horizon.mp3"
+      }
     },
     {
       "id": "bgm-oracle-summon",
       "src": "assets/audio/bgm/oracle-summon.mp3",
-      "durationSeconds": 36.84,
-      "bytes": 885312,
-      "sha256": "05edd99a0b38d98f04a61d7284b6fb6b2c39d7dd26d5b42167e6df204c6d9494",
+      "duration": 36.84,
+      "bytes": 999749,
       "role": "oracle-summon-and-meta",
-      "origin": {
-        "category": "suno-paid-dedicated",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "targetLufs": -20,
+      "measuredLufs": -20.35,
+      "truePeakDbtp": -6.86,
+      "measuredLra": 8.8,
+      "sha256": "03d87beaa877ce9090a96dc9f01a8bb14dd3343c0669d9266d8d61282d297c06",
+      "source": {
+        "type": "suno-bgm",
+        "project": "Cat Odyssey",
+        "title": "Stars Within the Oracle Shell",
+        "sunoSongId": "87af0939-a595-47b3-bd8c-1b721d39c9a8",
+        "sunoSongUrl": "https://suno.com/song/87af0939-a595-47b3-bd8c-1b721d39c9a8",
+        "sourceArchive": "art-source/audio/suno/downloads/Stars Within the Oracle Shell.mp3"
+      }
     }
   ],
   "sfx": [
     {
       "id": "sfx-ricochet-hit",
       "src": "assets/audio/sfx/ricochet-hit.mp3",
-      "durationSeconds": 0.7,
-      "bytes": 18180,
-      "sha256": "d30c0794e6c9da018d3c9609869ec470604caeb95e8a5f25553bfcd4e7529488",
+      "duration": 0.7,
+      "bytes": 18225,
       "role": "ricochet-hit",
       "semanticFamily": "ricochet-hit",
-      "origin": {
-        "category": "project-owned-procedural",
-        "rightsStatus": "project-owned"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1.9,
+      "sha256": "74532b56e3ea3808166dc401c26dae5b88c0953b7a1100da70b956faf64075d0",
+      "source": {
+        "type": "deterministic-procedural-master",
+        "sourceArchive": "audio-source/generated/ricochet-hit.wav"
+      }
     },
     {
       "id": "sfx-summon-reveal",
       "src": "assets/audio/sfx/summon-reveal.mp3",
-      "durationSeconds": 1.8,
-      "bytes": 44511,
-      "sha256": "e51628b0a5dbb9f535a1bd339f5e3c7e9a562ff544caf272e32993d677a4db03",
+      "duration": 1.8,
+      "bytes": 44556,
       "role": "summon-reveal",
       "semanticFamily": "summon-reveal",
-      "origin": {
-        "category": "project-owned-procedural",
-        "rightsStatus": "project-owned"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1.5,
+      "sha256": "234d2f0a2c1fc8c5ca5c104099244a639631cc7125d05c3a890d58406c4b61b0",
+      "source": {
+        "type": "deterministic-procedural-master",
+        "sourceArchive": "audio-source/generated/summon-reveal.wav"
+      }
     },
     {
       "id": "sfx-ui-confirm",
       "src": "assets/audio/sfx/ui-confirm.mp3",
-      "durationSeconds": 1.299,
-      "bytes": 21888,
-      "sha256": "7d4468e2823070d91c8fe2f40447d74b29671977a2567d7437a6d3442a2da776",
+      "duration": 1.299,
+      "bytes": 199723,
       "role": "ui-confirm",
       "semanticFamily": "ui-confirm",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2,
+      "sha256": "964f1a5c68257fc0dfe815ff1dbe4ce20655844dd1a484846d6db45db5c48332",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "drillheart-upgrade-confirm",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/drillheart-upgrade-confirm.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-ui-cancel",
       "src": "assets/audio/sfx/ui-cancel.mp3",
-      "durationSeconds": 0.387,
-      "bytes": 7296,
-      "sha256": "8b8fbb514c3563c08440c306cebb02b6f689182c12275d2444b7dbd5978c1088",
+      "duration": 0.387,
+      "bytes": 97486,
       "role": "ui-cancel",
       "semanticFamily": "ui-cancel",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1.9,
+      "sha256": "4b6c2d7842b1b7951b50ce2d58dc291ab06c44685e7d23ae0d616ddbae8a6d38",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "sword-light-swing",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/sword-light-swing.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-ui-error",
       "src": "assets/audio/sfx/ui-error.mp3",
-      "durationSeconds": 0.403,
-      "bytes": 7522,
-      "sha256": "9198aaacd86ebead72784c9e80a74416acdd362a7227941be2b6cb5b9298c391",
+      "duration": 0.403,
+      "bytes": 7567,
       "role": "ui-error",
       "semanticFamily": "ui-error",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch +25%, high-pass 1.05 kHz",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -5,
+      "sha256": "f06836a6d6dcca54f0fec494558eeeebaa9291227a9cef1e65d33d1754c9c92e",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "abyss-curse-attack",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/abyss-curse-attack.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-launch-light",
       "src": "assets/audio/sfx/launch-light.mp3",
-      "durationSeconds": 0.437,
-      "bytes": 8064,
-      "sha256": "418f1c1bdf113ced27997ded30c6263858ecabcd8ced384746ee9bc05647df3b",
+      "duration": 0.437,
+      "bytes": 62558,
       "role": "launch-light",
       "semanticFamily": "launch-light",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.2,
+      "sha256": "22806e0bbd576bf2d9b65fd62b16955f062b0633f4e56d17ec3cb79234664bb9",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "short-melee-swing",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/short-melee-swing.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-launch-heavy",
       "src": "assets/audio/sfx/launch-heavy.mp3",
-      "durationSeconds": 0.409,
-      "bytes": 7680,
-      "sha256": "90da6dd8140519ea80b47a163d6482f9d093989d75ec610620766616f8c68672",
+      "duration": 0.409,
+      "bytes": 118270,
       "role": "launch-heavy",
       "semanticFamily": "launch-heavy",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2,
+      "sha256": "3d7103bfc3ae810c9729140c161b058ae93d3d5a807cc68ac4f6a4f0030dce30",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "sword-heavy-swing",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/sword-heavy-swing.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-ricochet-stone",
       "src": "assets/audio/sfx/ricochet-stone.mp3",
-      "durationSeconds": 0.516,
-      "bytes": 9216,
-      "sha256": "de51b1c1ff87487097cb645dbcf409b5fdf4565e4580cd3c4f05e6beba95116d",
+      "duration": 0.516,
+      "bytes": 144027,
       "role": "ricochet-stone",
       "semanticFamily": "ricochet-stone",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.5,
+      "sha256": "3f7fa5cec25878442e84bf76168853ad9cf664885f2f1323cb1ec414c096b291",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "armor-hit",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/armor-hit.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-ricochet-wood",
       "src": "assets/audio/sfx/ricochet-wood.mp3",
-      "durationSeconds": 0.307,
-      "bytes": 5760,
-      "sha256": "0a4182e1764a7265eb46a56c9e7edf021b95bc38f7d78ba6b105ba154f7e4a70",
+      "duration": 0.307,
+      "bytes": 133295,
       "role": "ricochet-wood",
       "semanticFamily": "ricochet-wood",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.5,
+      "sha256": "396cf84539332ab68dc6128ae524ec244e3a1152bbbe8a92e90fc28a2c889ceb",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "light-enemy-hit",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/light-enemy-hit.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-ricochet-magic",
       "src": "assets/audio/sfx/ricochet-magic.mp3",
-      "durationSeconds": 0.813,
-      "bytes": 13824,
-      "sha256": "fd3c51aacd44eba9826471d3549cc36d40ce1d9e79fd8108623030cd42993d26",
+      "duration": 0.813,
+      "bytes": 103660,
       "role": "ricochet-magic",
       "semanticFamily": "ricochet-magic",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.2,
+      "sha256": "486fafbec15ef4393fadfe772a9bf1b36323258f8503edc9687feec9353ba5d7",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "magic-impact",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/magic-impact.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-hit-light",
       "src": "assets/audio/sfx/hit-light.mp3",
-      "durationSeconds": 0.298,
-      "bytes": 5850,
-      "sha256": "8bff5bb82c417a301f59888d2cc2ca354d3898ec7172c1a15283b6327bdb8533",
+      "duration": 0.298,
+      "bytes": 5895,
       "role": "hit-light",
       "semanticFamily": "hit-light",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch +12%, high-pass 720 Hz",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -0.9,
+      "sha256": "f8b34d4f2e74f69cb0aff1d6e4d1d7b4cd85f64277a64ed3330f37dc9f44b401",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "light-enemy-hit",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/light-enemy-hit.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-hit-critical",
       "src": "assets/audio/sfx/hit-critical.mp3",
-      "durationSeconds": 0.599,
-      "bytes": 10368,
-      "sha256": "2f2f6c8415d577b21ca15a897bf03301b6b2cc6611cf1a89772671f9153fe8b1",
+      "duration": 0.599,
+      "bytes": 97519,
       "role": "hit-critical",
       "semanticFamily": "hit-critical",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.1,
+      "sha256": "5ba6b8636fe1a82da7171926f6eb90e56eafcf23d47c652ed28cfd3775dd7f3a",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "critical-hit",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/critical-hit.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-weakpoint-break",
       "src": "assets/audio/sfx/weakpoint-break.mp3",
-      "durationSeconds": 0.874,
-      "bytes": 14976,
-      "sha256": "79fb1071e1a938e647133b7fe0a39bffd441477dab2f617fb334f803fb28d83b",
+      "duration": 0.874,
+      "bytes": 186869,
       "role": "weakpoint-break",
       "semanticFamily": "weakpoint-break",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.4,
+      "sha256": "c97d9cfff4049c06c25039aafbfcb8ef2f360830ac4c90089bc0a2c1065cacf4",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "mortar-impact",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/mortar-impact.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-shield-block",
       "src": "assets/audio/sfx/shield-block.mp3",
-      "durationSeconds": 0.626,
-      "bytes": 11136,
-      "sha256": "8e2fbf1963974a928930df7353c23134562afb4f6643318da161cfd22e1ab074",
+      "duration": 0.626,
+      "bytes": 92297,
       "role": "shield-block",
       "semanticFamily": "shield-block",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.1,
+      "sha256": "8f0ece7ce7a458c6b67bcb9d59f32855815c0b9470c0bff225e6fd7e5864cee6",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "sword-parry",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/sword-parry.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-shield-break",
       "src": "assets/audio/sfx/shield-break.mp3",
-      "durationSeconds": 0.583,
-      "bytes": 10368,
-      "sha256": "9fff0c9bed5f1c0ef187b20a8db91d300e5e664ab6c9a72d83c203494d91f43c",
+      "duration": 0.583,
+      "bytes": 98545,
       "role": "shield-break",
       "semanticFamily": "shield-break",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -5.1,
+      "sha256": "bd646cd695597d41db5a4306004a98b8e88e8a9cb018c03d17af0241d55e3270",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "sword-critical-slash",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/sword-critical-slash.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-friendship-link",
       "src": "assets/audio/sfx/friendship-link.mp3",
-      "durationSeconds": 1.177,
-      "bytes": 19968,
-      "sha256": "92ce2d9658b3171e82eac374f1e2e7ebeb69d72a466bbbcad14b774edf5c230b",
+      "duration": 1.177,
+      "bytes": 104150,
       "role": "friendship-link",
       "semanticFamily": "friendship-link",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1.9,
+      "sha256": "aa901cdca48522be9fc09415248ee826e740a76d979a67d111627d04a03f81f9",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "abyss-upgrade-success",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/abyss-upgrade-success.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-active-ready",
       "src": "assets/audio/sfx/active-ready.mp3",
-      "durationSeconds": 1.263,
-      "bytes": 21314,
-      "sha256": "ee72a83eaa38615b218da0a71286c173725188fa1e0c725edc46bc4cb6dc9192",
+      "duration": 1.263,
+      "bytes": 21359,
       "role": "active-ready",
       "semanticFamily": "active-ready",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch +12%, high-pass 520 Hz",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.2,
+      "sha256": "0e4ce092be8e6f61dafa21e9e700708810632cd156adf094aa283f2c71c121d5",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "drillheart-upgrade-confirm",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/drillheart-upgrade-confirm.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-active-cast",
       "src": "assets/audio/sfx/active-cast.mp3",
-      "durationSeconds": 0.377,
-      "bytes": 6912,
-      "sha256": "2f05d3a5b3399062f2b3dc31607818c48dd2d3181f96d9eef5704bd2feeebdd9",
+      "duration": 0.377,
+      "bytes": 103318,
       "role": "active-cast",
       "semanticFamily": "active-cast",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.3,
+      "sha256": "d03f04bb72fe5501bfba4fc3c3e6fbef7e261a3bc35d769b2efe9b7dfa1c0b40",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "magic-projectile-cast",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/magic-projectile-cast.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-turn-player",
       "src": "assets/audio/sfx/turn-player.mp3",
-      "durationSeconds": 1.068,
-      "bytes": 17971,
-      "sha256": "867a994a58239d4f94467ae3257135be77ca18b623e28caf2c3ad2c1b48d33c5",
+      "duration": 1.068,
+      "bytes": 18016,
       "role": "turn-player",
       "semanticFamily": "turn-player",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch +20%, high-pass 850 Hz",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -3.5,
+      "sha256": "4fe1ebd9a862cf9fcd9f13fb92527bce2c6b3ed40e6f633db8a12121a2ff40bf",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "abyss-upgrade-success",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/abyss-upgrade-success.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-turn-enemy",
       "src": "assets/audio/sfx/turn-enemy.mp3",
-      "durationSeconds": 0.614,
-      "bytes": 10866,
-      "sha256": "b4d0f71a7a62b67e9fd27aa43be97697af6ff58d4f9244b38519522922b2ff8a",
+      "duration": 0.614,
+      "bytes": 10911,
       "role": "turn-enemy",
       "semanticFamily": "turn-enemy",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch -18%, low-pass 2.8 kHz",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.7,
+      "sha256": "dbd0c701798226cac1c2dbff56c962614638e0bc331347bc8e3d5aeac77eee44",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "abyss-curse-attack",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/abyss-curse-attack.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-enemy-telegraph",
       "src": "assets/audio/sfx/enemy-telegraph.mp3",
-      "durationSeconds": 0.463,
-      "bytes": 8448,
-      "sha256": "54c573681eb32d13d23b88c4f0afac1cc879db3aa444376e3f360dfe1be8ec8e",
+      "duration": 0.463,
+      "bytes": 105355,
       "role": "enemy-telegraph",
       "semanticFamily": "enemy-telegraph",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.2,
+      "sha256": "b3cfd4a541965f8205ab98770dd26ea215f53c6dc6e519ad653a0b24de54bda9",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "abyss-curse-attack",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/abyss-curse-attack.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-enemy-heavy",
       "src": "assets/audio/sfx/enemy-heavy.mp3",
-      "durationSeconds": 0.543,
-      "bytes": 9612,
-      "sha256": "be4511036688a648efa31da26a5976abe09b0bf8bd53e66b99477b4f2a8a67d6",
+      "duration": 0.543,
+      "bytes": 9657,
       "role": "enemy-heavy",
       "semanticFamily": "enemy-heavy",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch -18%, low-pass 4.2 kHz",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1.4,
+      "sha256": "90724b4096bee30703befb70cfeea85a32ed85e2a6f3a29ebbac09cc89cab3c5",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "sword-heavy-swing",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/sword-heavy-swing.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-enemy-projectile",
       "src": "assets/audio/sfx/enemy-projectile.mp3",
-      "durationSeconds": 0.503,
-      "bytes": 8832,
-      "sha256": "9f064a1461b3d5e4fb19763f6416971a038fe517e14412e4edf8c3a0c63e17fa",
+      "duration": 0.503,
+      "bytes": 171906,
       "role": "enemy-projectile",
       "semanticFamily": "enemy-projectile",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.5,
+      "sha256": "23dd5012a9e1651867c934cff5629b50a4d904ab47415f0761afba32864a2cd4",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "spectral-arrow-shot",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/spectral-arrow-shot.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-enemy-heal",
       "src": "assets/audio/sfx/enemy-heal.mp3",
-      "durationSeconds": 4.096,
-      "bytes": 66432,
-      "sha256": "24c65176d7b3b1fcfdfd6ccc76ff5f77d260d65102be383261f822fbd55e27c3",
+      "duration": 4.096,
+      "bytes": 183606,
       "role": "enemy-heal",
       "semanticFamily": "enemy-heal",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2,
+      "sha256": "0a85600f6293a6723beaecf602cf4604e0abf51b8cfce6ce475bb58cd771321e",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "rebirth-transformation",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/rebirth-transformation.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-enemy-spawn",
       "src": "assets/audio/sfx/enemy-spawn.mp3",
-      "durationSeconds": 3.651,
-      "bytes": 59520,
-      "sha256": "f9a1d0f848ca6fa91aa7e1e10897113c7c58b3a618a2c36f6c24851c0d01b64c",
+      "duration": 3.651,
+      "bytes": 194216,
       "role": "enemy-spawn",
       "semanticFamily": "enemy-spawn",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1.6,
+      "sha256": "9d836da399d23fe791daeb32b96a8b2cf7275fdc9584823e25c80b9ca9a80973",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "enemy-gate-spawn",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/enemy-gate-spawn.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-hero-damage",
       "src": "assets/audio/sfx/hero-damage.mp3",
-      "durationSeconds": 0.669,
-      "bytes": 11701,
-      "sha256": "287dfe5e4b5508cc4a5225039fc5d4d98986b400474eab91e9af8d8b72643570",
+      "duration": 0.669,
+      "bytes": 11746,
       "role": "hero-damage",
       "semanticFamily": "hero-damage",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch -16%, low-pass 3.9 kHz",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -3.6,
+      "sha256": "c9274e445eebec5c9def9a58f0e7e40b78a62791625f7a50f5f6d764e941f1aa",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "armor-hit",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/armor-hit.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-hero-defeated",
       "src": "assets/audio/sfx/hero-defeated.mp3",
-      "durationSeconds": 2.636,
-      "bytes": 43008,
-      "sha256": "fb9815a997ad88c1086516d7531ebdfd264367ac599824368074a4dbca7287f6",
+      "duration": 2.636,
+      "bytes": 98904,
       "role": "hero-defeated",
       "semanticFamily": "defeat",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.1,
+      "sha256": "c7832912fa6ccdb975f88b890902ff02dfc515aad8926b827065dd0ab2750e00",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "enemy-defeated",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/enemy-defeated.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-hazard-warning",
       "src": "assets/audio/sfx/hazard-warning.mp3",
-      "durationSeconds": 0.56,
-      "bytes": 10030,
-      "sha256": "c85de32cebc11347130b549d04645f8f4c1efc31b3823fc1c2892836521585ba",
+      "duration": 0.56,
+      "bytes": 10075,
       "role": "hazard-warning",
       "semanticFamily": "hazard-warning",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch -10%, 9 Hz tremolo",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -3.4,
+      "sha256": "c6f83dcf3fc3b8633dc4ddc6e0dac1e825f119a2439cb24735dc2d932561ed2a",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "abyss-curse-attack",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/abyss-curse-attack.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-boss-phase",
       "src": "assets/audio/sfx/boss-phase.mp3",
-      "durationSeconds": 2.512,
-      "bytes": 41377,
-      "sha256": "ebb49c9ac83de08f00d9bfae3afc1a9366075ff4357582fcd20b53548adc3294",
+      "duration": 2.512,
+      "bytes": 41422,
       "role": "boss-phase",
       "semanticFamily": "boss-phase",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "trim 1.8 s, pitch -22%, low-pass 4.8 kHz, short fade",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1.4,
+      "sha256": "f507af20bd86d02a93b16ab45fe69d40364443e1b0cad4e2d87ecf77ca343d53",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "rebirth-transformation",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/rebirth-transformation.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-victory",
       "src": "assets/audio/sfx/victory.mp3",
-      "durationSeconds": 2.734,
-      "bytes": 44544,
-      "sha256": "71c3801561aa4425d8f2e95ce0550bc4d4e3a15bdd4c57021b6ad0a5196938fe",
+      "duration": 2.734,
+      "bytes": 190867,
       "role": "victory",
       "semanticFamily": "victory",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2,
+      "sha256": "07deb405648e33b87673fbbe19aa10c185c4fc23646533fc0b527b9f99f49838",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "boss-defeated",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/boss-defeated.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-defeat",
       "src": "assets/audio/sfx/defeat.mp3",
-      "durationSeconds": 2.636,
-      "bytes": 43008,
-      "sha256": "fb9815a997ad88c1086516d7531ebdfd264367ac599824368074a4dbca7287f6",
+      "duration": 2.636,
+      "bytes": 98904,
       "role": "defeat",
       "semanticFamily": "defeat",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.1,
+      "sha256": "c7832912fa6ccdb975f88b890902ff02dfc515aad8926b827065dd0ab2750e00",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "enemy-defeated",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/enemy-defeated.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-objective-success",
       "src": "assets/audio/sfx/objective-success.mp3",
-      "durationSeconds": 1.186,
-      "bytes": 20061,
-      "sha256": "478d68fda513e654eee83e92bb0f9de6fb0f4d11f6c2c5d63ca2113ba53d9897",
+      "duration": 1.186,
+      "bytes": 20106,
       "role": "objective-success",
       "semanticFamily": "objective-success",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch +8%, high-pass 620 Hz",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -2.3,
+      "sha256": "e828ef3245c789345e9c91c2e681375cc8349fa6be0f316b81ab70e8f604b1ac",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "abyss-upgrade-success",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/abyss-upgrade-success.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-objective-fail",
       "src": "assets/audio/sfx/objective-fail.mp3",
-      "durationSeconds": 0.754,
-      "bytes": 12955,
-      "sha256": "a8bbd985dab91852893606447fd6cd0e58c7b64eedc804760ccae71bde2d8f65",
+      "duration": 0.754,
+      "bytes": 13000,
       "role": "objective-fail",
       "semanticFamily": "objective-fail",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "pitch -28%, low-pass 3.6 kHz, 55 ms echo",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -11.6,
+      "sha256": "cc20cd69842d83e32feeb8994c2e9a06cff67637d8b4e12a07e7e0adef0d22f8",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "abyss-curse-attack",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/abyss-curse-attack.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-reward-chest",
       "src": "assets/audio/sfx/reward-chest.mp3",
-      "durationSeconds": 2.603,
-      "bytes": 42630,
-      "sha256": "9916c853c9619698d56909002c11307f7d1a0d6716b595e1bd22205cff07fce2",
+      "duration": 2.603,
+      "bytes": 42675,
       "role": "reward-chest",
       "semanticFamily": "reward-chest",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "trim 2.2 s, pitch -8%, low-pass 8.2 kHz, short fade",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1,
+      "sha256": "ee5e45c958284fa7fa308a587f4ac48ff7c1e1b48107b087074d7b5b40999b5a",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "rare-summon-reveal",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/rare-summon-reveal.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     },
     {
       "id": "sfx-summon-rare",
       "src": "assets/audio/sfx/summon-rare.mp3",
-      "durationSeconds": 6.472,
-      "bytes": 104448,
-      "sha256": "95e6645731ad403ab9a146462f307da485dc690dd3cdd980be3a7108d942cc7b",
+      "duration": 6.472,
+      "bytes": 280153,
       "role": "summon-rare",
       "semanticFamily": "summon-rare",
-      "origin": {
-        "category": "suno-paid-user-owned",
-        "rightsStatus": "rights-holder-confirmed-paid-plan-commercial-rights"
-      },
-      "licenseId": "LicenseRef-Meowthology-Official-Builtin"
+      "variantProcess": "normalized source master",
+      "targetPeakDbfs": -1,
+      "measuredMaxPeakDbfs": -1.9,
+      "sha256": "a763e40359d614a390636ead1a9de6eca1c52ce94f6dc69d49631c05d176df95",
+      "source": {
+        "type": "user-owned-cross-project-suno-sfx",
+        "ownership": "user-owned",
+        "rawSourceSlug": "rare-summon-reveal",
+        "sourceArchive": "art-source/audio/suno/reused-cross-project/rare-summon-reveal.mp3",
+        "reuseReason": "Suno Sounds generation was challenge-blocked in this production session."
+      }
     }
   ],
-  "provenanceCategories": {
-    "suno-paid-dedicated": "Generated for Cat Odyssey while the rights holder had a paid Suno plan.",
-    "suno-paid-user-owned-remaster": "User-owned remaster music generated while the rights holder had a paid Suno plan.",
-    "suno-paid-user-owned": "User-owned Suno audio generated while the rights holder had a paid plan and adapted for this game.",
-    "project-owned-procedural": "Deterministically synthesized by the project and not generated by Suno."
+  "suno": {
+    "bgmStatus": "cat-odyssey-dedicated-downloads-integrated",
+    "cattubeBgmStatus": "user-approved-remaster-episodes-1-through-11-integrated",
+    "sfxStatus": "user-owned-cross-project-sources-integrated",
+    "sfxSemanticStatus": "cross-family-waveform-duplicates-zero",
+    "sfxGenerationBlocker": "Suno Sounds challenge closed or expired during this session.",
+    "swapContract": "Replace stable MP3 files without changing runtime keys, then rebuild this catalog."
+  },
+  "provenance": {
+    "bgmPolicy": "Cat Odyssey dedicated Suno, in-project procedural masters, and user-approved CatTube remaster episodes 1-11 only.",
+    "catOdysseySunoArchive": "art-source/audio/suno/downloads",
+    "externalRuntimeBgm": [],
+    "catTubeRuntimeBgm": [
+      "bgm-voyage-open-sea",
+      "bgm-voyage-enchanted",
+      "bgm-boss-cyclops",
+      "bgm-voyage-winds",
+      "bgm-voyage-underworld",
+      "bgm-voyage-homecoming"
+    ],
+    "crossProjectRuntimeBgm": [],
+    "crossProjectSfxReuseAllowed": true
   }
 }

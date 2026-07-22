@@ -3,6 +3,7 @@ import {
   matchesDiamondAction,
   type DiamondActionDefinition
 } from "./diamondActions";
+import { translateText } from "../localization";
 
 export type MockStorage = Pick<Storage, "getItem" | "setItem" | "removeItem">;
 
@@ -119,8 +120,8 @@ export function createMockGameHost(options: MockHostOptions = {}): MockGameHostA
         }
         if (declared.requiresConfirm) {
           const approved = await confirm({
-            title: "다이아 사용 확인",
-            message: `${declared.reason}\n\n필요 다이아: ${declared.amount}\n현재 잔액: ${balance}`
+            title: translateText("다이아 사용 확인"),
+            message: translateText(`${declared.reason}\n\n필요 다이아: ${declared.amount}\n현재 잔액: ${balance}`)
           });
           if (!approved) {
             return failedSpend("cancelled", "사용자가 취소했습니다.", balance);

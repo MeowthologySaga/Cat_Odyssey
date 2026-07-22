@@ -248,7 +248,7 @@ export class UnsupportedSaveSchemaError extends Error {
   }
 }
 
-export function createDefaultSave(): GameSaveV1 {
+export function createDefaultSave(language: GameLanguage = "ko"): GameSaveV1 {
   return {
     schemaVersion: SAVE_SCHEMA_VERSION,
     progress: {
@@ -325,7 +325,7 @@ export function createDefaultSave(): GameSaveV1 {
     pendingPurchases: [],
     purchaseReceipts: [],
     settings: {
-      language: "ko",
+      language,
       masterVolume: DEFAULT_AUDIO_VOLUMES.masterVolume,
       musicVolume: DEFAULT_AUDIO_VOLUMES.musicVolume,
       sfxVolume: DEFAULT_AUDIO_VOLUMES.sfxVolume,
@@ -364,17 +364,17 @@ export function cloneSave(save: GameSaveV1): GameSaveV1 {
  * Unknown fields are intentionally dropped; this also guarantees that wallet balance is
  * never copied into the game save.
  */
-export function migrateSave(raw: unknown): GameSaveV1 {
+export function migrateSave(raw: unknown, defaultLanguage: GameLanguage = "ko"): GameSaveV1 {
   const source = asRecord(raw);
   const rawVersion = asFiniteNumber(source?.schemaVersion, 0);
   if (rawVersion > SAVE_SCHEMA_VERSION) {
     throw new UnsupportedSaveSchemaError(rawVersion);
   }
-  return normalizeSave(source);
+  return normalizeSave(source, defaultLanguage);
 }
 
-export function normalizeSave(raw: unknown): GameSaveV1 {
-  const defaults = createDefaultSave();
+export function normalizeSave(raw: unknown, defaultLanguage: GameLanguage = "ko"): GameSaveV1 {
+  const defaults = createDefaultSave(defaultLanguage);
   const source = asRecord(raw) ?? {};
   const progress = asRecord(source.progress) ?? {};
   const roster = asRecord(source.roster) ?? asRecord(source.heroes) ?? {};

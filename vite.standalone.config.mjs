@@ -1,4 +1,4 @@
-import { copyFileSync } from "node:fs";
+import { readFileSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
@@ -12,9 +12,11 @@ export default defineConfig({
     {
       name: "write-standalone-index",
       closeBundle() {
-        copyFileSync(
-          path.join(projectRoot, "standalone-src", "index.html"),
+        // Keep the source/test catalog local; the runtime does not request it.
+        rmSync(path.join(projectRoot, "standalone", "assets", "audio", "catalog.json"), { force: true });
+        writeFileSync(
           path.join(projectRoot, "standalone", "index.html"),
+          readFileSync(path.join(projectRoot, "standalone-src", "index.html")),
         );
       },
     },

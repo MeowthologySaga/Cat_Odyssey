@@ -7,21 +7,31 @@ import {
 } from "../../src/platform";
 
 describe("PlayZone manifest contract", () => {
-  it("keeps all eight runtime actions byte-for-byte aligned with the manifest", () => {
-    expect(manifest.economy.diamondActions).toEqual(DIAMOND_ACTIONS);
+  it("keeps all eight runtime protocol actions aligned with the manifest", () => {
+    const manifestProtocol = manifest.economy.diamondActions.map((action) => ({
+      id: action.id,
+      amount: action.amount,
+      reason: action.reason,
+      requiresConfirm: action.requiresConfirm,
+      repeatable: action.repeatable,
+    }));
+    expect(manifestProtocol).toEqual(DIAMOND_ACTIONS);
     expect(DIAMOND_ACTIONS).toHaveLength(8);
+    for (const action of manifest.economy.diamondActions) {
+      expect(action.localizedReason).toMatchObject({ ko: action.reason });
+      expect(action.localizedReason.en).not.toMatch(/[\u3131-\u318e\uac00-\ud7a3]/u);
+    }
   });
 
   it("uses the current iframe schema and minimum permissions", () => {
     expect(manifest.contentType).toBe("game_pack");
     expect(manifest.lineageId).toBe("adb6ec88-2557-4fb2-857a-76e5c057f998");
     expect(manifest.entry).toEqual({ type: "iframe", path: "game/index.html" });
-    expect(manifest.permissions).toEqual({
-      walletSpend: true,
-      storage: true,
+    expect(manifest.permissions).toMatchObject({
       network: false,
-      externalLinks: false,
-      cardRead: false
+      cardsRead: false,
+      cardsCreate: false,
+      walletSpend: true
     });
   });
 

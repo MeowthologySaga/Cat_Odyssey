@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { translateText } from "../localization";
 import { HERO_BY_ID } from "../data";
 import { resolveHeroTexture, HERO_FALLBACK_TEXTURE_KEY } from "../assets/runtimeAssetCatalog";
 import { partyImageAssets, queueImageAssets } from "../assets/assetStreaming";
@@ -55,7 +56,7 @@ export class StoryScene extends Phaser.Scene {
     if (this.kind === "crew") this.drawCrewPortrait();
     else this.drawRouteEmblem(content.accent);
 
-    addTitle(this, content.title, this.kind === "crew" ? 620 : 565, 38);
+    addTitle(this, content.title, this.kind === "crew" ? 620 : 565, this.kind === "crew" ? 38 : 26);
     this.add.text(W / 2, this.kind === "crew" ? 690 : 640, content.body.join("\n\n"), {
       fontFamily: "Malgun Gothic, sans-serif", fontSize: `${uiTextSize(19)}px`, lineSpacing: 12, color: "#d7e4dc", align: "center", wordWrap: { width: 540 },
     }).setOrigin(0.5);
@@ -106,7 +107,7 @@ export class StoryScene extends Phaser.Scene {
     const save = result.save;
     if (!result.persisted) {
       try {
-        services.host.ui.toast("저장 연결이 지연되었습니다. 항해는 계속하며 자동으로 다시 저장합니다.");
+        services.host.ui.toast(translateText("저장 연결이 지연되었습니다. 항해는 계속하며 자동으로 다시 저장합니다."));
       } catch {
         // Host UI feedback is optional and must never become another navigation gate.
       }

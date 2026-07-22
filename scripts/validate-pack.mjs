@@ -7,35 +7,24 @@ import JSZip from "jszip";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 export const DEFAULT_PROJECT_ROOT = path.resolve(SCRIPT_DIR, "..");
-export const MAX_PACK_BYTES = 250 * 1024 * 1024;
+/** Public Cat Odyssey distribution budget: 105 MiB compressed and unpacked. */
+export const MAX_PACK_BYTES = 105 * 1024 * 1024;
 export const MAX_FILE_BYTES = 64 * 1024 * 1024;
-
-const LEGAL_AND_PROVENANCE_FILES = [
-  "LICENSE",
-  "THIRD_PARTY_NOTICES.md",
-  "ASSET_LICENSES.md",
-  "ASSET_INVENTORY.json",
-  "MEDIA_MANIFEST.json",
-  "CUTSCENE_CREDITS.md"
-];
 
 const REQUIRED_FILES = [
   "manifest.json",
   "README.md",
   "security-report.md",
-  ...LEGAL_AND_PROVENANCE_FILES,
   "game/index.html",
-  "assets/thumbnail.webp"
+  "assets/thumbnail.png",
+  "assets/icon.png"
 ];
 
 const ALLOWED_TOP_LEVEL_FILES = new Set([
   "manifest.json",
   "README.md",
-  "security-report.md",
-  ...LEGAL_AND_PROVENANCE_FILES
+  "security-report.md"
 ]);
-
-const ALLOWED_TOP_LEVEL_DIRECTORIES = new Set(["game", "assets", "licenses"]);
 
 const ALLOWED_GAME_EXTENSIONS = new Set([
   ".html",
@@ -87,10 +76,6 @@ export async function collectPackEntries(options = {}) {
     entries.set(fileName, await readRequiredFile(sourcePath));
   }
 
-  for (const fileName of LEGAL_AND_PROVENANCE_FILES) {
-    entries.set(fileName, await readRequiredFile(path.join(projectRoot, fileName)));
-  }
-
   await addDirectory(entries, buildRoot, "game", {
     filter(relativePath) {
       const packPath = `game/${toPackPath(relativePath)}`;
@@ -107,12 +92,7 @@ export async function collectPackEntries(options = {}) {
     await addDirectory(entries, cartridgeAssets, "assets");
   }
 
-  const licenseRoot = path.join(projectRoot, "licenses");
-  if (await isDirectory(licenseRoot)) {
-    await addDirectory(entries, licenseRoot, "licenses");
-  }
-
-  for (const assetName of ["thumbnail.webp"]) {
+  for (const assetName of ["thumbnail.png", "icon.png"]) {
     const packPath = `assets/${assetName}`;
     if (!entries.has(packPath)) {
       const buffer = await readFirstExisting([
@@ -127,26 +107,32 @@ export async function collectPackEntries(options = {}) {
   }
 
   return {
-    entries: withManifestIntegrity(entries),
+    entries: withIntegrityManifest(entries),
     skippedDevelopmentArtifacts
   };
 }
 
-export function withManifestIntegrity(inputEntries) {
+export function withIntegrityManifest(inputEntries) {
   const entries = cloneEntries(inputEntries);
-  const manifestBuffer = entries.get("manifest.json");
-  if (!manifestBuffer) throw new Error("manifest.json is required before integrity can be generated.");
-  const manifest = JSON.parse(manifestBuffer.toString("utf8"));
-  const files = Object.fromEntries(
-    [...entries.entries()]
-      .filter(([filePath]) => filePath !== "manifest.json")
-      .sort(([left], [right]) => comparePaths(left, right))
-      .map(([filePath, content]) => [filePath, sha256(content)])
-  );
-  manifest.integrity = { files };
+  entries.delete("assets/integrity.sha256.json");
+  const files = [...entries.entries()]
+    .filter(([filePath]) => filePath.startsWith("assets/") || filePath.startsWith("game/assets/"))
+    .sort(([left], [right]) => comparePaths(left, right))
+    .map(([filePath, content]) => ({
+      path: filePath,
+      bytes: content.length,
+      sha256: sha256(content)
+    }));
+  const integrity = {
+    schemaVersion: 1,
+    algorithm: "SHA-256",
+    fileCount: files.length,
+    totalBytes: files.reduce((sum, file) => sum + file.bytes, 0),
+    files
+  };
   entries.set(
-    "manifest.json",
-    Buffer.from(`${JSON.stringify(manifest, null, 2)}\n`, "utf8")
+    "assets/integrity.sha256.json",
+    Buffer.from(`${JSON.stringify(integrity, null, 2)}\n`, "utf8")
   );
   return entries;
 }
@@ -200,7 +186,6 @@ export async function validatePackEntries(inputEntries, options = {}) {
   }
 
   scanPackContent(entries, errors, warnings);
-  validateCutsceneAttribution(entries, errors);
   validateIntegrityManifest(entries, errors);
 
   return {
@@ -281,7 +266,6 @@ export function isGeneratedDevelopmentArtifact(filePath) {
   const normalized = toPackPath(filePath).toLowerCase();
   const baseName = path.posix.basename(normalized);
   return (
-    normalized === "game/assets/audio/catalog.json" ||
     baseName === "prompt-used.txt" ||
     baseName === "pipeline-meta.json" ||
     baseName.endsWith(".prompt.txt") ||
@@ -315,72 +299,21 @@ async function validateManifest(manifest, entries, projectRoot, errors, warnings
   requireString(manifest.description, "manifest.description", errors);
   requireString(manifest.releaseNotes, "manifest.releaseNotes", errors);
   requireString(manifest.creator?.name, "manifest.creator.name", errors);
-  requireEqual(
-    manifest.license,
-    "MIT AND LicenseRef-Meowthology-Official-Builtin AND LicenseRef-Cat-Odyssey-ElevenLabs-NC-1.0",
-    "manifest.license",
-    errors
-  );
-  requireEqual(
-    manifest.sourceUrl,
-    "https://github.com/MeowthologySaga/Cat_Odyssey",
-    "manifest.sourceUrl",
-    errors
-  );
-  requireEqual(manifest.category, "action-rpg", "manifest.category", errors);
-  requireEqual(
-    JSON.stringify(manifest.tags),
-    JSON.stringify(["official", "action", "ricochet", "rpg", "collector", "boss-hunt"]),
-    "manifest.tags",
-    errors
-  );
 
   requireEqual(manifest.entry?.type, "iframe", "manifest.entry.type", errors);
   requireEqual(manifest.entry?.path, "game/index.html", "manifest.entry.path", errors);
-  requireEqual(manifest.metadata?.thumbnail, "assets/thumbnail.webp", "manifest.metadata.thumbnail", errors);
-  requireEqual(manifest.metadata?.distribution, "non-commercial", "manifest.metadata.distribution", errors);
-  requireEqual(
-    manifest.metadata?.cutsceneVoiceAttribution,
-    "elevenlabs.io",
-    "manifest.metadata.cutsceneVoiceAttribution",
-    errors
-  );
-  requireEqual(
-    manifest.metadata?.cutsceneLicenseNotice,
-    "CUTSCENE_CREDITS.md",
-    "manifest.metadata.cutsceneLicenseNotice",
-    errors
-  );
-  requireEqual(
-    manifest.metadata?.cutsceneLicenseId,
-    "LicenseRef-Cat-Odyssey-ElevenLabs-NC-1.0",
-    "manifest.metadata.cutsceneLicenseId",
-    errors
-  );
-  requireEqual(
-    manifest.metadata?.cutsceneGenerationMode,
-    "ElevenLabs Text to Speech",
-    "manifest.metadata.cutsceneGenerationMode",
-    errors
-  );
-  requireString(
-    manifest.metadata?.cutsceneVoiceDisclosure,
-    "manifest.metadata.cutsceneVoiceDisclosure",
-    errors
-  );
+  requireEqual(manifest.metadata?.thumbnail, "assets/thumbnail.png", "manifest.metadata.thumbnail", errors);
+  requireEqual(manifest.metadata?.icon, "assets/icon.png", "manifest.metadata.icon", errors);
 
   const requiredPermissions = {
-    walletSpend: true,
-    storage: true,
     network: false,
     externalLinks: false,
-    cardRead: false
+    filesystem: false,
+    clipboard: false,
+    cardsRead: false,
+    cardsCreate: false,
+    walletSpend: true
   };
-  for (const permission of Object.keys(manifest.permissions ?? {})) {
-    if (!(permission in requiredPermissions)) {
-      errors.push(`manifest.permissions contains unsupported capability: ${permission}`);
-    }
-  }
   for (const [permission, expected] of Object.entries(requiredPermissions)) {
     requireEqual(
       manifest.permissions?.[permission],
@@ -415,13 +348,14 @@ async function validateManifest(manifest, entries, projectRoot, errors, warnings
   }
   await validateEconomyContract(manifestActions, projectRoot, errors, warnings);
 
-  for (const manifestPath of [manifest.entry?.path, manifest.metadata?.thumbnail]) {
+  for (const manifestPath of [manifest.entry?.path, manifest.metadata?.thumbnail, manifest.metadata?.icon]) {
     if (typeof manifestPath === "string" && !entries.has(manifestPath)) {
       errors.push(`Manifest path does not exist in pack: ${manifestPath}`);
     }
   }
 
-  validateThumbnailRequirements(entries.get("assets/thumbnail.webp"), errors);
+  validateImageRequirements(entries.get("assets/thumbnail.png"), "thumbnail", errors);
+  validateImageRequirements(entries.get("assets/icon.png"), "icon", errors);
 }
 
 async function validateEconomyContract(manifestActions, projectRoot, errors, warnings) {
@@ -472,66 +406,27 @@ async function validateEconomyContract(manifestActions, projectRoot, errors, war
   }
 }
 
-function validateThumbnailRequirements(content, errors) {
+function validateImageRequirements(content, kind, errors) {
   if (!content) {
     return;
   }
-  const image = decodePackWebpSize(content);
+  const image = decodePackPng(content);
   if (!image) {
-    errors.push("assets/thumbnail.webp is not a complete, readable WebP image.");
+    errors.push(`assets/${kind}.png is not a complete, readable 8-bit RGB/RGBA PNG.`);
     return;
   }
-  const aspect = image.width / image.height;
-  if (Math.abs(aspect - 16 / 9) > 0.015) {
-    errors.push(`Thumbnail must be 16:9, got ${image.width}x${image.height}.`);
-  }
-  if (image.width < 1280 || image.height < 720) {
-    errors.push(`Thumbnail must be at least 1280x720, got ${image.width}x${image.height}.`);
-  }
-}
-
-function decodePackWebpSize(content) {
-  if (
-    content.length < 30
-    || content.toString("ascii", 0, 4) !== "RIFF"
-    || content.toString("ascii", 8, 12) !== "WEBP"
-  ) return undefined;
-  const declaredBytes = content.readUInt32LE(4) + 8;
-  if (declaredBytes > content.length) return undefined;
-  let offset = 12;
-  while (offset + 8 <= content.length) {
-    const type = content.toString("ascii", offset, offset + 4);
-    const length = content.readUInt32LE(offset + 4);
-    const data = offset + 8;
-    if (data + length > content.length) return undefined;
-    if (type === "VP8X" && length >= 10) {
-      return {
-        width: 1 + content[data + 4] + (content[data + 5] << 8) + (content[data + 6] << 16),
-        height: 1 + content[data + 7] + (content[data + 8] << 8) + (content[data + 9] << 16)
-      };
+  if (kind === "thumbnail") {
+    const aspect = image.width / image.height;
+    if (Math.abs(aspect - 16 / 9) > 0.015) {
+      errors.push(`Thumbnail must be 16:9, got ${image.width}x${image.height}.`);
     }
-    if (
-      type === "VP8 "
-      && length >= 10
-      && content[data + 3] === 0x9d
-      && content[data + 4] === 0x01
-      && content[data + 5] === 0x2a
-    ) {
-      return {
-        width: content.readUInt16LE(data + 6) & 0x3fff,
-        height: content.readUInt16LE(data + 8) & 0x3fff
-      };
+    if (image.width < 1280 || image.height < 720) {
+      errors.push(`Thumbnail must be at least 1280x720, got ${image.width}x${image.height}.`);
     }
-    if (type === "VP8L" && length >= 5 && content[data] === 0x2f) {
-      const bits = content.readUInt32LE(data + 1);
-      return {
-        width: 1 + (bits & 0x3fff),
-        height: 1 + ((bits >>> 14) & 0x3fff)
-      };
-    }
-    offset = data + length + (length % 2);
+    validateThumbnailPixels(image, errors);
+  } else if (image.width !== image.height || image.width < 512) {
+    errors.push(`Icon must be square and at least 512x512, got ${image.width}x${image.height}.`);
   }
-  return undefined;
 }
 
 function validateThumbnailPixels(image, errors) {
@@ -604,26 +499,6 @@ function scanPackContent(entries, errors, warnings) {
   }
 }
 
-function validateCutsceneAttribution(entries, errors) {
-  const credits = entries.get("CUTSCENE_CREDITS.md")?.toString("utf8") ?? "";
-  for (let episode = 1; episode <= 20; episode += 1) {
-    const packPath = `game/assets/video/cutscenes/ep${episode}.mp4`;
-    const video = entries.get(packPath);
-    if (!video) {
-      errors.push(`${packPath}: full-feature non-commercial cutscene is missing.`);
-      continue;
-    }
-    if (!video.includes(Buffer.from("elevenlabs.io", "utf8"))) {
-      errors.push(`${packPath}: MP4 title metadata is missing required elevenlabs.io attribution.`);
-    }
-    const sourcePath = `public/assets/video/cutscenes/ep${episode}.mp4`;
-    const episodeLabel = `EP${String(episode).padStart(2, "0")}`;
-    if (!credits.includes(sourcePath) || !credits.includes(episodeLabel) || !credits.includes("elevenlabs.io")) {
-      errors.push(`${packPath}: CUTSCENE_CREDITS.md is missing its path, episode title, or attribution.`);
-    }
-  }
-}
-
 function scanRuntimeNetworkLiterals(filePath, text, errors, warnings) {
   const forbiddenPatterns = [
     /<(?:script|img|audio|video|source|iframe)\b[^>]*\bsrc\s*=\s*["'](?:https?:)?\/\//i,
@@ -652,36 +527,28 @@ function scanRuntimeNetworkLiterals(filePath, text, errors, warnings) {
 }
 
 function validateIntegrityManifest(entries, errors) {
-  const content = entries.get("manifest.json");
-  if (!content) return;
-  let manifest;
+  const integrityPath = "assets/integrity.sha256.json";
+  const content = entries.get(integrityPath);
+  if (!content) {
+    errors.push(`Missing generated integrity list: ${integrityPath}`);
+    return;
+  }
+  let parsed;
   try {
-    manifest = JSON.parse(content.toString("utf8"));
+    parsed = JSON.parse(content.toString("utf8"));
   } catch {
+    errors.push(`${integrityPath}: invalid JSON.`);
     return;
   }
-  const declared = manifest?.integrity?.files;
-  if (!declared || typeof declared !== "object" || Array.isArray(declared)) {
-    errors.push("manifest.integrity.files must list every non-manifest pack file.");
-    return;
+  const expectedEntries = withIntegrityManifest(
+    new Map([...entries].filter(([filePath]) => filePath !== integrityPath))
+  );
+  const expected = expectedEntries.get(integrityPath);
+  if (!expected || !expected.equals(content)) {
+    errors.push(`${integrityPath}: hashes do not match packaged asset bytes.`);
   }
-  const actualPaths = [...entries.keys()]
-    .filter((filePath) => filePath !== "manifest.json")
-    .sort(comparePaths);
-  const declaredPaths = Object.keys(declared).sort(comparePaths);
-  for (const filePath of declaredPaths) {
-    if (!entries.has(filePath)) {
-      errors.push(`${filePath}: manifest.integrity.files declares a missing file.`);
-    } else if (!/^[0-9a-f]{64}$/.test(String(declared[filePath]))) {
-      errors.push(`${filePath}: manifest.integrity.files must contain a lowercase SHA-256 digest.`);
-    } else if (sha256(entries.get(filePath)) !== declared[filePath]) {
-      errors.push(`${filePath}: manifest.integrity.files hash does not match packaged bytes.`);
-    }
-  }
-  for (const filePath of actualPaths) {
-    if (!Object.hasOwn(declared, filePath)) {
-      errors.push(`${filePath}: file is not listed in manifest.integrity.files.`);
-    }
+  if (parsed?.algorithm !== "SHA-256") {
+    errors.push(`${integrityPath}: algorithm must be SHA-256.`);
   }
 }
 
@@ -703,7 +570,7 @@ function validatePackPath(filePath, errors) {
   if (segments.length === 1 && !ALLOWED_TOP_LEVEL_FILES.has(filePath)) {
     errors.push(`Unexpected top-level file: ${filePath}`);
   }
-  if (segments.length > 1 && !ALLOWED_TOP_LEVEL_DIRECTORIES.has(segments[0])) {
+  if (segments.length > 1 && segments[0] !== "game" && segments[0] !== "assets") {
     errors.push(`Unexpected top-level directory: ${filePath}`);
   }
 }

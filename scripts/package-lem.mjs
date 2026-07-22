@@ -81,11 +81,10 @@ export function createReleaseFileName(manifest) {
     .toLowerCase()
     .replace(/[^a-z0-9_.-]+/g, "-")
     .replace(/^-+|-+$/g, "") || "game-pack";
-  const assetStem = id.split(".").filter(Boolean).at(-1) || "game-pack";
   const version = String(manifest?.version ?? "0.0.0")
     .trim()
     .replace(/[^0-9a-zA-Z.-]+/g, "-");
-  return `${assetStem}-${version}.lemgame`;
+  return `${id}-${version}.lemgame`;
 }
 
 async function writeIfChanged(targetPath, content) {

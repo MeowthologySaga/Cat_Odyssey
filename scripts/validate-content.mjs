@@ -231,7 +231,7 @@ for (const hero of heroes) {
   assert(Array.isArray(hero.friendshipSkill?.effects) && hero.friendshipSkill.effects.length > 0, `${hero.id} lacks friendship effects.`);
   assert(Array.isArray(hero.activeSkill?.effects) && hero.activeSkill.effects.length > 0, `${hero.id} lacks active skill effects.`);
   assert(
-    fs.existsSync(path.join(root, "public", "assets", "art", "characters", `${hero.id}-flight.webp`)),
+    fs.existsSync(path.join(root, "public", "assets", "art", "characters", `${hero.id}-flight.png`)),
     `${hero.id} lacks its runtime character image.`,
   );
 }
@@ -249,7 +249,7 @@ for (const enemy of enemyData.enemies) {
   assert(enemy.stats?.hp > 0 && enemy.stats?.attack >= 0, `${enemy.id} has invalid stats.`);
   const enemyFolder = enemy.boss ? "bosses" : "enemies";
   assert(
-    fs.existsSync(path.join(root, "public", "assets", "art", enemyFolder, `${enemy.id}.webp`)),
+    fs.existsSync(path.join(root, "public", "assets", "art", enemyFolder, `${enemy.id}.png`)),
     `${enemy.id} lacks its runtime ${enemy.boss ? "boss" : "enemy"} image.`,
   );
 }
@@ -299,7 +299,7 @@ for (const route of routes) {
   assert(actualStages.map((stage) => stage.id).join("|") === route.stageIds.join("|"), `${route.id} stageIds are out of order.`);
   assert(actualStages.every((stage, index) => stage.order === index + 1), `${route.id} stage order must start at 1 without gaps.`);
   assert(
-    fs.existsSync(path.join(root, "public", "assets", "art", "maps", "routes", `${route.id}.webp`)),
+    fs.existsSync(path.join(root, "public", "assets", "art", "maps", "routes", `${route.id}.png`)),
     `${route.id} lacks its runtime route map.`,
   );
   const missingCommercialArt = {
@@ -321,13 +321,13 @@ for (const route of routes) {
 
 for (const propId of requiredPropIds) {
   assert(
-    fs.existsSync(path.join(root, "public", "assets", "art", "props", `${propId}.webp`)),
+    fs.existsSync(path.join(root, "public", "assets", "art", "props", `${propId}.png`)),
     `${propId} lacks its runtime prop image.`,
   );
 }
 for (const hazardId of requiredHazardIds) {
   assert(
-    fs.existsSync(path.join(root, "public", "assets", "art", "hazards", `${hazardId}.webp`)),
+    fs.existsSync(path.join(root, "public", "assets", "art", "hazards", `${hazardId}.png`)),
     `${hazardId} lacks its runtime hazard image.`,
   );
 }

@@ -4,6 +4,7 @@ import { getServices } from "../core/services";
 import { COMBAT_HELP_CARDS } from "../core/uxFlow";
 import { adjustAudioVolume, type AudioVolumeKey } from "../state/audioVolume";
 import type { ColorVisionMode, GameLanguage, TextScale } from "../state/saveSchema";
+import { setLanguage, translateText } from "../localization";
 import {
   accessibilityPaletteFor,
   addButton,
@@ -245,10 +246,10 @@ export class SettingsScene extends Phaser.Scene {
   }
 
   private drawLanguageRow(y: number, language: GameLanguage): void {
-    this.add.text(82, y - 15, "컷신 언어 · 자막", {
+    this.add.text(82, y - 15, "게임 언어 · 자막", {
       fontFamily: "Malgun Gothic, sans-serif", fontStyle: "bold", fontSize: `${uiTextSize(18)}px`, color: "#eee7d1",
     }).setOrigin(0, 0.5);
-    this.add.text(82, y + 20, language === "ko" ? "원본 영상 아래에 한국어 자막 표시" : "영상에 포함된 English captions 사용", {
+    this.add.text(82, y + 20, language === "ko" ? "한국어 UI와 한국어 컷신 자막" : "English UI and accurate English cutscene subtitles", {
       ...this.descriptionStyle(), wordWrap: { width: 420, useAdvancedWrap: true },
     }).setOrigin(0, 0.5).setMaxLines(2);
     addButton(this, 585, y, language === "ko" ? "한국어" : "English", {
@@ -370,14 +371,19 @@ export class SettingsScene extends Phaser.Scene {
   }
 
   private async toggleLanguage(): Promise<void> {
+    let failed = false;
     try {
       await getServices().save.update((draft) => {
         draft.settings.language = draft.settings.language === "ko" ? "en" : "ko";
       });
-      this.render();
     } catch {
-      addToast(this, "언어 설정을 저장하지 못했습니다. 잠시 후 다시 시도해 주세요.", COLORS.red);
+      failed = true;
     }
+    // GameSaveStore deliberately retains a failed write in memory so it can be
+    // retried. Keep the rendered language synchronized with that snapshot.
+    setLanguage(getServices().save.getSnapshot().settings.language);
+    this.render();
+    if (failed) addToast(this, "언어 설정을 저장하지 못했습니다. 잠시 후 다시 시도해 주세요.", COLORS.red);
   }
 
   private async toggleTextScale(): Promise<void> {
@@ -415,11 +421,16 @@ export class SettingsScene extends Phaser.Scene {
     this.resetBusy = true;
     try {
       const approved = await getServices().host.ui.confirm({
-        title: "모든 진행 데이터를 초기화할까요?",
-        message: "스토리, 영웅, 장비, 재료와 설정이 처음 상태로 돌아갑니다. 학습으로 얻은 다이아 잔액은 유지됩니다.",
+        title: translateText("모든 진행 데이터를 초기화할까요?"),
+        message: translateText("스토리, 영웅, 장비, 재료와 설정이 처음 상태로 돌아갑니다. 언어 선택과 학습으로 얻은 다이아 잔액은 유지됩니다."),
       });
       if (!approved) return;
+      const selectedLanguage = getServices().save.getSnapshot().settings.language;
       await getServices().save.clear();
+      if (getServices().save.getSnapshot().settings.language !== selectedLanguage) {
+        await getServices().save.update((draft) => { draft.settings.language = selectedLanguage; });
+      }
+      setLanguage(selectedLanguage);
       fadeTo(this, "Title");
     } catch {
       addToast(this, "진행 데이터를 초기화하지 못했습니다. 잠시 후 다시 시도해 주세요.", COLORS.red);

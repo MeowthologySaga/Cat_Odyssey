@@ -4,6 +4,16 @@ Cat Odyssey is the official built-in ricochet action RPG for Language Miner.
 The learning app supplies the launcher, save boundary, and diamond wallet; the
 game itself is a standalone-style game without quizzes or study UI.
 
+## Language support
+
+Cat Odyssey supports Korean (`ko`) and English (`en`). Korean content remains
+available unchanged. On first launch, the game prefers a supported PlayZone Host
+locale hint, otherwise it detects the browser/OS language; a saved in-game
+selection always takes priority. Change the language at any time in
+**Settings & Help > Audio & Language**. The selected language applies to the
+title, tutorial, HUD, menus, story, growth, rewards, Diamond confirmation UI,
+and cutscene subtitles.
+
 > **Non-commercial cutscene notice:** all 20 story videos contain narration made
 > with ElevenLabs Text to Speech. Episodes 1–11 have no preserved plan record and
 > are conservatively treated as free-plan output; episodes 12–20 have a confirmed

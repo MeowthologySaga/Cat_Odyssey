@@ -1,4 +1,5 @@
 import type { GameLanguage } from "../state/saveSchema";
+import { translateForLanguage } from "../localization";
 import { GENERATED_KOREAN_CUTSCENE_SUBTITLES } from "./generatedCutsceneMedia";
 
 export interface CutsceneSubtitleCue {
@@ -132,7 +133,8 @@ export function cutsceneSubtitleAt(
   currentTime: number,
   language: GameLanguage,
 ): string {
-  if (language !== "ko" || !Number.isFinite(currentTime)) return "";
+  if (!Number.isFinite(currentTime)) return "";
   const cues = KOREAN_CUTSCENE_SUBTITLES[cutsceneId] ?? [];
-  return cues.find((cue) => currentTime >= cue.start && currentTime < cue.end)?.text ?? "";
+  const text = cues.find((cue) => currentTime >= cue.start && currentTime < cue.end)?.text ?? "";
+  return translateForLanguage(text, language);
 }
