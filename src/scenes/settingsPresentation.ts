@@ -10,8 +10,9 @@ export const SETTINGS_LAYOUT = Object.freeze({
   tabHeight: 56,
   panelTop: 246,
   panelBottom: 1086,
-  resetY: 1134,
-  doneY: 1212,
+  resetY: 1110,
+  debugUnlockY: 1174,
+  doneY: 1244,
   viewportBottom: 1280,
 });
 

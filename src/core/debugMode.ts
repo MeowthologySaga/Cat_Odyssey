@@ -18,8 +18,9 @@ export const DEBUG_QUERY_PARAMETER = "catDebug" as const;
 export const DEBUG_RESOURCE_AMOUNT = 999_999 as const;
 
 /**
- * Debug mode is deliberately query-only. There is no remembered setting, key
- * chord, or release UI path that can enable it for an ordinary player.
+ * The developer voyage itself is deliberately query-only. Release settings
+ * may expose explicit progression-only QA shortcuts, but never enable the
+ * volatile Debug scene or modify the host-owned Diamond Wallet.
  */
 export function isDebugModeRequested(search: string): boolean {
   const normalized = search.startsWith("?") ? search : `?${search}`;

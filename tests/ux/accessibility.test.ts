@@ -62,8 +62,9 @@ describe("accessibility presentation", () => {
     expect(SETTINGS_LAYOUT.topBarBottom).toBeLessThan(SETTINGS_LAYOUT.headingY);
     expect(SETTINGS_LAYOUT.tabsY + SETTINGS_LAYOUT.tabHeight / 2).toBeLessThan(SETTINGS_LAYOUT.panelTop);
     expect(SETTINGS_LAYOUT.panelBottom).toBeLessThan(SETTINGS_LAYOUT.resetY - 23);
-    expect(SETTINGS_LAYOUT.resetY + 40).toBeLessThan(SETTINGS_LAYOUT.doneY - 30);
-    expect(SETTINGS_LAYOUT.doneY + 30).toBeLessThan(SETTINGS_LAYOUT.viewportBottom);
+    expect(SETTINGS_LAYOUT.resetY + 40).toBeLessThan(SETTINGS_LAYOUT.debugUnlockY - 22);
+    expect(SETTINGS_LAYOUT.debugUnlockY + 23).toBeLessThan(SETTINGS_LAYOUT.doneY - 25);
+    expect(SETTINGS_LAYOUT.doneY + 25).toBeLessThan(SETTINGS_LAYOUT.viewportBottom);
   });
 
 });

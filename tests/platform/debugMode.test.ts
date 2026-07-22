@@ -30,6 +30,7 @@ describe("explicit developer voyage mode", () => {
     expect(save.progress.campaignComplete).toBe(true);
     expect(Object.values(save.progress.stageStars).every((stars) => stars === 3)).toBe(true);
     expect(CUTSCENE_MANIFEST.every((cutscene) => hasSeenCutscene(save, cutscene.id))).toBe(true);
+    expect(getEndgameGates(save).oracleTower.unlocked).toBe(true);
   });
 
   it("opens every endgame gate and supplies repeatable entries", () => {

@@ -123,6 +123,7 @@ export const CONTENT_ENGLISH_CATALOG: EnglishCatalog = Object.freeze({
   "포-사이돈의 폭풍 화신": "Paw-seidon's Storm Avatar",
   "망각의 로토스 심장": "Lotus Heart of Oblivion",
   "폴리-먀오무스": "Poly-meow-mus",
+  "외눈 통나무수문장": "One-Eyed Log Gatekeeper",
   "폭주하는 바람 주머니": "Runaway Bag of Winds",
   "퍼-씨의 거울 환영": "Purr-ce's Mirror Illusion",
   "저승의 봉인문": "Sealed Gate of the Underworld",

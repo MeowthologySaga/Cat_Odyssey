@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import { playBgm, refreshAudioSettings } from "../audio/AudioDirector";
 import { getServices } from "../core/services";
+import { unlockAllDebugStory } from "../core/debugMode";
 import { COMBAT_HELP_CARDS } from "../core/uxFlow";
 import { adjustAudioVolume, type AudioVolumeKey } from "../state/audioVolume";
 import type { ColorVisionMode, GameLanguage, TextScale } from "../state/saveSchema";
@@ -38,6 +39,7 @@ type ToggleKey = "reducedMotion" | "screenShake" | "aimAssist";
 export class SettingsScene extends Phaser.Scene {
   private returnScene = "Harbor";
   private resetBusy = false;
+  private debugUnlockBusy = false;
   private page: SettingsPage = "sound";
 
   constructor() { super("Settings"); }
@@ -49,6 +51,7 @@ export class SettingsScene extends Phaser.Scene {
 
   create(): void {
     this.resetBusy = false;
+    this.debugUnlockBusy = false;
     playBgm(this, "bgm-harbor-homeward");
     setUiFocusScope(this, "base");
     this.render();
@@ -113,14 +116,32 @@ export class SettingsScene extends Phaser.Scene {
       fontSize: `${uiTextSize(11)}px`,
       color: settings.highContrast ? "#f4dddd" : "#9b8582",
     }).setOrigin(0.5);
+    addButton(this, 206, SETTINGS_LAYOUT.debugUnlockY, "디버그: 전 스테이지·컷신 해금", {
+      width: 294,
+      height: 46,
+      fontSize: 12,
+      accent: COLORS.cyan,
+      focusKey: "settings-debug-unlock-all-story",
+      enabled: !this.debugUnlockBusy,
+      onClick: () => void this.unlockDebugProgress(false),
+    });
+    addButton(this, 514, SETTINGS_LAYOUT.debugUnlockY, "끝없는 해역 열기", {
+      width: 252,
+      height: 46,
+      fontSize: 13,
+      accent: COLORS.gold,
+      focusKey: "settings-debug-open-endless",
+      enabled: !this.debugUnlockBusy,
+      onClick: () => void this.unlockDebugProgress(true),
+    });
     addButton(this, W / 2, SETTINGS_LAYOUT.doneY, "설정 완료", {
       width: 330,
-      height: 60,
+      height: 50,
       icon: "✓",
       focusKey: "settings-done",
       onClick: () => fadeTo(this, this.returnScene),
     });
-    ensureUiFocus(this, [`settings-page-${this.page}`, "settings-done"]);
+    ensureUiFocus(this, [`settings-page-${this.page}`, "settings-debug-unlock-all-story", "settings-done"]);
   }
 
   private drawSoundPage(settings: ReturnType<ReturnType<typeof getServices>["save"]["getSnapshot"]>["settings"]): void {
@@ -436,6 +457,31 @@ export class SettingsScene extends Phaser.Scene {
       addToast(this, "진행 데이터를 초기화하지 못했습니다. 잠시 후 다시 시도해 주세요.", COLORS.red);
     } finally {
       this.resetBusy = false;
+    }
+  }
+
+  /** Explicit QA shortcut: changes only durable game progression, never the wallet. */
+  private async unlockDebugProgress(openEndlessWaters: boolean): Promise<void> {
+    if (this.debugUnlockBusy) return;
+    this.debugUnlockBusy = true;
+    try {
+      const approved = await getServices().host.ui.confirm({
+        title: translateText("디버그 진행 해금"),
+        message: translateText("모든 스테이지와 컷신을 해금하고 끝없는 해역을 엽니다. 다이아는 변경되지 않습니다."),
+      });
+      if (!approved) return;
+      await getServices().save.update((draft) => unlockAllDebugStory(draft));
+      if (openEndlessWaters) {
+        fadeTo(this, "Endgame");
+        return;
+      }
+      this.debugUnlockBusy = false;
+      this.render();
+      addToast(this, "전 스테이지와 컷신을 해금했습니다. 끝없는 해역도 열렸습니다.", COLORS.green);
+    } catch {
+      addToast(this, "디버그 진행 해금을 저장하지 못했습니다. 잠시 후 다시 시도해 주세요.", COLORS.red);
+    } finally {
+      this.debugUnlockBusy = false;
     }
   }
 }

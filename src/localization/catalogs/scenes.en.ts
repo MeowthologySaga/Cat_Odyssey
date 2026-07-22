@@ -475,6 +475,12 @@ const SCENE_FIXED_CATALOG: EnglishCatalog = Object.freeze({
 
   // Settings copy introduced with language persistence.
   "스토리, 영웅, 장비, 재료와 설정이 처음 상태로 돌아갑니다. 언어 선택과 학습으로 얻은 다이아 잔액은 유지됩니다.": "Story, heroes, equipment, materials, and settings return to their initial state. Your language choice and Diamonds earned through learning are kept.",
+  "디버그: 전 스테이지·컷신 해금": "Debug: Unlock All Stages & Cutscenes",
+  "끝없는 해역 열기": "Open Endless Waters",
+  "디버그 진행 해금": "Unlock Debug Progress",
+  "모든 스테이지와 컷신을 해금하고 끝없는 해역을 엽니다. 다이아는 변경되지 않습니다.": "This unlocks every stage and cutscene and opens Endless Waters. Diamonds are unchanged.",
+  "전 스테이지와 컷신을 해금했습니다. 끝없는 해역도 열렸습니다.": "All stages and cutscenes are unlocked. Endless Waters is now open.",
+  "디버그 진행 해금을 저장하지 못했습니다. 잠시 후 다시 시도해 주세요.": "Could not save the debug progression unlock. Please try again shortly.",
 
   // Collection/meta labels and descriptions visible outside battle.
   "햇살 드는 섬과 폭풍 해안": "Sunlit Island and Storm Coast",
