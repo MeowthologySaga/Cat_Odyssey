@@ -202,6 +202,33 @@ describe("stage data schema", () => {
     )).toBe(true);
   });
 
+  it("keeps the Cat-clopses log guards exclusive to Poly-meow-mus's boss room", () => {
+    const bossRoom = STAGES.find((stage) => stage.id === "r03-s05")!;
+    expect(bossRoom.enemies.map((placement) => placement.enemyId)).toEqual([
+      "poly-meow-mus",
+      "cyclops-logguard",
+      "cyclops-logguard",
+    ]);
+
+    const earlierRouteThreeStages = STAGES.filter(
+      (stage) => stage.routeId === "route-03-cyclops" && stage.id !== bossRoom.id,
+    );
+    expect(earlierRouteThreeStages.flatMap((stage) => stage.enemies).some(
+      (placement) => placement.enemyId === "cyclops-logguard",
+    )).toBe(false);
+    expect(earlierRouteThreeStages.flatMap((stage) => stage.enemies).some(
+      (placement) => placement.enemyId === "cyclops-stoneguard",
+    )).toBe(true);
+
+    const logGuard = ENEMIES.find((enemy) => enemy.id === "cyclops-logguard");
+    expect(logGuard).toMatchObject({
+      behaviorId: "shield",
+      visualKey: "enemy-cyclops-logguard",
+      attack: { kind: "log-guard-bash" },
+    });
+    expect(logGuard?.tags).toEqual(expect.arrayContaining(["cyclops", "guard", "one-eye", "club"]));
+  });
+
   it("connects every Route 4 stage to a distinct 720x1040 foundation plate", () => {
     const routeFour = STAGES.filter((stage) => stage.routeId === "route-04-aeolus")
       .sort((left, right) => left.order - right.order);
